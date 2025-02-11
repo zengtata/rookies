@@ -9,20 +9,40 @@ const RecommendationPage = () => {
 
   useEffect(() => {
     const fetchCareers = async () => {
+      // Retrieve quiz responses from localStorage
+      const storedResponses = localStorage.getItem("quizResponses");
+      if (!storedResponses) {
+        alert("No quiz responses found. Please complete the quiz.");
+        router.push("/quiz");
+        return;
+      }
+
+      const responses = JSON.parse(storedResponses);
+      if (!responses || responses.length < 11) {
+        alert("Incomplete quiz responses found. Please complete the quiz.");
+        router.push("/quiz");
+        return;
+      }
+
       const response = await fetch("/api/recommend", {
-        method: "POST", // Ensure method is POST, not GET
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ skills: [], interests: [], workPreference: "" }), // Replace with actual data
+        body: JSON.stringify({ responses }),
       });
 
       const data = await response.json();
-      setCareers(data.careers || []); // Assuming the response contains the 'careers' array
+      if (data.success) {
+        setCareers(data.careers || []);
+      } else {
+        console.error("Failed to load careers:", data.error);
+        alert("Error in recommendation: " + data.error);
+      }
     };
 
     fetchCareers();
-  }, []);
+  }, [router]);
 
   const handleCareerSelection = async (careerId: string) => {
     // Send the selected career ID to the backend to store it in the user-career table
@@ -43,26 +63,29 @@ const RecommendationPage = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-lg space-y-6">
-      <h1 className="text-3xl font-semibold text-center text-gray-800">
-        Select Your Career
-      </h1>
+      <div className="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-lg space-y-6">
+        <h1 className="text-3xl font-semibold text-center text-gray-800">
+          Select Your Career
+        </h1>
 
-      <div className="space-y-6">
-        {careers.map((career) => (
-          <div key={career} className="space-y-2">
-            <h3 className="text-xl font-medium text-gray-700">{career}</h3>
-            <p className="text-gray-600">{career.description}</p>
-            <Button
-              onClick={() => handleCareerSelection(career.id)}
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200 ease-in-out"
-            >
-              Select Career
-            </Button>
-          </div>
-        ))}
+        <div className="space-y-6">
+          {careers.map((career) => (
+              <div key={career.id} className="space-y-2">
+                <h3 className="text-xl font-medium text-gray-700">{career.title}</h3>
+                <p className="text-gray-600">{career.description}</p>
+                <p className="text-gray-500">
+                  Sentiment Score: {career.sentiment_score}
+                </p>
+                <Button
+                    onClick={() => handleCareerSelection(career.id)}
+                    className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200 ease-in-out"
+                >
+                  Select Career
+                </Button>
+              </div>
+          ))}
+        </div>
       </div>
-    </div>
   );
 };
 

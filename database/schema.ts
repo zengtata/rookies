@@ -1,11 +1,8 @@
 import {
-  date,
   integer,
-  pgEnum,
   pgTable,
   real,
   text,
-  timestamp,
   uuid,
   varchar,
 } from "drizzle-orm/pg-core";
@@ -25,8 +22,8 @@ export const careers = pgTable("careers", {
 });
 
 export const userCareer = pgTable("user_career", {
-  user_id: uuid("user_id").notNull(),
-  career_id: uuid("career_id").notNull(),
+  user_id: uuid("user_id").notNull().references(() => users.id),
+  career_id: uuid("career_id").notNull().references(() => careers.id),
 });
 
 export const milestones = pgTable("milestones", {
@@ -36,7 +33,9 @@ export const milestones = pgTable("milestones", {
   resources: text("resources").notNull(),
 });
 
+// Career-Milestone table with step_order
 export const careerMilestone = pgTable("career_milestone", {
-  career_id: uuid("career_id").notNull(),
-  milestone_id: uuid("milestone_id").notNull(),
+  career_id: uuid("career_id").notNull().references(() => careers.id), // Add reference
+  milestone_id: uuid("milestone_id").notNull().references(() => milestones.id), // Add reference
+  step_order: integer("step_order").notNull(), // To track the order of milestones
 });

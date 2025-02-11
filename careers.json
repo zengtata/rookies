@@ -1,0 +1,62 @@
+[
+  {
+    "id": "a3b5458b-7792-4e61-a704-62a7ab8c9a8c",
+    "title": "Data Scientist",
+    "description": "A data scientist is a professional responsible for analyzing and interpreting complex data to help companies make decisions. They use techniques in statistical modeling, machine learning, and data visualization to extract actionable insights from data.",
+    "sentiment_score": 90.0
+  },
+  {
+    "id": "c3d245ab-d9fe-4f4b-9417-f43d5789bc68",
+    "title": "Cybersecurity Specialist",
+    "description": "Cybersecurity specialists protect systems, networks, and data from cyberattacks. They monitor networks for security breaches, develop strategies to mitigate risks, and ensure compliance with security regulations.",
+    "sentiment_score": 80.0
+  },
+  {
+    "id": "d4f57cd7-4528-48ae-b35a-24ff7b5f0f52",
+    "title": "Software Engineer",
+    "description": "Software engineers design, develop, and maintain software applications. They use programming languages and frameworks to write clean, scalable, and efficient code, ensuring software works as intended.",
+    "sentiment_score": 88.0
+  },
+  {
+    "id": "e5d21c9f-42cd-4d4e-bcb7-1b2d207fc818",
+    "title": "IT Manager",
+    "description": "IT managers oversee an organization's technology infrastructure, ensuring that all systems run smoothly and are secure. They are responsible for managing IT teams, budgeting, and aligning technology strategies with business goals.",
+    "sentiment_score": 75.0
+  },
+  {
+    "id": "f6b1e25d-f9cf-4377-b1a7-1012d28c6173",
+    "title": "AI Engineer",
+    "description": "AI engineers develop systems and algorithms that allow machines to simulate human intelligence. They work with machine learning, deep learning, and neural networks to create systems that can process and analyze large datasets autonomously.",
+    "sentiment_score": 93.0
+  },
+  {
+    "id": "g7d68b2e-81ad-4a56-b5fd-91fe1b1a38b3",
+    "title": "UX Designer",
+    "description": "UX designers focus on creating user-friendly designs for digital products. They conduct user research, create wireframes and prototypes, and ensure that the product's design meets the needs and expectations of the user.",
+    "sentiment_score": 92.0
+  },
+  {
+    "id": "h8e44b9d-320f-4820-9b98-8003c2c78fdb",
+    "title": "QA Engineer",
+    "description": "QA engineers test and validate software applications to ensure that they meet quality standards. They identify defects, report bugs, and work with developers to fix issues before the software is released.",
+    "sentiment_score": 76.0
+  },
+  {
+    "id": "i9c78f1f-3e55-493f-828f-82a2fe759327",
+    "title": "IT Support",
+    "description": "IT support specialists provide assistance to employees and customers with technical issues related to hardware, software, and networking. They troubleshoot problems, install updates, and ensure that IT systems function properly.",
+    "sentiment_score": 72.0
+  },
+  {
+    "id": "j1e56c1c-91fb-40e4-8d9e-b1a1b30d02c9",
+    "title": "Network Engineer",
+    "description": "Network engineers design, implement, and manage an organization's network infrastructure. They ensure the reliability and security of communication systems, including local area networks (LANs) and wide area networks (WANs).",
+    "sentiment_score": 81.0
+  },
+  {
+    "id": "k2d43f39-4e78-47f3-b1c1-67a785b531f7",
+    "title": "Cloud Engineer",
+    "description": "Cloud engineers manage cloud-based infrastructures, ensuring their scalability, security, and availability. They work with cloud platforms like AWS, Azure, and Google Cloud to deploy and manage applications and services in the cloud.",
+    "sentiment_score": 86.0
+  }
+]

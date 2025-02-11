@@ -1,0 +1,5 @@
+ALTER TABLE "career_milestone" ADD COLUMN "step_order" integer NOT NULL;--> statement-breakpoint
+ALTER TABLE "career_milestone" ADD CONSTRAINT "career_milestone_career_id_careers_id_fk" FOREIGN KEY ("career_id") REFERENCES "public"."careers"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "career_milestone" ADD CONSTRAINT "career_milestone_milestone_id_milestones_id_fk" FOREIGN KEY ("milestone_id") REFERENCES "public"."milestones"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "user_career" ADD CONSTRAINT "user_career_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
+ALTER TABLE "user_career" ADD CONSTRAINT "user_career_career_id_careers_id_fk" FOREIGN KEY ("career_id") REFERENCES "public"."careers"("id") ON DELETE no action ON UPDATE no action;

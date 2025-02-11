@@ -1,25 +1,38 @@
+"use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { signInSchema } from "@/lib/validation";
-import { signOut } from "@/auth";
-import BookList from "@/components/BookList";
-import { sampleBooks } from "@/constants";
+import { useRouter } from "next/navigation";
+import {signOutAction} from "@/app/actions/signOutAction";
 
 const Page = () => {
-  return (
-    <>
-      <form
-        action={async () => {
-          "use server";
+    const router = useRouter();
 
-          await signOut();
-        }}
-        className="mb-10"
-      >
-        <Button>Logout</Button>
-      </form>
-      <BookList title="Borrowed Books" books={sampleBooks} />
-    </>
-  );
+    const handleSignOut = async () => {
+        await signOutAction();
+        router.push("/sign-in");
+    };
+
+    return (
+        <>
+            <div className="mb-5 ml-5">
+                <Button onClick={handleSignOut}>Logout</Button>
+            </div>
+            <div className="flex justify-center">
+                <Button
+                    onClick={() => router.push("/recommendation")}
+                    className="bg-yellow-500 text-white px-6 py-3 rounded-md shadow-md hover:bg-yellow-600 transition-colors duration-200 mx-5"
+                >
+                    Change Career
+                </Button>
+                <Button
+                    onClick={() => router.push("/quiz")}
+                    className="bg-yellow-500 text-white px-6 py-3 rounded-md shadow-md hover:bg-yellow-600 transition-colors duration-200 mx-5"
+                >
+                    Retake Quiz
+                </Button>
+            </div>
+        </>
+    );
 };
+
 export default Page;

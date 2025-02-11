@@ -1,0 +1,602 @@
+[
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "milestone_id": "6d170110-03fb-44c7-bd31-5ad5bd7a7aa6",
+    "step_order": 1
+  },
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "milestone_id": "3a115fe8-beab-4859-abd0-59e40d400ffa",
+    "step_order": 2
+  },
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "milestone_id": "3ec23dad-314e-496a-a7dc-8f8fa59d87ac",
+    "step_order": 3
+  },
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "milestone_id": "1d6db905-9cf6-400e-84b4-75c94d14843e",
+    "step_order": 4
+  },
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "milestone_id": "1d29c0c3-2ccd-42d7-84c5-ab094b763090",
+    "step_order": 5
+  },
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "milestone_id": "1b8cf3ba-0086-4d3a-a3a9-b2e365943398",
+    "step_order": 6
+  },
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "milestone_id": "b275f607-557b-4469-9f63-b0c37fec08c6",
+    "step_order": 7
+  },
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "milestone_id": "1b9ae912-ebe9-4802-b1ee-af6e450b123b",
+    "step_order": 8
+  },
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "milestone_id": "1d934a78-3869-4550-8128-07bb5ea91b9f",
+    "step_order": 9
+  },
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "milestone_id": "252f6a4a-9abd-4336-aae5-44de95fc727c",
+    "step_order": 10
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "milestone_id": "1fd67df8-d7e8-4799-908b-f78bedff5725",
+    "step_order": 1
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "milestone_id": "8b4c6d2a-d4da-4f14-80e5-1739608a5415",
+    "step_order": 2
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "milestone_id": "b48015cd-591f-484f-8ae3-36c11de1104c",
+    "step_order": 3
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "milestone_id": "0d0aa085-b0b8-4112-a8ee-6efe6cf3be3b",
+    "step_order": 4
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "milestone_id": "9847cc7f-82aa-4853-94bf-22f4dd3725da",
+    "step_order": 5
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "milestone_id": "afc5e5bc-d64c-49e6-be53-eb0c0d13505a",
+    "step_order": 6
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "milestone_id": "5c175df4-88cc-40e4-bd59-69cdfb708376",
+    "step_order": 7
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "milestone_id": "3ec23dad-314e-496a-a7dc-8f8fa59d87ac",
+    "step_order": 8
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "milestone_id": "1b8cf3ba-0086-4d3a-a3a9-b2e365943398",
+    "step_order": 9
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "milestone_id": "252f6a4a-9abd-4336-aae5-44de95fc727c",
+    "step_order": 10
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "milestone_id": "a04bdd54-4b61-4fb7-bd3e-8444971df330",
+    "step_order": 11
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "milestone_id": "e7fe7613-9846-4b86-a018-46e3e371d705",
+    "step_order": 1
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "milestone_id": "c10ee930-0582-4d25-9722-3ebe2f4b1d2b",
+    "step_order": 2
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "milestone_id": "d775e398-b3a1-47db-b9aa-d0179e1e073a",
+    "step_order": 3
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "milestone_id": "7ea6472f-65ca-4196-a0e9-73b64caeb0ce",
+    "step_order": 4
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "milestone_id": "002d8220-338b-46b9-87f9-48eeedbb5894",
+    "step_order": 5
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "milestone_id": "52ebf4a6-8c76-4ebf-8ea9-3ec64883be2f",
+    "step_order": 6
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "milestone_id": "3a115fe8-beab-4859-abd0-59e40d400ffa",
+    "step_order": 7
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "milestone_id": "cd8fbbc8-41ee-47fb-8935-fe2d1ede2ee4",
+    "step_order": 8
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "milestone_id": "121d3eba-372d-4893-b835-0508bea57b78",
+    "step_order": 9
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "milestone_id": "47c6eb4b-7d21-454d-8518-e3aa0643e0fa",
+    "step_order": 10
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "milestone_id": "a595c450-1786-4cef-b831-14373df53f16",
+    "step_order": 11
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "milestone_id": "9d73aba9-e0fb-41e6-87a8-266f6f370d5a",
+    "step_order": 1
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "milestone_id": "ec4ed28c-63b3-4624-86a0-9e8ce9455df1",
+    "step_order": 2
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "milestone_id": "141f53cf-5697-4848-a15d-a9d76be70b11",
+    "step_order": 3
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "milestone_id": "b5885fff-70f3-459a-b427-e519ae916129",
+    "step_order": 4
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "milestone_id": "6d94e031-5b0f-4f6e-8204-746175ba54f1",
+    "step_order": 5
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "milestone_id": "aa169cf3-aca6-4df2-ae79-1cc81c931969",
+    "step_order": 6
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "milestone_id": "7a8226ac-c79f-4985-930e-a0b791f4648b",
+    "step_order": 7
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "milestone_id": "55fc16dc-637a-4794-a8ce-8c8f6ae4c82f",
+    "step_order": 8
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "milestone_id": "25a4e55c-2c54-4d17-b04c-f7bfe8c93047",
+    "step_order": 9
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "milestone_id": "fb1d6d2c-a007-4241-9e1f-88f39a410925",
+    "step_order": 10
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "milestone_id": "500ac1c7-d577-4680-b39e-0f8537224367",
+    "step_order": 11
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "milestone_id": "7f84f5f5-0876-4ace-8d62-d197d4f47199",
+    "step_order": 1
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "milestone_id": "c77eac3f-d6d2-425a-821c-d766b1aff39f",
+    "step_order": 2
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "milestone_id": "dabf59ec-9451-4bf4-b469-4794f1336173",
+    "step_order": 3
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "milestone_id": "4e0e876c-b687-4d9c-a21d-3b0f58dab91d",
+    "step_order": 4
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "milestone_id": "a62f7ab0-010b-47a1-bcd9-5be9373794ba",
+    "step_order": 5
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "milestone_id": "017ec260-873d-4c99-81ea-5d42edf67643",
+    "step_order": 6
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "milestone_id": "de44db6f-be9a-40f3-ad2c-ed9aff6d7840",
+    "step_order": 7
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "milestone_id": "aed51ae5-de25-4cce-993c-50052b24869b",
+    "step_order": 8
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "milestone_id": "13d522c6-a4c3-4ac9-90f2-5c272265a12e",
+    "step_order": 9
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "milestone_id": "60744382-37db-4dd0-85e0-a0b97cddccb2",
+    "step_order": 10
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "milestone_id": "5ddc74b5-97aa-4eb0-a73a-3194e1647419",
+    "step_order": 11
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "milestone_id": "19dfa1e1-b2ad-4036-8412-f84f5837aac6",
+    "step_order": 1
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "milestone_id": "1d934a78-3869-4550-8128-07bb5ea91b9f",
+    "step_order": 2
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "milestone_id": "1d6db905-9cf6-400e-84b4-75c94d14843e",
+    "step_order": 3
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "milestone_id": "b275f607-557b-4469-9f63-b0c37fec08c6",
+    "step_order": 4
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "milestone_id": "6ba813f1-b2c6-46ea-93d5-78a08d865b71",
+    "step_order": 5
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "milestone_id": "a4498a9f-c768-4983-96ee-faa741af1e86",
+    "step_order": 6
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "milestone_id": "e108787e-95a7-4baa-8e7b-080a67b2a6ca",
+    "step_order": 7
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "milestone_id": "9a636d1e-7d07-4fd4-b1a4-bd984ce361e9",
+    "step_order": 8
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "milestone_id": "a6b12237-8bd5-4d13-a988-03665d2f4202",
+    "step_order": 9
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "milestone_id": "bb700be0-96dc-4fbc-8d70-b79427971456",
+    "step_order": 10
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "milestone_id": "da0e142b-1149-4ffb-b46f-dcfaddaba24d",
+    "step_order": 11
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "milestone_id": "50dc990c-3276-470f-bead-ac25c0e968a6",
+    "step_order": 1
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "milestone_id": "f4cf311f-f121-4aae-bd34-d31c09177409",
+    "step_order": 2
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "milestone_id": "37c82788-a17d-44cb-b166-0874dfb8f65f",
+    "step_order": 3
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "milestone_id": "49371486-5ae9-4a21-9120-a04808344467",
+    "step_order": 4
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "milestone_id": "8a2ab4f1-927c-45fc-8ed7-d623e396b5fa",
+    "step_order": 5
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "milestone_id": "d53f6023-ba39-4a89-9baa-870800462a20",
+    "step_order": 6
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "milestone_id": "7163038f-6cfd-4a4d-97de-bf46127bc14a",
+    "step_order": 7
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "milestone_id": "f2080fc7-355a-42f0-b8d3-c68fd24fab38",
+    "step_order": 8
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "milestone_id": "86c57873-00c4-4e0a-a376-8ad41d6c1f06",
+    "step_order": 9
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "milestone_id": "67e81fac-e745-4bac-a642-6cf61fb75ad9",
+    "step_order": 10
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "milestone_id": "4a9147be-9318-4545-a800-a26f10b76e95",
+    "step_order": 11
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "milestone_id": "fbba8ba1-f791-47b8-83c6-ff63eec43049",
+    "step_order": 1
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "milestone_id": "9f470a79-66e0-46c7-a8bd-90c49306d2d7",
+    "step_order": 2
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "milestone_id": "c590073d-bebb-4443-b78c-c3e72401bba7",
+    "step_order": 3
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "milestone_id": "29b0e856-bb26-41c6-ae99-973f4fae976e",
+    "step_order": 4
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "milestone_id": "177bf7da-12f4-483a-b206-8ab45e62fb18",
+    "step_order": 5
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "milestone_id": "d9fb40ed-506a-4948-84d6-55efa1e3632e",
+    "step_order": 6
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "milestone_id": "7116a70e-f4e7-4901-886b-bcd4e649aa67",
+    "step_order": 7
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "milestone_id": "84c4f830-6241-4412-82d4-cc061e42662b",
+    "step_order": 8
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "milestone_id": "dcafd1fa-41a9-412b-bd8d-63b170c8deac",
+    "step_order": 9
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "milestone_id": "de63765f-5fec-4ef5-aff9-aa8018408da7",
+    "step_order": 10
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "milestone_id": "e0bb419e-5b4d-4399-b1fa-dc99bfcddf1d",
+    "step_order": 11
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "milestone_id": "cf9ea06c-5048-4dff-8049-a59aa9534ab7",
+    "step_order": 1
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "milestone_id": "cf2aa4f3-f275-4fbd-a3ce-daae28b15a23",
+    "step_order": 2
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "milestone_id": "f4b224ea-b713-468f-9d98-178d517e0000",
+    "step_order": 3
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "milestone_id": "66436c78-2477-4e71-93fc-bc9459623c77",
+    "step_order": 4
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "milestone_id": "30c6f926-5490-4739-a04a-4658f6443876",
+    "step_order": 5
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "milestone_id": "9b156307-e915-4f13-8a82-583fd4dca6fa",
+    "step_order": 6
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "milestone_id": "50716ffe-9a78-41f3-a490-bd575bf274ef",
+    "step_order": 7
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "milestone_id": "4c4f4ee8-25ab-4bab-a358-c9d480c9c1a5",
+    "step_order": 8
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "milestone_id": "b90120b5-fe42-4645-987c-7e5749fd83c5",
+    "step_order": 9
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "milestone_id": "92635eb8-42f3-4504-a83a-db984c018caf",
+    "step_order": 10
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "milestone_id": "0e28ab78-181a-4c42-a7ac-e0400d2ba69d",
+    "step_order": 11
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "milestone_id": "2e1e6872-e8a9-4d07-9705-58a07250ae41",
+    "step_order": 1
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "milestone_id": "4a429a56-354c-45a5-beaf-063218192507",
+    "step_order": 2
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "milestone_id": "ff76fa25-4fed-45c7-8a86-7e2069617966",
+    "step_order": 3
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "milestone_id": "85b2aac4-5d67-4b53-8931-58b92da9ce4f",
+    "step_order": 4
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "milestone_id": "2a1a0938-bdae-4564-9826-fa08e1ff6996",
+    "step_order": 5
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "milestone_id": "011141e9-e0bf-41a1-a8b5-8bd1eaa7b44e",
+    "step_order": 6
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "milestone_id": "988d90b0-b42c-4e11-a364-403a62771bbd",
+    "step_order": 7
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "milestone_id": "0f5b2d15-54f9-4a04-b3ec-1a8fe321d007",
+    "step_order": 8
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "milestone_id": "99fd88d2-3645-49eb-b93c-7b4ef5a70011",
+    "step_order": 9
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "milestone_id": "b6e2fffd-351e-4efa-8d8d-556ecf8aed07",
+    "step_order": 10
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "milestone_id": "d6f5086c-bde1-4602-abe9-c01ded165c3d",
+    "step_order": 11
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "milestone_id": "96722729-48ac-4116-ae76-6be69a5d8198",
+    "step_order": 1
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "milestone_id": "0dbd6b60-478e-4e15-96b7-a44b3938b761",
+    "step_order": 2
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "milestone_id": "512ea6c3-9a4e-4145-a466-e3fa8758d263",
+    "step_order": 3
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "milestone_id": "24cdc859-60a8-4cb8-a76b-3a476a031f25",
+    "step_order": 4
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "milestone_id": "111473fc-c325-4651-8b4d-31c84a5d4bb2",
+    "step_order": 5
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "milestone_id": "156dba55-0965-4fc5-88ad-3f900305fcb1",
+    "step_order": 6
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "milestone_id": "8b8f83be-1052-49b7-8ac6-2c93af8779ee",
+    "step_order": 7
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "milestone_id": "1b9ae912-ebe9-4802-b1ee-af6e450b123b",
+    "step_order": 8
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "milestone_id": "a328b049-b440-4449-82ff-68f86768dd8d",
+    "step_order": 9
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "milestone_id": "64fbed1e-d9b6-4c38-8687-f9222d450f53",
+    "step_order": 10
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "milestone_id": "cccfbeef-1cae-495f-aa2e-f0b0c396d4d5",
+    "step_order": 11
+  }
+]

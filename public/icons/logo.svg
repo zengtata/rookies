@@ -1,18 +1,1 @@
-<svg width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path opacity="0.5" d="M20 9.99988V31.8888C29.8889 26.4443 38.2223 29.9999 40 31.9999V9.99987C33 5.99986 21.8148 6.62951 20 9.99988Z" fill="#DBE5FF"/>
-<path d="M20 10.0001V31.889C26.3333 23.6668 34.3334 25.6668 36.8889 26.1112V4.33343C31 2.44453 21.8148 6.62973 20 10.0001Z" fill="#F0F4FF"/>
-<path d="M20 9.74947V31.5556C23.4089 23.6965 32.4261 22.9217 34.2222 23.0324V0.00865083C29.9996 -0.257008 20.8797 5.65389 20 9.74947Z" fill="url(#paint0_linear_5984_2811)"/>
-<path opacity="0.5" d="M20 9.99988V31.8888C10.1111 26.4443 1.77775 29.9999 -3.43323e-05 31.9999V9.99987C6.99998 5.99986 18.1852 6.62951 20 9.99988Z" fill="#DBE5FF"/>
-<path d="M20 10.0001V31.889C13.6667 23.6668 5.66664 25.6668 3.11108 26.1112V4.33343C8.99998 2.44453 18.1852 6.62973 20 10.0001Z" fill="#F0F4FF"/>
-<path d="M20 9.74947V31.5556C16.5911 23.6965 7.57386 22.9217 5.77775 23.0324V0.00865083C10.0004 -0.257008 19.1203 5.65389 20 9.74947Z" fill="url(#paint1_linear_5984_2811)"/>
-<defs>
-<linearGradient id="paint0_linear_5984_2811" x1="20" y1="18.7778" x2="34.2222" y2="18.7778" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FAFBFF" stop-opacity="0.49"/>
-<stop offset="1" stop-color="#FAFBFF"/>
-</linearGradient>
-<linearGradient id="paint1_linear_5984_2811" x1="20" y1="18.7778" x2="5.77775" y2="18.7778" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FAFBFF" stop-opacity="0.49"/>
-<stop offset="1" stop-color="#FAFBFF"/>
-</linearGradient>
-</defs>
-</svg>
+<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 80.3 80.3" style="enable-background:new 0 0 80.3 80.3" xml:space="preserve"><style>.st4{fill:#fff}.st6{fill:#0c2c48}</style><circle cx="40.2" cy="40.2" r="40.2" style="fill:#f6a09c"/><path class="st6" d="M67.7 56.2c0 .7-.5 1.2-1.2 1.2H13.8c-.7 0-1.2-.5-1.2-1.2V17.4c0-.7.5-1.2 1.2-1.2h52.8c.7 0 1.2.5 1.2 1.2v38.8z"/><path style="fill:#bababa" d="M29.8 56.3h20.7v7H29.8z"/><path style="fill:#a3b9c4" d="M15.5 18.6h49.2v30.5H15.5z"/><path class="st4" d="M12.6 48.1v8.1c0 .7.5 1.2 1.2 1.2h52.8c.7 0 1.2-.5 1.2-1.2v-8.1H12.6zM55.7 68.1v-2.2c0-1.7-1.3-3-3-3h-25c-1.7 0-3 1.3-3 3v2.2h31z"/><circle class="st6" cx="40.2" cy="52.5" r="1.5"/><g><path class="st4" d="M32.8 38.2 23.5 34v-1.6l9.3-4.5v2.4l-6.6 2.8v.1l6.6 2.7v2.3z"/><path d="m44.6 24.6-7 16.7h-2.8l6.9-16.7h2.9z" style="fill:#50646f"/><path d="M56.2 33.8 46.9 38v-2.4l6.7-2.7-6.7-2.8v-2.4l9.3 4.4v1.7z" style="fill:#ed6b5a"/></g></svg>

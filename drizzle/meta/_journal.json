@@ -22,6 +22,13 @@
       "when": 1739044933262,
       "tag": "0002_giant_greymalkin",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1739190382394,
+      "tag": "0003_outgoing_frightful_four",
+      "breakpoints": true
     }
   ]
 }
