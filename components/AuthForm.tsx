@@ -114,11 +114,11 @@ const AuthForm = <T extends FieldValues>({
           </Button>
         </form>
       </Form>
-      <p className="text-center text-base font-medium">
+      <p className="text-center text-base font-medium text-customLight">
         {isSignIn ? "New to Rookies? " : "Already have an account? "}
         <Link
           href={isSignIn ? "/sign-up" : "/sign-in"}
-          className="font-bold text-primary"
+          className="font-bold text-customTeal"
         >
           {isSignIn ? "Sign up" : "Sign in"}
         </Link>

@@ -14,6 +14,10 @@ export default {
 				"bebas-neue": ["var(--bebas-neue)"],
 			},
 			colors: {
+				customLight: "#F2EFE7",
+				customBlueGray: "#9ACBD0",
+				customTeal: "#48A6A7",
+				customBlue: "#2973B2",
 				background: "hsl(var(--background))",
 				foreground: "hsl(var(--foreground))",
 				card: {
@@ -105,9 +109,6 @@ export default {
 				lg: "var(--radius)",
 				md: "calc(var(--radius) - 2px)",
 				sm: "calc(var(--radius) - 4px)",
-			},
-			backgroundImage: {
-				pattern: "url('/images/pattern.webp')",
 			},
 		},
 	},

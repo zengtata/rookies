@@ -19,7 +19,7 @@ const Layout = async ({ children }: { children: ReactNode }) => {
     .limit(1);
 
   if (!userCareerExists.length) {
-    //redirect("/quiz");
+    redirect("/quiz");
   }
 
   return (

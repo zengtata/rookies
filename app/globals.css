@@ -29,7 +29,7 @@
 
 @layer components {
   .form-btn {
-    @apply bg-primary text-dark-100 hover:bg-primary inline-flex min-h-14 w-full items-center justify-center rounded-md px-6 py-2 font-bold text-base !important;
+    @apply bg-customLight text-dark-100 hover:bg-customTeal inline-flex min-h-14 w-full items-center justify-center rounded-md px-6 py-2 font-bold text-base !important;
   }
 
   .form-input {
@@ -39,7 +39,7 @@
     text-base
     font-bold
     placeholder:font-normal
-    text-white
+    text-customLight
     placeholder:text-light-100
     focus-visible:ring-0
     focus-visible:shadow-none
@@ -127,7 +127,7 @@
 
   /* Auth */
   .auth-container {
-    @apply relative flex flex-col-reverse text-light-100 sm:flex-row;
+    @apply relative flex flex-col-reverse text-customLight sm:flex-row;
   }
 
   .auth-form {
@@ -142,7 +142,7 @@
     width: 400px;
     max-width: 90%;
     /* Transparent white overlay background */
-    background-color: rgba(165, 165, 165, 0.20);
+    background-color: rgb(242, 239, 231, 0.25);
   }
 
   .auth-video {
@@ -155,27 +155,6 @@
     @apply flex min-h-screen flex-1 flex-col bg-white px-5 xs:px-10 md:px-16;
   }
 
-  /* Book Details */
-  .book-details {
-    @apply lg:mt-36 mt-16 mb-20 flex flex-col gap-16 lg:flex-row;
-  }
-
-  .book-details h3 {
-    @apply text-xl font-semibold text-primary;
-  }
-
-  /* Library */
-  .library {
-    @apply mx-auto flex max-w-xl w-full flex-col text-center;
-  }
-
-  .library-subtitle {
-    @apply text-lg font-semibold uppercase text-light-100;
-  }
-
-  .library-title {
-    @apply mt-2 text-3xl font-semibold text-white xs:text-5xl;
-  }
 }
 
 @layer base {
