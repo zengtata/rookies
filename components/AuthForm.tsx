@@ -75,13 +75,8 @@ const AuthForm = <T extends FieldValues>({
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-2xl font-semibold text-white">
-        {isSignIn ? "Welcome Back To BookWise" : "Create your library account"}
+        {isSignIn ? "Welcome Back To Rookies" : "Create your account"}
       </h1>
-      <p className="text-light-100">
-        {isSignIn
-          ? "Access the vast collection of resources, and stay updated"
-          : "Please complete all fields and upload a valid university ID to gain access to the library"}
-      </p>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(handleSubmit)}
@@ -98,9 +93,6 @@ const AuthForm = <T extends FieldValues>({
                     {FIELD_NAMES[field.name as keyof typeof FIELD_NAMES]}
                   </FormLabel>
                   <FormControl>
-                    {field.name === "universityCard" ? (
-                      <ImageUpload onFileChange={field.onChange} />
-                    ) : (
                       <Input
                         required
                         type={
@@ -109,7 +101,6 @@ const AuthForm = <T extends FieldValues>({
                         {...field}
                         className="form-input"
                       />
-                    )}
                   </FormControl>
 
                   <FormMessage />
@@ -124,7 +115,7 @@ const AuthForm = <T extends FieldValues>({
         </form>
       </Form>
       <p className="text-center text-base font-medium">
-        {isSignIn ? "New to BookWise? " : "Already have an account? "}
+        {isSignIn ? "New to Rookies? " : "Already have an account? "}
         <Link
           href={isSignIn ? "/sign-up" : "/sign-in"}
           className="font-bold text-primary"

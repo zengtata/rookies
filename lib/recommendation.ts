@@ -9,7 +9,7 @@ export function getRecommendations(responses: string[]): string[] {
     "Business Analyst": 0,
     "UX Designer": 0,
     "QA Engineer": 0,
-    "IT Support": 0,
+    "IT Support": 0, 
     "Network Engineer": 0,
     "Cloud Engineer": 0,
   };

@@ -4,7 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="" />
+    <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/background.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AuthForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AuthForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recommendation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recommendation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/books.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/book.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/bookmark.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/calendar.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/caret-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/caret-up.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/close.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/edit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/eye.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/home.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/info.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/link.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/plus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/receipt.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/tick.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/trash.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/user.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/admin/users.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icons/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/icons/logo.svg" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,35 +64,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Thesis/rookies&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Thesis\\rookies\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Thesis\\rookies\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Thesis/rookies/app/(auth)/sign-in",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "D:\\Thesis\\rookies\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "D:\\Thesis\\rookies\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Thesis\rookies\app\(auth)\sign-in" />
+      <recent name="D:\Thesis\rookies\app\(auth)\sign-up" />
       <recent name="D:\OneDrive\Asztali gép\Thesis\rookies\career_recommendation_project" />
       <recent name="D:\OneDrive\Asztali gép\Thesis\rookies\career_recommendation_project\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Thesis\rookies\public" />
+      <recent name="D:\Thesis\rookies\app\(auth)" />
+      <recent name="D:\Thesis\rookies\public\icons" />
       <recent name="D:\Thesis\rookies\career_recommendation_project" />
       <recent name="D:\Thesis\rookies\career_recommendation_project\app\api\workflow\onboarding" />
-      <recent name="D:\Thesis\rookies\career_recommendation_project\app\api\auth" />
-      <recent name="D:\Thesis\rookies\career_recommendation_project\app" />
-      <recent name="D:\OneDrive\Asztali gép\Thesis\rookies\career_recommendation_project\app\(root)" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -93,7 +127,11 @@
       <workItem from="1739109821257" duration="6008000" />
       <workItem from="1739186021210" duration="16557000" />
       <workItem from="1739215979673" duration="6474000" />
-      <workItem from="1739280338378" duration="2889000" />
+      <workItem from="1739280338378" duration="3164000" />
+      <workItem from="1739391879183" duration="1101000" />
+      <workItem from="1739440820357" duration="757000" />
+      <workItem from="1739461755231" duration="5927000" />
+      <workItem from="1739531101080" duration="10039000" />
     </task>
     <servers />
   </component>

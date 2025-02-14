@@ -23,7 +23,7 @@ const bebasNeue = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "BookWise",
+  title: "Rookies",
   description: "BookWise is a university library management solution.",
 };
 
