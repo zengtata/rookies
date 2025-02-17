@@ -5,9 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/api/career-reviews/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/get-progress/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/update-progress/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/career_reviews.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/CareerCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/CareerInfo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MilestoneDetailsPanel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MilestoneFlow.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MilestoneNavigation.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MilestoneNavigationNodes.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MilestoneNode.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MilestoneSheet.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/app-sidebar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/DisableScroll.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/my-profile/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/my-profile/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/recommendation/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/recommendation/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AuthForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AuthForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/dialog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/seed.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle/meta/_journal.json" beforeDir="false" afterPath="$PROJECT_DIR$/drizzle/meta/_journal.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recommendation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recommendation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +131,11 @@
       <workItem from="1739440820357" duration="757000" />
       <workItem from="1739461755231" duration="5927000" />
       <workItem from="1739531101080" duration="10039000" />
-      <workItem from="1739555957203" duration="943000" />
+      <workItem from="1739555957203" duration="6024000" />
+      <workItem from="1739620346447" duration="10697000" />
+      <workItem from="1739700758786" duration="10217000" />
+      <workItem from="1739738030844" duration="4736000" />
+      <workItem from="1739789375966" duration="27749000" />
     </task>
     <servers />
   </component>

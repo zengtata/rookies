@@ -5,6 +5,14 @@
 @layer base {
   :root {
     --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .hide-scrollbar::-webkit-scrollbar {
@@ -24,6 +32,16 @@
 
   .hide-scrollbar::-webkit-scrollbar-thumb:hover {
     background: transparent;
+  }
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -210,5 +228,81 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+  }
+
+  .vertical-roadmap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-y: auto; /* Make it scrollable if needed */
+    max-height: 80vh; /* or any desired height */
+  }
+
+  /* Each container for a single milestone + connecting line */
+  .milestone-item {
+    position: relative;
+    margin-bottom: 2rem; /* spacing between nodes */
+  }
+
+  /* The line connecting to the next node (below the circle) */
+  .line {
+    position: absolute;
+    top: 80px; /* just below the node, which is 80px tall */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 2rem; /* adjust to control spacing */
+    background: #999;
+  }
+
+  /* Hide scrollbar */
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
+  }
+
+  /* (Optional) The existing tooltip code you have: */
+  .tooltip-container {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  /* Tooltip will be centered over the node */
+  .tooltip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    font-size: 0.875rem;
+    color: #333;
+  }
+
+  .tooltip-container:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

@@ -24,7 +24,7 @@ const bebasNeue = localFont({
 
 export const metadata: Metadata = {
   title: "Rookies",
-  description: "BookWise is a university library management solution.",
+  description: "Career guidance solution for IT beginners",
 };
 
 const RootLayout = async ({ children }: { children: ReactNode }) => {
@@ -33,10 +33,9 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
     <html lang="en">
       <SessionProvider session={session}>
         <body
-          className={`${ibmPlexSans.className} ${bebasNeue.variable} antialiased`}
+          className={`${ibmPlexSans.className} ${bebasNeue.variable}`}
         >
           {children}
-
           <Toaster />
         </body>
       </SessionProvider>

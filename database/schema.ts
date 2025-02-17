@@ -18,7 +18,6 @@ export const careers = pgTable("careers", {
   id: uuid("id").notNull().primaryKey().defaultRandom(),
   title: varchar("title", { length: 255 }).notNull(),
   description: text("description").notNull(),
-  sentiment_score: real("sentiment_score").notNull(), // sentiment score between 0-100
 });
 
 export const userCareer = pgTable("user_career", {
@@ -33,9 +32,21 @@ export const milestones = pgTable("milestones", {
   resources: text("resources").notNull(),
 });
 
-// Career-Milestone table with step_order
 export const careerMilestone = pgTable("career_milestone", {
   career_id: uuid("career_id").notNull().references(() => careers.id), // Add reference
   milestone_id: uuid("milestone_id").notNull().references(() => milestones.id), // Add reference
   step_order: integer("step_order").notNull(), // To track the order of milestones
+});
+
+export const userProgress = pgTable("user_progress", {
+  user_id: uuid("user_id").notNull().primaryKey().references(() => users.id),
+  current_milestone: integer("current_milestone").notNull().default(0),
+  completed_milestones: text("completed_milestones").notNull(), // Stored as JSON string
+});
+
+export const careerReviews = pgTable("career_reviews", {
+  career_id: uuid("career_id").notNull().references(() => careers.id), // Add reference
+  year: integer("year").notNull(),
+  sentiment_score: real("sentiment_score").notNull(),
+  num_reviews: integer("num_reviews").notNull(),
 });

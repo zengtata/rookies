@@ -14,7 +14,7 @@ const Page = () => {
 
     return (
         <>
-            <div className="mb-5 ml-5">
+            <div className="mb-5">
                 <Button onClick={handleSignOut}>Logout</Button>
             </div>
             <div className="flex justify-center">

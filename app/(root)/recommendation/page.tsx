@@ -1,15 +1,17 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
 
-const RecommendationPage = () => {
+import React, { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import { SidebarTrigger } from "@/components/ui/sidebar";
+import { CareerCard } from "@/components/CareerCard";
+
+export default function RecommendationPage() {
   const [careers, setCareers] = useState<any[]>([]);
   const router = useRouter();
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const fetchCareers = async () => {
-      // Retrieve quiz responses from localStorage
       const storedResponses = localStorage.getItem("quizResponses");
       if (!storedResponses) {
         alert("No quiz responses found. Please complete the quiz.");
@@ -45,7 +47,6 @@ const RecommendationPage = () => {
   }, [router]);
 
   const handleCareerSelection = async (careerId: string) => {
-    // Send the selected career ID to the backend to store it in the user-career table
     const response = await fetch("/api/select-career", {
       method: "POST",
       body: JSON.stringify({ careerId }),
@@ -55,38 +56,51 @@ const RecommendationPage = () => {
     });
 
     if (response.ok) {
-      // Redirect the user to the homepage after selection
       router.push("/");
     } else {
       alert("Failed to select career");
     }
   };
 
-  return (
-      <div className="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-lg space-y-6">
-        <h1 className="text-3xl font-semibold text-center text-gray-800">
-          Select Your Career
-        </h1>
+  // Convert vertical scroll to horizontal
+  const handleWheel = (event: React.WheelEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollLeft += event.deltaY;
+    }
+  };
 
-        <div className="space-y-6">
-          {careers.map((career) => (
-              <div key={career.id} className="space-y-2">
-                <h3 className="text-xl font-medium text-gray-700">{career.title}</h3>
-                <p className="text-gray-600">{career.description}</p>
-                <p className="text-gray-500">
-                  Sentiment Score: {career.sentiment_score}
-                </p>
-                <Button
-                    onClick={() => handleCareerSelection(career.id)}
-                    className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200 ease-in-out"
-                >
-                  Select Career
-                </Button>
+  return (
+      <div className="h-screen bg-white overflow-hidden">
+        {/* Sticky top header */}
+        <header className="h-16 border-b flex items-center gap-4 px-4 shrink-0">
+          <SidebarTrigger />
+          <h1 className="text-xl font-bold">Recommended Careers</h1>
+        </header>
+
+        {/* Main container */}
+        <main
+            ref={scrollContainerRef}
+            onWheel={handleWheel}
+            className= "hide-scrollbar overflow-hidden overflow-x-auto mx-auto w-[90vw] md:w-[calc(100vw-16rem)] h-[calc(100vh-2rem)] md:h-[calc(100vh-10%)]"
+        >
+          {careers.length === 0 ? (
+              <div className="flex items-center justify-center h-full">
+                <p className="text-gray-500">Loading or no careers found...</p>
               </div>
-          ))}
-        </div>
+          ) : (
+              <div className="flex flex-row items-center h-full space-x-6 px-2 py-2">
+                {careers.map((career) => (
+                    <div key={career.id} className="first:ml-0">
+                      <CareerCard
+                          career={career}
+                          onSelect={handleCareerSelection}
+                      />
+                    </div>
+                ))}
+              </div>
+          )}
+        </main>
       </div>
   );
-};
-
-export default RecommendationPage;
+}

@@ -3,7 +3,7 @@ export function getRecommendations(responses: string[]): string[] {
   const careerWeights: Record<string, number> = {
     "Data Scientist": 0,
     "AI Engineer": 0, // Replaced "Frontend Engineer" with "AI Engineer"
-    "Cybersecurity Specialist": 0,
+    "Cyber Security": 0,
     "Software Engineer": 0,
     "IT Manager": 0,
     "Business Analyst": 0,
@@ -21,7 +21,7 @@ export function getRecommendations(responses: string[]): string[] {
     case "Solving problems and puzzles":
       careerWeights["Software Engineer"] += 2;
       careerWeights["Data Scientist"] += 2;
-      careerWeights["Cybersecurity Specialist"] += 2;
+      careerWeights["Cyber Security"] += 2;
       careerWeights["QA Engineer"] += 1;
       careerWeights["Network Engineer"] += 1;
       break;
@@ -46,7 +46,7 @@ export function getRecommendations(responses: string[]): string[] {
     case "Fast-paced and constantly evolving":
       careerWeights["Software Engineer"] += 2;
       careerWeights["Data Scientist"] += 2;
-      careerWeights["Cybersecurity Specialist"] += 1;
+      careerWeights["Cyber Security"] += 1;
       careerWeights["Cloud Engineer"] += 2;
       break;
     case "Collaborative with a focus on teamwork":
@@ -58,7 +58,7 @@ export function getRecommendations(responses: string[]): string[] {
     case "Quiet, with independent tasks":
       careerWeights["Data Scientist"] += 2;
       careerWeights["Software Engineer"] += 1;
-      careerWeights["Cybersecurity Specialist"] += 1;
+      careerWeights["Cyber Security"] += 1;
       break;
     default:
       break;
@@ -70,7 +70,7 @@ export function getRecommendations(responses: string[]): string[] {
   switch (responses[2]) {
     case "Hands-on experience and trial-and-error":
       careerWeights["Software Engineer"] += 2;
-      careerWeights["Cybersecurity Specialist"] += 1;
+      careerWeights["Cyber Security"] += 1;
       careerWeights["IT Support"] += 1;
       careerWeights["QA Engineer"] += 1;
       break;
@@ -108,7 +108,7 @@ export function getRecommendations(responses: string[]): string[] {
       break;
     case "Become an expert in a specific field":
       careerWeights["Data Scientist"] += 2;
-      careerWeights["Cybersecurity Specialist"] += 2;
+      careerWeights["Cyber Security"] += 2;
       careerWeights["Software Engineer"] += 1;
       break;
     default:
@@ -120,7 +120,7 @@ export function getRecommendations(responses: string[]): string[] {
   // "I thrive on challenges and work well under pressure", "I prefer a steady pace and avoid stressful situations", "I use creative outlets to cope with stress", "None of these"
   switch (responses[4]) {
     case "I thrive on challenges and work well under pressure":
-      careerWeights["Cybersecurity Specialist"] += 2;
+      careerWeights["Cyber Security"] += 2;
       careerWeights["Software Engineer"] += 1;
       break;
     case "I prefer a steady pace and avoid stressful situations":
@@ -142,7 +142,7 @@ export function getRecommendations(responses: string[]): string[] {
     case "Problem-solving and analytical thinking":
       careerWeights["Data Scientist"] += 2;
       careerWeights["Software Engineer"] += 2;
-      careerWeights["Cybersecurity Specialist"] += 2;
+      careerWeights["Cyber Security"] += 2;
       careerWeights["QA Engineer"] += 1;
       break;
     case "Communication and collaboration":
@@ -221,7 +221,7 @@ export function getRecommendations(responses: string[]): string[] {
       break;
     case "I stand firm on my opinions and try to defend them":
       careerWeights["Software Engineer"] += 1;
-      careerWeights["Cybersecurity Specialist"] += 1;
+      careerWeights["Cyber Security"] += 1;
       break;
     default:
       break;
@@ -259,7 +259,7 @@ export function getRecommendations(responses: string[]): string[] {
       break;
     case "C++":
       careerWeights["Software Engineer"] += 2;
-      careerWeights["Cybersecurity Specialist"] += 1;
+      careerWeights["Cyber Security"] += 1;
       break;
     case "JavaScript":
       careerWeights["AI Engineer"] += 2; // Update: use AI Engineer instead of Frontend Engineer

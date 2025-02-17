@@ -1,0 +1,464 @@
+[
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "year": 2018,
+    "sentiment_score": 72.5,
+    "num_reviews": 120
+  },
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "year": 2019,
+    "sentiment_score": 74.3,
+    "num_reviews": 130
+  },
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "year": 2020,
+    "sentiment_score": 70.8,
+    "num_reviews": 140
+  },
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "year": 2021,
+    "sentiment_score": 75.0,
+    "num_reviews": 150
+  },
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "year": 2022,
+    "sentiment_score": 78.2,
+    "num_reviews": 160
+  },
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "year": 2023,
+    "sentiment_score": 80.5,
+    "num_reviews": 170
+  },
+  {
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "year": 2024,
+    "sentiment_score": 77.7,
+    "num_reviews": 165
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "year": 2018,
+    "sentiment_score": 68.9,
+    "num_reviews": 100
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "year": 2019,
+    "sentiment_score": 70.2,
+    "num_reviews": 110
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "year": 2020,
+    "sentiment_score": 72.5,
+    "num_reviews": 115
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "year": 2021,
+    "sentiment_score": 69.3,
+    "num_reviews": 105
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "year": 2022,
+    "sentiment_score": 71.8,
+    "num_reviews": 120
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "year": 2023,
+    "sentiment_score": 73.1,
+    "num_reviews": 130
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "year": 2024,
+    "sentiment_score": 75.0,
+    "num_reviews": 140
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "year": 2018,
+    "sentiment_score": 65.0,
+    "num_reviews": 80
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "year": 2019,
+    "sentiment_score": 66.5,
+    "num_reviews": 85
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "year": 2020,
+    "sentiment_score": 64.0,
+    "num_reviews": 90
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "year": 2021,
+    "sentiment_score": 67.8,
+    "num_reviews": 95
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "year": 2022,
+    "sentiment_score": 70.0,
+    "num_reviews": 100
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "year": 2023,
+    "sentiment_score": 68.4,
+    "num_reviews": 110
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "year": 2024,
+    "sentiment_score": 69.7,
+    "num_reviews": 105
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "year": 2018,
+    "sentiment_score": 82.3,
+    "num_reviews": 200
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "year": 2019,
+    "sentiment_score": 83.7,
+    "num_reviews": 210
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "year": 2020,
+    "sentiment_score": 81.5,
+    "num_reviews": 205
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "year": 2021,
+    "sentiment_score": 84.2,
+    "num_reviews": 215
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "year": 2022,
+    "sentiment_score": 86.0,
+    "num_reviews": 220
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "year": 2023,
+    "sentiment_score": 85.5,
+    "num_reviews": 225
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "year": 2024,
+    "sentiment_score": 87.1,
+    "num_reviews": 230
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "year": 2018,
+    "sentiment_score": 60.0,
+    "num_reviews": 50
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "year": 2019,
+    "sentiment_score": 62.2,
+    "num_reviews": 55
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "year": 2020,
+    "sentiment_score": 61.5,
+    "num_reviews": 60
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "year": 2021,
+    "sentiment_score": 63.3,
+    "num_reviews": 65
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "year": 2022,
+    "sentiment_score": 64.8,
+    "num_reviews": 70
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "year": 2023,
+    "sentiment_score": 66.0,
+    "num_reviews": 75
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "year": 2024,
+    "sentiment_score": 67.5,
+    "num_reviews": 80
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "year": 2018,
+    "sentiment_score": 55.5,
+    "num_reviews": 45
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "year": 2019,
+    "sentiment_score": 57.0,
+    "num_reviews": 50
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "year": 2020,
+    "sentiment_score": 56.2,
+    "num_reviews": 55
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "year": 2021,
+    "sentiment_score": 58.3,
+    "num_reviews": 60
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "year": 2022,
+    "sentiment_score": 59.7,
+    "num_reviews": 65
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "year": 2023,
+    "sentiment_score": 60.0,
+    "num_reviews": 70
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "year": 2024,
+    "sentiment_score": 61.5,
+    "num_reviews": 75
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "year": 2018,
+    "sentiment_score": 88.0,
+    "num_reviews": 180
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "year": 2019,
+    "sentiment_score": 89.5,
+    "num_reviews": 190
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "year": 2020,
+    "sentiment_score": 87.0,
+    "num_reviews": 185
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "year": 2021,
+    "sentiment_score": 90.0,
+    "num_reviews": 195
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "year": 2022,
+    "sentiment_score": 91.2,
+    "num_reviews": 200
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "year": 2023,
+    "sentiment_score": 92.5,
+    "num_reviews": 205
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "year": 2024,
+    "sentiment_score": 93.0,
+    "num_reviews": 210
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "year": 2018,
+    "sentiment_score": 79.0,
+    "num_reviews": 160
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "year": 2019,
+    "sentiment_score": 80.5,
+    "num_reviews": 165
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "year": 2020,
+    "sentiment_score": 78.0,
+    "num_reviews": 170
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "year": 2021,
+    "sentiment_score": 81.0,
+    "num_reviews": 175
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "year": 2022,
+    "sentiment_score": 82.3,
+    "num_reviews": 180
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "year": 2023,
+    "sentiment_score": 83.0,
+    "num_reviews": 185
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "year": 2024,
+    "sentiment_score": 84.5,
+    "num_reviews": 190
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "year": 2018,
+    "sentiment_score": 66.5,
+    "num_reviews": 95
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "year": 2019,
+    "sentiment_score": 67.8,
+    "num_reviews": 100
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "year": 2020,
+    "sentiment_score": 65.0,
+    "num_reviews": 105
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "year": 2021,
+    "sentiment_score": 68.2,
+    "num_reviews": 110
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "year": 2022,
+    "sentiment_score": 69.5,
+    "num_reviews": 115
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "year": 2023,
+    "sentiment_score": 70.0,
+    "num_reviews": 120
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "year": 2024,
+    "sentiment_score": 71.3,
+    "num_reviews": 125
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "year": 2018,
+    "sentiment_score": 74.0,
+    "num_reviews": 130
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "year": 2019,
+    "sentiment_score": 75.5,
+    "num_reviews": 135
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "year": 2020,
+    "sentiment_score": 73.3,
+    "num_reviews": 140
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "year": 2021,
+    "sentiment_score": 76.0,
+    "num_reviews": 145
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "year": 2022,
+    "sentiment_score": 77.8,
+    "num_reviews": 150
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "year": 2023,
+    "sentiment_score": 78.5,
+    "num_reviews": 155
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "year": 2024,
+    "sentiment_score": 80.0,
+    "num_reviews": 160
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "year": 2018,
+    "sentiment_score": 69.0,
+    "num_reviews": 90
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "year": 2019,
+    "sentiment_score": 70.0,
+    "num_reviews": 95
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "year": 2020,
+    "sentiment_score": 68.5,
+    "num_reviews": 100
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "year": 2021,
+    "sentiment_score": 71.0,
+    "num_reviews": 105
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "year": 2022,
+    "sentiment_score": 72.2,
+    "num_reviews": 110
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "year": 2023,
+    "sentiment_score": 73.5,
+    "num_reviews": 115
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "year": 2024,
+    "sentiment_score": 74.0,
+    "num_reviews": 120
+  }
+]

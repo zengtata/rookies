@@ -1,8 +1,8 @@
-import {careerMilestone, careers, milestones} from "@/database/schema";
+import { careerReviews } from "@/database/schema";
 import { neon } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-http";
 import { config } from "dotenv";
-import * as careerMilestoneData from "../career_milestone.json";
+import * as careerReviewData from "../career_reviews.json";
 
 config({ path: ".env.local" });
 
@@ -10,23 +10,24 @@ const sql = neon(process.env.DATABASE_URL!);
 export const db = drizzle({ client: sql });
 
 const seed = async () => {
-    console.log("Seeding career-milestone relations...");
+    console.log("Seeding career reviews...");
 
     try {
-        for (const data of careerMilestoneData) {
-            const { career_id, milestone_id, step_order } = data;
+        for (const data of careerReviewData) {
+            const { career_id, year, sentiment_score, num_reviews } = data;
 
-            // Insert the relationship into the career_milestone table
-            await db.insert(careerMilestone).values({
-                career_id: career_id,
-                milestone_id: milestone_id,
-                step_order: step_order,
+            // Insert the record into the careerReviews table
+            await db.insert(careerReviews).values({
+                career_id,
+                year,
+                sentiment_score,
+                num_reviews,
             });
         }
 
-        console.log("Career-Milestone relations seeded successfully!");
+        console.log("Career reviews seeded successfully!");
     } catch (error) {
-        console.error("Error seeding career-milestone relations:", error);
+        console.error("Error seeding career reviews:", error);
     }
 };
 

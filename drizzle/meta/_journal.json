@@ -29,6 +29,20 @@
       "when": 1739190382394,
       "tag": "0003_outgoing_frightful_four",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1739626581014,
+      "tag": "0004_nifty_namora",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1739805904468,
+      "tag": "0005_purple_la_nuit",
+      "breakpoints": true
     }
   ]
 }
