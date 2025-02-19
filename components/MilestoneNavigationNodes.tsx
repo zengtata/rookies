@@ -24,7 +24,7 @@ export function MilestoneNavigationNodes({
                                              onMilestoneClick,
                                          }: MilestoneNavigationNodesProps) {
     return (
-        <div className="vertical-roadmap hide-scrollbar">
+        <div className="vertical-roadmap hide-scrollbar pb-6">
             {milestones.map((m, index) => {
                 const isActive = index === currentIndex;
                 const isLast = index === milestones.length - 1;

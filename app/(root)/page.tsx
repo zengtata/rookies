@@ -5,6 +5,7 @@ import { MilestoneDetailsPanel } from "@/components/MilestoneDetailsPanel";
 import { MilestoneSheet } from "@/components/MilestoneSheet";
 import { MilestoneNavigationNodes } from "@/components/MilestoneNavigationNodes";
 import { SidebarTrigger } from "@/components/ui/sidebar";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface Milestone {
     milestone: {
@@ -117,7 +118,7 @@ export default function Homepage() {
         await saveProgressToServer(currentIndex, newCompleted);
     };
 
-    // Progress bar height
+    // Progress bar percentage
     const progressPercentage =
         milestones.length > 0 ? (completedMilestones.length / milestones.length) * 100 : 0;
 
@@ -131,7 +132,7 @@ export default function Homepage() {
                             <SidebarTrigger />
                             <div>
                                 <h1 className="text-2xl font-bold">{career.title}</h1>
-                                <p className="text-sm text-gray-600">{career.description}</p>
+                                {/* <p className="text-sm text-gray-600">{career.description}</p> */}
                             </div>
                         </div>
                     )}
@@ -139,30 +140,27 @@ export default function Homepage() {
             </header>
 
             {/* Main content: 3 columns on desktop */}
-            <div className="flex flex-1 overflow-hidden">
+            <div className="flex flex-1">
                 {/* Left Column: vertical bar with progress (visible on all screens) */}
                 <div className="w-16 border-r bg-white relative flex items-center justify-center">
-                    {/* Full-height container to remove bottom empty space */}
                     <div className="absolute inset-0 flex items-center justify-center">
-                        {/* Gray line track, ~80% of container height for spacing */}
                         <div className="h-[80%] w-2 bg-gray-300 relative">
-                            {/* Filled portion */}
                             <div
-                                className="bg-blue-600 w-full transition-all duration-300"
+                                className="bg-green-600 w-full transition-all duration-300"
                                 style={{ height: `${progressPercentage}%` }}
                             />
                         </div>
                     </div>
                 </div>
 
-                {/* Middle Column: Milestone Navigation (full width on mobile, 1/3 on desktop) */}
-                <div className="w-full md:w-1/3 overflow-y-auto hide-scrollbar p-4">
+                {/* Middle Column: Milestone Navigation wrapped in a ScrollArea */}
+                <ScrollArea className="w-full md:w-2/5 h-full pt-4 hide-scrollbar">
                     <MilestoneNavigationNodes
                         milestones={milestones}
                         currentIndex={currentIndex}
                         onMilestoneClick={handleMilestoneClick}
                     />
-                </div>
+                </ScrollArea>
 
                 {/* Right Column: Milestone Details (hidden on mobile) */}
                 <div className="hidden md:block flex-1 p-4">

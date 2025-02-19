@@ -28,7 +28,7 @@ export function AppSidebar() {
         >
             <SidebarContent>
                 <SidebarGroup>
-                    <SidebarGroupLabel>Navigation</SidebarGroupLabel>
+                    <SidebarGroupLabel>Rookies</SidebarGroupLabel>
                     <SidebarMenu>
                         {navItems.map((item) => (
                             <SidebarMenuItem key={item.title}>

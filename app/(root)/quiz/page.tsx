@@ -1,7 +1,10 @@
 "use client";
+
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import { SidebarTrigger } from "@/components/ui/sidebar";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const questions = [
   {
@@ -116,41 +119,29 @@ interface Answers {
 
 const Page = () => {
   const [answers, setAnswers] = useState<Answers>({});
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
-  const [selectedAnswer, setSelectedAnswer] = useState<{ [key: number]: string }>({});
   const router = useRouter();
 
+  // Toggle selection: if the same answer is clicked, clear it; otherwise, set it.
   const handleAnswer = (questionIndex: number, answer: string) => {
-    setAnswers((prev) => ({ ...prev, [questionIndex]: answer }));
-    setSelectedAnswer((prev) => ({ ...prev, [questionIndex]: answer }));
-  };
-
-  const handleNext = () => {
-    if (currentQuestionIndex < questions.length - 1) {
-      setCurrentQuestionIndex((prev) => prev + 1);
-    }
-  };
-
-  const handlePrevious = () => {
-    if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex((prev) => prev - 1);
-    }
+    setAnswers((prev) => {
+      if (prev[questionIndex] === answer) {
+        const updated = { ...prev };
+        delete updated[questionIndex];
+        return updated;
+      }
+      return { ...prev, [questionIndex]: answer };
+    });
   };
 
   const handleSubmit = async () => {
-    // Ensure that all questions have been answered.
     if (Object.keys(answers).length < questions.length) {
       alert("Please answer all questions before submitting.");
       return;
     }
 
-    // Convert answers object to an array of responses.
-    const responses = Object.values(answers);
-
-    // Save responses to localStorage for later use (e.g., in the RecommendationPage)
+    const responses = questions.map((_, index) => answers[index]);
     localStorage.setItem("quizResponses", JSON.stringify(responses));
 
-    // Send responses to the recommendation API endpoint.
     const response = await fetch("/api/recommend", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -177,59 +168,68 @@ const Page = () => {
     }
   };
 
+  const allAnswered = Object.keys(answers).length === questions.length;
+
   return (
-      <div className="bg-gray-100 p-8 min-h-screen flex items-center justify-center">
-        <div className="max-w-2xl w-full bg-white p-6 rounded-xl shadow-lg space-y-6">
-          <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
-            Career Recommendation Quiz
-          </h1>
-          <div className="space-y-6">
-            <h3 className="text-xl font-medium text-gray-700">
-              {questions[currentQuestionIndex].question}
-            </h3>
-            <ul className="space-y-4">
-              {questions[currentQuestionIndex].options.map((option, idx) => (
-                  <li key={idx}>
-                    <Button
-                        onClick={() => handleAnswer(currentQuestionIndex, option)}
-                        className={`${
-                            selectedAnswer[currentQuestionIndex] === option
-                                ? "bg-blue-600 text-white"
-                                : "bg-gray-200 text-gray-800"
-                        } w-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 px-4 py-3 rounded-lg transition-colors duration-200 ease-in-out`}
-                    >
-                      {option}
-                    </Button>
-                  </li>
-              ))}
-            </ul>
+      <div className="h-screen overflow-hidden">
+        {/* Header with sidebar trigger */}
+        <header className="h-16 border-b flex items-center gap-4 px-4 shrink-0">
+          <SidebarTrigger />
+          <h1 className="text-xl font-bold">Career Quiz</h1>
+        </header>
+
+        {/* Main container: flex-col on mobile, flex-row on desktop */}
+        <main className="flex flex-col md:flex-row p-4 mx-auto w-[90vw] md:w-[calc(100vw-16rem)] h-[calc(100vh-4rem)] overflow-hidden">
+          {/* 3D Model Container (desktop only) */}
+          <div className="hidden md:flex w-full md:w-1/3 border border-gray-300 items-center justify-center">
+            <p className="text-lg font-medium">3D model</p>
           </div>
-          <div className="flex justify-between">
-            {currentQuestionIndex > 0 && (
-                <Button
-                    onClick={handlePrevious}
-                    className="w-auto bg-gray-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-600 transition-colors duration-200 ease-in-out"
-                >
-                  Previous
-                </Button>
-            )}
-            {currentQuestionIndex < questions.length - 1 ? (
-                <Button
-                    onClick={handleNext}
-                    className="w-auto bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200 ease-in-out"
-                >
-                  Next
-                </Button>
-            ) : (
+
+          {/* Questions Container within a ScrollArea */}
+          <ScrollArea className="w-full md:w-2/3 h-full md:pl-4 hide-scrollbar">
+            <div className="space-y-6 pb-8">
+              {questions.map((q, index) => (
+                  <div key={index}>
+                    <h3 className="text-xl font-medium text-gray-700 mb-8">
+                      {q.question}
+                    </h3>
+                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                      {q.options.map((option, idx) => {
+                        // If an answer is already selected, only render that one.
+                        if (answers[index] && answers[index] !== option) return null;
+                        return (
+                            <Button
+                                key={idx}
+                                onClick={() => handleAnswer(index, option)}
+                                className={`inline-flex items-center px-4 py-3 rounded-lg transition-colors duration-200 ease-in-out ${
+                                    answers[index] === option
+                                        ? "bg-blue-600 text-white border border-blue-600"
+                                        : "bg-transparent text-gray-800 border border-gray-300 hover:bg-gray-50"
+                                }`}
+                            >
+                              {option}
+                            </Button>
+                        );
+                      })}
+                    </div>
+                  </div>
+              ))}
+              <div className="flex justify-center mt-8">
                 <Button
                     onClick={handleSubmit}
-                    className="w-full sm:w-auto bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-200 ease-in-out"
+                    disabled={!allAnswered}
+                    className={`px-6 py-3 rounded-lg shadow-md transition-colors duration-200 ease-in-out ${
+                        allAnswered
+                            ? "bg-blue-600 text-white hover:bg-blue-700"
+                            : "bg-gray-400 text-gray-800 cursor-not-allowed"
+                    }`}
                 >
                   Submit
                 </Button>
-            )}
-          </div>
-        </div>
+              </div>
+            </div>
+          </ScrollArea>
+        </main>
       </div>
   );
 };
