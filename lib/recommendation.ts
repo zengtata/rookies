@@ -1,296 +1,354 @@
 export function getRecommendations(responses: string[]): string[] {
-  // Define initial weights for each career.
   const careerWeights: Record<string, number> = {
     "Data Scientist": 0,
-    "AI Engineer": 0, // Replaced "Frontend Engineer" with "AI Engineer"
+    "AI Engineer": 0,
     "Cyber Security": 0,
     "Software Engineer": 0,
     "IT Manager": 0,
     "Business Analyst": 0,
     "UX Designer": 0,
     "QA Engineer": 0,
-    "IT Support": 0, 
+    "IT Support": 0,
     "Network Engineer": 0,
     "Cloud Engineer": 0,
   };
 
-  // Question 1: Which of these activities do you enjoy most?
-  // Options:
-  // "Solving problems and puzzles", "Helping others and making a positive impact", "Expressing creativity and imagination", "None of these"
+  // Q1: How do you tackle tough coding challenges?
   switch (responses[0]) {
-    case "Solving problems and puzzles":
+    case "I break problems down into smaller steps.":
       careerWeights["Software Engineer"] += 2;
-      careerWeights["Data Scientist"] += 2;
-      careerWeights["Cyber Security"] += 2;
-      careerWeights["QA Engineer"] += 1;
-      careerWeights["Network Engineer"] += 1;
+      careerWeights["QA Engineer"] += 2;
+      careerWeights["Data Scientist"] += 1;
+      careerWeights["Cyber Security"] += 1;
       break;
-    case "Helping others and making a positive impact":
-      careerWeights["IT Support"] += 2;
-      careerWeights["Business Analyst"] += 2;
+    case "I experiment until something clicks.":
+      careerWeights["AI Engineer"] += 2;
+      careerWeights["UX Designer"] += 2;
+      careerWeights["Software Engineer"] += 1;
+      break;
+    case "I chat with my teammates for fresh ideas.":
+      careerWeights["Business Analyst"] += 3;
+      careerWeights["IT Manager"] += 1;
+      careerWeights["IT Support"] += 1;
+      careerWeights["UX Designer"] += 1;
+      break;
+    case "I look back at what worked before.":
+      careerWeights["QA Engineer"] += 2;
+      careerWeights["Software Engineer"] += 1;
       careerWeights["IT Manager"] += 1;
       break;
-    case "Expressing creativity and imagination":
-      careerWeights["UX Designer"] += 2;
-      careerWeights["AI Engineer"] += 2; // Use AI Engineer instead of Frontend Engineer
+  }
+
+  // Q2: What role do you usually play in a team?
+  switch (responses[1]) {
+    case "I love leading and keeping things organized.":
+      careerWeights["IT Manager"] += 3;
       careerWeights["Business Analyst"] += 1;
       break;
-    default:
+    case "I enjoy sharing creative ideas.":
+      careerWeights["UX Designer"] += 3;
+      careerWeights["AI Engineer"] += 1;
+      careerWeights["Business Analyst"] += 1;
       break;
-  }
-
-  // Question 2: What type of work setting do you prefer?
-  // Options:
-  // "Fast-paced and constantly evolving", "Collaborative with a focus on teamwork", "Quiet, with independent tasks", "None of these"
-  switch (responses[1]) {
-    case "Fast-paced and constantly evolving":
+    case "I prefer working independently.":
+      careerWeights["Data Scientist"] += 3;
       careerWeights["Software Engineer"] += 2;
-      careerWeights["Data Scientist"] += 2;
       careerWeights["Cyber Security"] += 1;
-      careerWeights["Cloud Engineer"] += 2;
       break;
-    case "Collaborative with a focus on teamwork":
+    case "I’m the go-to for smoothing over conflicts.":
+      careerWeights["IT Support"] += 3;
       careerWeights["Business Analyst"] += 2;
-      careerWeights["UX Designer"] += 1;
-      careerWeights["IT Manager"] += 2;
-      careerWeights["QA Engineer"] += 1;
-      break;
-    case "Quiet, with independent tasks":
-      careerWeights["Data Scientist"] += 2;
-      careerWeights["Software Engineer"] += 1;
-      careerWeights["Cyber Security"] += 1;
-      break;
-    default:
       break;
   }
 
-  // Question 3: What’s your preferred way of learning new skills?
-  // Options:
-  // "Hands-on experience and trial-and-error", "Reading, research, and self-study", "Discussion and group activities", "None of these"
+  // Q3: How do you decide what to work on first?
   switch (responses[2]) {
-    case "Hands-on experience and trial-and-error":
+    case "I plan everything in detail.":
+      careerWeights["IT Manager"] += 3;
+      careerWeights["QA Engineer"] += 2;
+      break;
+    case "I adapt on the fly as priorities change.":
+      careerWeights["Cloud Engineer"] += 3;
       careerWeights["Software Engineer"] += 2;
-      careerWeights["Cyber Security"] += 1;
-      careerWeights["IT Support"] += 1;
-      careerWeights["QA Engineer"] += 1;
       break;
-    case "Reading, research, and self-study":
-      careerWeights["Data Scientist"] += 2;
-      careerWeights["IT Manager"] += 1;
-      careerWeights["Network Engineer"] += 1;
+    case "I handle the toughest tasks first.":
+      careerWeights["Data Scientist"] += 3;
+      careerWeights["Cyber Security"] += 2;
       break;
-    case "Discussion and group activities":
-      careerWeights["Business Analyst"] += 2;
-      careerWeights["UX Designer"] += 1;
-      careerWeights["IT Manager"] += 1;
-      break;
-    default:
-      break;
-  }
-
-  // Question 4: What are your long-term career ambitions?
-  // Options:
-  // "Achieve financial stability", "Pursue a career that makes a positive societal impact", "Have a creative career that allows for personal expression", "Become an expert in a specific field", "Something else"
-  switch (responses[3]) {
-    case "Achieve financial stability":
+    case "I set priorities together with my team.":
+      careerWeights["Business Analyst"] += 3;
       careerWeights["IT Manager"] += 2;
-      careerWeights["Software Engineer"] += 1;
-      careerWeights["Network Engineer"] += 1;
-      break;
-    case "Pursue a career that makes a positive societal impact":
-      careerWeights["IT Support"] += 2;
-      careerWeights["Business Analyst"] += 2;
-      careerWeights["UX Designer"] += 1;
-      break;
-    case "Have a creative career that allows for personal expression":
-      careerWeights["UX Designer"] += 2;
-      careerWeights["AI Engineer"] += 2; // Update: use AI Engineer instead of Frontend Engineer
-      break;
-    case "Become an expert in a specific field":
-      careerWeights["Data Scientist"] += 2;
-      careerWeights["Cyber Security"] += 2;
-      careerWeights["Software Engineer"] += 1;
-      break;
-    default:
       break;
   }
 
-  // Question 5: How do you manage stress or challenging situations?
-  // Options:
-  // "I thrive on challenges and work well under pressure", "I prefer a steady pace and avoid stressful situations", "I use creative outlets to cope with stress", "None of these"
-  switch (responses[4]) {
-    case "I thrive on challenges and work well under pressure":
-      careerWeights["Cyber Security"] += 2;
-      careerWeights["Software Engineer"] += 1;
+  // Q4: How do you feel about learning new technologies?
+  switch (responses[3]) {
+    case "I’m excited and always learning.":
+      careerWeights["AI Engineer"] += 3;
+      careerWeights["Software Engineer"] += 2;
+      careerWeights["Data Scientist"] += 1;
       break;
-    case "I prefer a steady pace and avoid stressful situations":
+    case "I stick with what I know but can adjust.":
       careerWeights["IT Support"] += 2;
       careerWeights["QA Engineer"] += 2;
       break;
-    case "I use creative outlets to cope with stress":
-      careerWeights["UX Designer"] += 2;
-      careerWeights["AI Engineer"] += 1; // Update: use AI Engineer here if appropriate
+    case "I rely on my strong basics.":
+      careerWeights["Software Engineer"] += 3;
+      careerWeights["Data Scientist"] += 2;
       break;
-    default:
+    case "I need a little extra time to catch up.":
+      careerWeights["IT Support"] += 2;
+      careerWeights["QA Engineer"] += 3;
       break;
   }
 
-  // Question 6: Which skill would you consider your strongest?
-  // Options:
-  // "Problem-solving and analytical thinking", "Communication and collaboration", "Creativity and innovative thinking", "Leadership and team management", "Adaptability to change", "Something else"
-  switch (responses[5]) {
-    case "Problem-solving and analytical thinking":
-      careerWeights["Data Scientist"] += 2;
-      careerWeights["Software Engineer"] += 2;
+  // Q5: Which technical skill is your strongest? (Critical – increased weight)
+  switch (responses[4]) {
+    case "Coding (Python, Java...).":
+      careerWeights["Software Engineer"] += 6;
+      careerWeights["Data Scientist"] += 4;
       careerWeights["Cyber Security"] += 2;
-      careerWeights["QA Engineer"] += 1;
-      break;
-    case "Communication and collaboration":
+      careerWeights["AI Engineer"] += 4;
       careerWeights["Business Analyst"] += 2;
-      careerWeights["IT Manager"] += 1;
-      careerWeights["UX Designer"] += 1;
-      break;
-    case "Creativity and innovative thinking":
       careerWeights["UX Designer"] += 2;
-      careerWeights["AI Engineer"] += 2; // Update: use AI Engineer instead of Frontend Engineer
-      break;
-    case "Leadership and team management":
-      careerWeights["IT Manager"] += 2;
-      careerWeights["Business Analyst"] += 1;
-      break;
-    case "Adaptability to change":
+      careerWeights["QA Engineer"] += 2;
+      careerWeights["Network Engineer"] += 2;
       careerWeights["Cloud Engineer"] += 2;
-      careerWeights["IT Manager"] += 1;
       break;
-    default:
+    case "Databases and SQL.":
+      careerWeights["Data Scientist"] += 6;
+      careerWeights["Business Analyst"] += 4;
+      careerWeights["Software Engineer"] += 2;
+      break;
+    case "Networking and systems.":
+      careerWeights["Network Engineer"] += 6;
+      careerWeights["Cyber Security"] += 4;
+      careerWeights["Cloud Engineer"] += 2;
+      break;
+    case "Designing software architecture.":
+      careerWeights["AI Engineer"] += 6;
+      careerWeights["Software Engineer"] += 4;
+      careerWeights["UX Designer"] += 4;
       break;
   }
 
-  // Question 7: When working with others, which role do you usually take on?
-  // Options: "Leader", "Organiser", "Idea generator", "Listener", "Other"
+  // Q6: How do you like to get feedback?
+  switch (responses[5]) {
+    case "I appreciate tips that help me grow.":
+      careerWeights["IT Manager"] += 3;
+      careerWeights["Software Engineer"] += 2;
+      break;
+    case "I love hearing positive vibes.":
+      careerWeights["IT Support"] += 3;
+      careerWeights["UX Designer"] += 2;
+      break;
+    case "I prefer detailed, technical advice.":
+      careerWeights["Data Scientist"] += 3;
+      careerWeights["QA Engineer"] += 2;
+      break;
+    case "A mix of both is best.":
+      careerWeights["Business Analyst"] += 3;
+      careerWeights["IT Manager"] += 2;
+      break;
+  }
+
+  // Q7: How do you handle a conflict with a teammate?
   switch (responses[6]) {
-    case "Leader":
+    case "I jump in to mediate and chat it out.":
+      careerWeights["Business Analyst"] += 3;
       careerWeights["IT Manager"] += 2;
-      careerWeights["Business Analyst"] += 1;
       break;
-    case "Organiser":
-      careerWeights["IT Manager"] += 1;
-      careerWeights["QA Engineer"] += 1;
+    case "I try to solve it on my own first.":
+      careerWeights["Software Engineer"] += 3;
+      careerWeights["Cyber Security"] += 2;
       break;
-    case "Idea generator":
-      careerWeights["UX Designer"] += 2;
-      careerWeights["AI Engineer"] += 1; // Update: assign weight to AI Engineer
+    case "I follow our team’s process.":
+      careerWeights["IT Manager"] += 3;
+      careerWeights["QA Engineer"] += 2;
       break;
-    case "Listener":
-      careerWeights["IT Support"] += 2;
-      careerWeights["Business Analyst"] += 1;
-      break;
-    default:
+    case "I usually let it settle on its own.":
+      careerWeights["IT Support"] += 3;
+      careerWeights["QA Engineer"] += 2;
       break;
   }
 
-  // Question 8: How do you prefer to communicate with others?
-  // Options: "Face-to-face interaction", "Via phone or video calls", "Through email or text messages", "It depends on the situation"
+  // Q8: What matters most when starting a project?
   switch (responses[7]) {
-    case "Face-to-face interaction":
+    case "Understanding what the user needs.":
+      careerWeights["Business Analyst"] += 3;
       careerWeights["UX Designer"] += 2;
-      careerWeights["Business Analyst"] += 1;
       break;
-    case "Via phone or video calls":
-      careerWeights["IT Manager"] += 1;
-      careerWeights["Business Analyst"] += 1;
-      break;
-    case "Through email or text messages":
-      careerWeights["IT Support"] += 2;
-      careerWeights["QA Engineer"] += 1;
-      break;
-    default:
-      break;
-  }
-
-  // Question 9: How do you approach conflict or disagreement in a team?
-  // Options: "I try to find a solution that works for everyone", "I avoid conflict and hope it resolves on its own", "I stand firm on my opinions and try to defend them", "None of these"
-  switch (responses[8]) {
-    case "I try to find a solution that works for everyone":
-      careerWeights["Business Analyst"] += 2;
-      careerWeights["IT Manager"] += 1;
-      break;
-    case "I avoid conflict and hope it resolves on its own":
-      careerWeights["IT Support"] += 2;
-      careerWeights["QA Engineer"] += 1;
-      break;
-    case "I stand firm on my opinions and try to defend them":
-      careerWeights["Software Engineer"] += 1;
-      careerWeights["Cyber Security"] += 1;
-      break;
-    default:
-      break;
-  }
-
-  // Question 10: What’s your approach to tackling complex problems?
-  // Options: "Break it down into smaller tasks and tackle them one by one",
-  // "Think creatively and explore unconventional solutions", "Collaborate with others and seek input when needed", "Something else"
-  switch (responses[9]) {
-    case "Break it down into smaller tasks and tackle them one by one":
-      careerWeights["Software Engineer"] += 2;
-      careerWeights["Data Scientist"] += 1;
-      break;
-    case "Think creatively and explore unconventional solutions":
-      careerWeights["UX Designer"] += 2;
-      careerWeights["AI Engineer"] += 1; // Update: assign weight to AI Engineer
-      break;
-    case "Collaborate with others and seek input when needed":
-      careerWeights["Business Analyst"] += 2;
-      careerWeights["IT Manager"] += 1;
-      break;
-    default:
-      break;
-  }
-
-  // Question 11: What coding languages are you familiar with or interested in learning?
-  // Options: "Python", "Java", "C++", "JavaScript", "SQL", "Go", "R", "C#", "HTML/CSS", "I’m not familiar with any yet"
-  switch (responses[10]) {
-    case "Python":
-      careerWeights["Data Scientist"] += 2;
-      careerWeights["Software Engineer"] += 1;
-      break;
-    case "Java":
-      careerWeights["Software Engineer"] += 2;
-      break;
-    case "C++":
-      careerWeights["Software Engineer"] += 2;
-      careerWeights["Cyber Security"] += 1;
-      break;
-    case "JavaScript":
-      careerWeights["AI Engineer"] += 2; // Update: use AI Engineer instead of Frontend Engineer
-      careerWeights["Software Engineer"] += 1;
-      break;
-    case "SQL":
-      careerWeights["Data Scientist"] += 1;
-      careerWeights["Business Analyst"] += 1;
-      break;
-    case "Go":
+    case "Choosing the right tools and tech.":
+      careerWeights["Software Engineer"] += 3;
       careerWeights["Cloud Engineer"] += 2;
-      careerWeights["Software Engineer"] += 1;
       break;
-    case "R":
-      careerWeights["Data Scientist"] += 2;
+    case "Planning and scheduling tasks.":
+      careerWeights["IT Manager"] += 3;
+      careerWeights["QA Engineer"] += 2;
       break;
-    case "C#":
-      careerWeights["Software Engineer"] += 2;
-      break;
-    case "HTML/CSS":
-      careerWeights["AI Engineer"] += 2; // Update: assign weight to AI Engineer
-      careerWeights["UX Designer"] += 1;
-      break;
-    case "I’m not familiar with any yet":
-      // No additional weight
-      break;
-    default:
+    case "Making sure everyone communicates well.":
+      careerWeights["Business Analyst"] += 3;
+      careerWeights["IT Manager"] += 2;
       break;
   }
 
-  // Sort the careers by weight in descending order and return the sorted career titles.
+  // Q9: How do you stay in the loop with tech trends?
+  switch (responses[8]) {
+    case "I read blogs, articles and watch videos.":
+      careerWeights["Data Scientist"] += 3;
+      careerWeights["Software Engineer"] += 2;
+      break;
+    case "I attend meetups and webinars.":
+      careerWeights["IT Manager"] += 3;
+      careerWeights["Business Analyst"] += 2;
+      break;
+    case "I take online courses and earn certificates.":
+      careerWeights["AI Engineer"] += 3;
+      careerWeights["Software Engineer"] += 2;
+      break;
+    case "I chat with peers and join communities.":
+      careerWeights["IT Support"] += 3;
+      careerWeights["UX Designer"] += 2;
+      break;
+  }
+
+  // Q10: How would you describe your work style?
+  switch (responses[9]) {
+    case "I thrive in a busy, collaborative space.":
+      careerWeights["Business Analyst"] += 3;
+      careerWeights["IT Manager"] += 2;
+      break;
+    case "I enjoy quiet time to focus deeply.":
+      careerWeights["Data Scientist"] += 3;
+      careerWeights["Software Engineer"] += 2;
+      break;
+    case "I like a mix of solo and team work.":
+      careerWeights["Software Engineer"] += 3;
+      careerWeights["IT Manager"] += 2;
+      break;
+    case "I prefer a creative, flexible vibe.":
+      careerWeights["UX Designer"] += 3;
+      careerWeights["AI Engineer"] += 2;
+      break;
+  }
+
+  // Q11: Which tech area excites you the most? (Critical – increased weight)
+  switch (responses[10]) {
+    case "Cloud and distributed systems.":
+      careerWeights["Cloud Engineer"] += 6;
+      careerWeights["IT Manager"] += 2;
+      break;
+    case "Cybersecurity":
+      careerWeights["Cyber Security"] += 6;
+      careerWeights["Network Engineer"] += 4;
+      break;
+    case "Data and machine learning.":
+      careerWeights["Data Scientist"] += 6;
+      careerWeights["AI Engineer"] += 4;
+      break;
+    case "Mobile and web apps.":
+      careerWeights["Software Engineer"] += 6;
+      careerWeights["UX Designer"] += 4;
+      break;
+    case "None of the above.":
+      // No additional points.
+      break;
+  }
+
+  // Q12: How do you love to learn new things?
+  switch (responses[11]) {
+    case "I set aside time for online courses and reading.":
+      careerWeights["AI Engineer"] += 3;
+      careerWeights["Data Scientist"] += 2;
+      break;
+    case "I learn best while working on real projects.":
+      careerWeights["Software Engineer"] += 3;
+      careerWeights["Business Analyst"] += 2;
+      break;
+    case "I enjoy learning from mentors and peers.":
+      careerWeights["IT Manager"] += 3;
+      careerWeights["IT Support"] += 2;
+      break;
+    case "I join workshops and community events.":
+      careerWeights["UX Designer"] += 3;
+      careerWeights["Business Analyst"] += 2;
+      break;
+    case "None of the above.":
+      // No additional points.
+      break;
+  }
+
+  // Q13: What’s your ideal work environment?
+  switch (responses[12]) {
+    case "A lively, open office.":
+      careerWeights["UX Designer"] += 3;
+      careerWeights["IT Manager"] += 2;
+      break;
+    case "A quiet space just for me.":
+      careerWeights["Data Scientist"] += 3;
+      careerWeights["Software Engineer"] += 2;
+      break;
+    case "A flexible setup that balances both.":
+      careerWeights["Business Analyst"] += 3;
+      careerWeights["IT Manager"] += 2;
+      break;
+    case "A well-organized, structured space.":
+      careerWeights["QA Engineer"] += 3;
+      careerWeights["IT Manager"] += 2;
+      break;
+  }
+
+  // Q14: How do you balance big ideas with the details?
+  switch (responses[13]) {
+    case "I keep a close eye on every little step.":
+      careerWeights["QA Engineer"] += 3;
+      careerWeights["Software Engineer"] += 2;
+      break;
+    case "I start broad and then hone in on details.":
+      careerWeights["IT Manager"] += 3;
+      careerWeights["Business Analyst"] += 2;
+      break;
+    case "I delegate details while focusing on strategy.":
+      careerWeights["IT Manager"] += 3;
+      careerWeights["UX Designer"] += 2;
+      break;
+    case "I switch between the big picture and details as needed.":
+      careerWeights["Business Analyst"] += 3;
+      careerWeights["IT Manager"] += 2;
+      break;
+  }
+
+  // Q15: Which of these technologies have you tried? (Critical – increased weight)
+  switch (responses[14]) {
+    case "Machine Learning":
+      careerWeights["AI Engineer"] += 6;
+      careerWeights["Data Scientist"] += 4;
+      break;
+    case "Database Management":
+      careerWeights["Data Scientist"] += 6;
+      careerWeights["Business Analyst"] += 4;
+      break;
+    case "Cloud Computing":
+      careerWeights["Cloud Engineer"] += 6;
+      careerWeights["IT Manager"] += 2;
+      break;
+    case "Mobile App Development":
+      careerWeights["Software Engineer"] += 6;
+      careerWeights["UX Designer"] += 4;
+      break;
+    case "Cybersecurity":
+      careerWeights["Cyber Security"] += 6;
+      careerWeights["Network Engineer"] += 4;
+      break;
+    case "DevOps":
+      careerWeights["Software Engineer"] += 6;
+      careerWeights["Cloud Engineer"] += 4;
+      break;
+    case "None of the above":
+      // No additional points.
+      break;
+  }
+
   return Object.entries(careerWeights)
       .sort(([, weightA], [, weightB]) => weightB - weightA)
       .map(([career]) => career);

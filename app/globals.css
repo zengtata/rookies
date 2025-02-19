@@ -46,6 +46,64 @@
 }
 
 @layer components {
+  .button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .button:hover {
+    width: 260px;
+    height: 165px;
+    border-radius: 50px;
+    background-color: rgb(255, 69, 69);
+    transition-duration: 0.3s;
+    align-items: center;
+  }
+
+  /* The step number is visible by default */
+  .stepNumber {
+    color: white;
+    font-size: 1.25rem;
+    transition: opacity 0.3s;
+  }
+
+  /* The tooltip uses the data-tooltip attribute and is hidden by default */
+  .button::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0;
+    opacity: 0;
+    transition: font-size 0.3s, opacity 0.3s;
+  }
+
+  /* On hover, hide the step number and reveal the milestone name */
+  .button:hover .stepNumber {
+    opacity: 0;
+  }
+
+  .button:hover::before {
+    font-size: 1rem; /* match the stepNumber font-size */
+    opacity: 1;
+  }
+
+
+
   .form-btn {
     @apply bg-customLight text-dark-100 hover:bg-customTeal inline-flex min-h-14 w-full items-center justify-center rounded-md px-6 py-2 font-bold text-base !important;
   }

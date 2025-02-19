@@ -28,7 +28,7 @@ export default function Homepage() {
 
     const router = useRouter();
 
-    // Detect mobile
+    // Detect mobile width
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth < 768);
         handleResize();
@@ -43,7 +43,6 @@ export default function Homepage() {
                 method: "GET",
                 headers: { "Content-Type": "application/json" },
             });
-
             const data = await response.json();
             if (data.success) {
                 setCareer(data.career);
@@ -74,7 +73,7 @@ export default function Homepage() {
         fetchProgress();
     }, []);
 
-    // Save progress
+    // Save progress to the server
     const saveProgressToServer = async (currentMilestone: number, completed: string[]) => {
         await fetch("/api/update-progress", {
             method: "POST",
@@ -83,7 +82,7 @@ export default function Homepage() {
         });
     };
 
-    // Milestone click
+    // Milestone click handler
     const handleMilestoneClick = (index: number) => {
         setCurrentIndex(index);
         if (isMobile) {
@@ -92,7 +91,7 @@ export default function Homepage() {
         }
     };
 
-    // Complete milestone
+    // Mark current milestone as complete and update progress
     const handleCompleteMilestone = async () => {
         if (currentIndex < milestones.length) {
             const currentMilestoneId = milestones[currentIndex].milestone.id;
@@ -110,7 +109,7 @@ export default function Homepage() {
         }
     };
 
-    // Undo milestone
+    // Undo milestone completion and update progress
     const handleUndoCompletion = async () => {
         const currentMilestoneId = milestones[currentIndex].milestone.id;
         const newCompleted = completedMilestones.filter((id) => id !== currentMilestoneId);
@@ -118,30 +117,29 @@ export default function Homepage() {
         await saveProgressToServer(currentIndex, newCompleted);
     };
 
-    // Progress bar percentage
+    // Calculate progress as the percentage of completed milestones
     const progressPercentage =
         milestones.length > 0 ? (completedMilestones.length / milestones.length) * 100 : 0;
 
     return (
-        <div className="flex flex-col min-h-screen w-full bg-white">
+        <div className="flex flex-col min-h-screen w-full bg-white overflow-hidden">
             {/* Sticky Header */}
             <header className="sticky top-0 z-50 w-full border-b-2 bg-white">
-                <div className="flex items-start justify-between px-4 py-3">
+                <div className="flex items-center gap-3 px-4 py-3">
+                    <SidebarTrigger />
                     {career && (
-                        <div className="flex gap-3 items-center">
-                            <SidebarTrigger />
-                            <div>
-                                <h1 className="text-2xl font-bold">{career.title}</h1>
-                                {/* <p className="text-sm text-gray-600">{career.description}</p> */}
-                            </div>
+                        <div>
+                            <h1 className="text-2xl font-bold">{career.title}</h1>
+                            {/* Uncomment if you want to show the description:
+              <p className="text-sm text-gray-600">{career.description}</p> */}
                         </div>
                     )}
                 </div>
             </header>
 
-            {/* Main content: 3 columns on desktop */}
-            <div className="flex flex-1">
-                {/* Left Column: vertical bar with progress (visible on all screens) */}
+            {/* Main content: 3 columns */}
+            <div className="flex flex-1 overflow-hidden">
+                {/* Column 1: Vertical progress bar */}
                 <div className="w-16 border-r bg-white relative flex items-center justify-center">
                     <div className="absolute inset-0 flex items-center justify-center">
                         <div className="h-[80%] w-2 bg-gray-300 relative">
@@ -153,17 +151,20 @@ export default function Homepage() {
                     </div>
                 </div>
 
-                {/* Middle Column: Milestone Navigation wrapped in a ScrollArea */}
-                <ScrollArea className="w-full md:w-2/5 h-full pt-4 hide-scrollbar">
-                    <MilestoneNavigationNodes
-                        milestones={milestones}
-                        currentIndex={currentIndex}
-                        onMilestoneClick={handleMilestoneClick}
-                    />
-                </ScrollArea>
+                {/* Column 2: Milestone Navigation (scrollable) */}
+                <div className="w-full md:w-2/5 overflow-y-auto hide-scrollbar p-4">
+                    <ScrollArea className="h-full">
+                        <MilestoneNavigationNodes
+                            milestones={milestones}
+                            currentIndex={currentIndex}
+                            completedMilestones={completedMilestones}
+                            onMilestoneClick={handleMilestoneClick}
+                        />
+                    </ScrollArea>
+                </div>
 
-                {/* Right Column: Milestone Details (hidden on mobile) */}
-                <div className="hidden md:block flex-1 p-4">
+                {/* Column 3: Milestone Details (desktop only) */}
+                <div className="hidden md:block flex-1 p-4 overflow-y-auto">
                     {milestones[currentIndex] && (
                         <MilestoneDetailsPanel
                             milestone={milestones[currentIndex]}

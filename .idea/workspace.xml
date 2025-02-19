@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/components/NavUser.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/my-profile/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/my-profile/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(root)/quiz/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/quiz/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/MilestoneNavigationNodes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MilestoneNavigationNodes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MilestoneNode.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MilestoneNode.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/app-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app-sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recommendation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recommendation.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -118,7 +119,9 @@
       <workItem from="1739789375966" duration="28054000" />
       <workItem from="1739827559424" duration="705000" />
       <workItem from="1739959525787" duration="42000" />
-      <workItem from="1739966932475" duration="6997000" />
+      <workItem from="1739966932475" duration="7423000" />
+      <workItem from="1739975049023" duration="630000" />
+      <workItem from="1739985027268" duration="9499000" />
     </task>
     <servers />
   </component>

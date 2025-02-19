@@ -15,33 +15,56 @@ interface Milestone {
 interface MilestoneNavigationNodesProps {
     milestones: Milestone[];
     currentIndex: number;
+    completedMilestones: string[];
     onMilestoneClick: (index: number) => void;
 }
 
 export function MilestoneNavigationNodes({
                                              milestones,
                                              currentIndex,
+                                             completedMilestones,
                                              onMilestoneClick,
                                          }: MilestoneNavigationNodesProps) {
     return (
-        <div className="vertical-roadmap hide-scrollbar pb-6">
-            {milestones.map((m, index) => {
-                const isActive = index === currentIndex;
-                const isLast = index === milestones.length - 1;
-
-                return (
-                    <div key={m.milestone.id} className="milestone-item">
-                        <MilestoneNode
-                            step={m.step_order}
-                            title={m.milestone.name}
-                            isActive={isActive}
-                            onClick={() => onMilestoneClick(index)}
-                        />
-                        {/* If not the last node, show a line below it */}
-                        {!isLast && <div className="line" />}
-                    </div>
-                );
-            })}
+        <div className="relative vertical-roadmap hide-scrollbar pb-6">
+            <div className="relative space-y-12">
+                {milestones.map((m, index) => {
+                    const isActive = index === currentIndex;
+                    const isLeft = index % 2 === 0;
+                    const completed = completedMilestones.includes(m.milestone.id);
+                    return (
+                        <div key={m.milestone.id} className="relative flex">
+                            {isLeft ? (
+                                <>
+                                    <div className="w-full flex justify-end pr-24">
+                                        <MilestoneNode
+                                            step={m.step_order}
+                                            title={m.milestone.name}
+                                            isActive={isActive}
+                                            completed={completed}
+                                            onClick={() => onMilestoneClick(index)}
+                                        />
+                                    </div>
+                                    <div className="w-1/2"></div>
+                                </>
+                            ) : (
+                                <>
+                                    <div className="w-1/2"></div>
+                                    <div className="w-full flex justify-start pl-24">
+                                        <MilestoneNode
+                                            step={m.step_order}
+                                            title={m.milestone.name}
+                                            isActive={isActive}
+                                            completed={completed}
+                                            onClick={() => onMilestoneClick(index)}
+                                        />
+                                    </div>
+                                </>
+                            )}
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 }
