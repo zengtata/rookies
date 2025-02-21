@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/3dModel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/3dModel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AuthForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AuthForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CareerCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CareerCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CareerInfo.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ImageUpload.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MilestoneDetailsPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MilestoneDetailsPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MilestoneFlow.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MilestoneNavigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MilestoneNavigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MilestoneNavigationNodes.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MilestoneSheet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MilestoneSheet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Model.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app-sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-    </list>
+    <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -128,7 +111,7 @@
       <workItem from="1739975049023" duration="630000" />
       <workItem from="1739985027268" duration="11546000" />
       <workItem from="1740074071541" duration="11194000" />
-      <workItem from="1740137467904" duration="29591000" />
+      <workItem from="1740137467904" duration="29681000" />
     </task>
     <servers />
   </component>

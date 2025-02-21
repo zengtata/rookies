@@ -11,7 +11,7 @@ const Layout = async ({ children }: { children: ReactNode }) => {
   return (
     <main className="auth-container">
         <section className="auth-form">
-            <video className="auth-video" autoPlay muted loop>
+            <video className="auth-video" autoPlay muted loop playsInline>
                 <source src="/background.mp4" type="video/mp4"/>
                 Your browser does not support the video tag.
             </video>

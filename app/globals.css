@@ -227,6 +227,7 @@
   .auth-video {
     @apply absolute top-0 left-0 w-full h-full object-cover;
     z-index: -1;
+    pointer-events: none;
   }
 
   /* Root */
