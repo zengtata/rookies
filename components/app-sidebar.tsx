@@ -64,7 +64,7 @@ export function AppSidebar({ user }: AppSidebarProps) {
                         ))}
                     </SidebarMenu>
                 </SidebarGroup>
-                {/* Additional navigation group placed just above the footer */}
+
                 <SidebarGroup className={"mt-auto"}>
                     <SidebarGroupLabel>More</SidebarGroupLabel>
                     <SidebarMenu>
@@ -82,7 +82,7 @@ export function AppSidebar({ user }: AppSidebarProps) {
                 </SidebarGroup>
             </SidebarContent>
 
-            {/* Sidebar Footer with NavUser */}
+
             <SidebarFooter>
                 <NavUser user={user} />
             </SidebarFooter>

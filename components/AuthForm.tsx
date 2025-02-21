@@ -25,13 +25,10 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import React from "react";
 import { FIELD_NAMES, FIELD_TYPES } from "@/constants";
-import ImageUpload from "@/components/ImageUpload";
 import { toast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 
-//
-//
-//
+
 interface Props<T extends FieldValues> {
   schema: ZodType<T>;
   defaultValues: T;

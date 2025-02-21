@@ -1,7 +1,6 @@
-// components/MilestoneNavigation.tsx
 "use client";
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { MilestoneNode } from "./MilestoneNode";
 
 interface Milestone {
     milestone: {
@@ -13,40 +12,59 @@ interface Milestone {
     step_order: number;
 }
 
-interface MilestoneNavigationProps {
+interface MilestoneNavigationNodesProps {
     milestones: Milestone[];
     currentIndex: number;
     completedMilestones: string[];
-    onMilestoneClick: (m: Milestone, index: number) => void;
+    onMilestoneClick: (index: number) => void;
 }
 
 export function MilestoneNavigation({
-                                        milestones,
-                                        currentIndex,
-                                        completedMilestones,
-                                        onMilestoneClick,
-                                    }: MilestoneNavigationProps) {
+                                             milestones,
+                                             currentIndex,
+                                             completedMilestones,
+                                             onMilestoneClick,
+                                         }: MilestoneNavigationNodesProps) {
     return (
-        <div className="md:w-1/3 flex flex-col space-y-4 overflow-auto pb-4 items-center">
-            {milestones.map((m, index) => {
-                const isActive = index === currentIndex;
-                const isCompleted = completedMilestones.includes(m.milestone.id);
-                let buttonClasses = "w-full py-2 px-4 rounded transition-colors";
-                if (isActive) {
-                    buttonClasses += " bg-blue-600 text-white hover:bg-blue-700 ";
-                } else if (isCompleted) {
-                    buttonClasses += " bg-green-600 text-white hover:bg-green-700";
-                } else {
-                    buttonClasses += " bg-gray-200 text-gray-800 hover:bg-gray-300";
-                }
-                return (
-                    <div key={m.milestone.id} className="w-full p-2">
-                        <Button onClick={() => onMilestoneClick(m, index)} className={buttonClasses}>
-                            Level {m.step_order}
-                        </Button>
-                    </div>
-                );
-            })}
+        <div className="relative vertical-roadmap hide-scrollbar pb-6">
+            <div className="relative space-y-12">
+                {milestones.map((m, index) => {
+                    const isActive = index === currentIndex;
+                    const isLeft = index % 2 === 0;
+                    const completed = completedMilestones.includes(m.milestone.id);
+                    return (
+                        <div key={m.milestone.id} className="relative flex">
+                            {isLeft ? (
+                                <>
+                                    <div className="w-full flex justify-end pr-24">
+                                        <MilestoneNode
+                                            step={m.step_order}
+                                            title={m.milestone.name}
+                                            isActive={isActive}
+                                            completed={completed}
+                                            onClick={() => onMilestoneClick(index)}
+                                        />
+                                    </div>
+                                    <div className="w-1/2"></div>
+                                </>
+                            ) : (
+                                <>
+                                    <div className="w-1/2"></div>
+                                    <div className="w-full flex justify-start pl-24">
+                                        <MilestoneNode
+                                            step={m.step_order}
+                                            title={m.milestone.name}
+                                            isActive={isActive}
+                                            completed={completed}
+                                            onClick={() => onMilestoneClick(index)}
+                                        />
+                                    </div>
+                                </>
+                            )}
+                        </div>
+                    );
+                })}
+            </div>
         </div>
     );
 }

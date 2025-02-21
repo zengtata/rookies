@@ -3,9 +3,10 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { MilestoneDetailsPanel } from "@/components/MilestoneDetailsPanel";
 import { MilestoneSheet } from "@/components/MilestoneSheet";
-import { MilestoneNavigationNodes } from "@/components/MilestoneNavigationNodes";
+import { MilestoneNavigation } from "@/components/MilestoneNavigation";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import {useToast} from "@/hooks/use-toast";
 
 interface Milestone {
     milestone: {
@@ -27,6 +28,8 @@ export default function Homepage() {
     const [isMobile, setIsMobile] = useState<boolean>(false);
 
     const router = useRouter();
+
+    const {toast} = useToast();
 
     // Detect mobile width
     useEffect(() => {
@@ -50,6 +53,12 @@ export default function Homepage() {
             } else {
                 console.error(data.error);
                 if (data.error === "No career selected") {
+                    toast({
+                        title: "No Career Selected",
+                        description:
+                            "Please answer the quiz and select a career!",
+                        variant: "destructive",
+                    });
                     router.push("/quiz");
                 }
             }
@@ -154,7 +163,7 @@ export default function Homepage() {
                 {/* Column 2: Milestone Navigation (scrollable) */}
                 <div className="w-full md:w-2/5 overflow-y-auto hide-scrollbar p-4">
                     <ScrollArea className="h-full">
-                        <MilestoneNavigationNodes
+                        <MilestoneNavigation
                             milestones={milestones}
                             currentIndex={currentIndex}
                             completedMilestones={completedMilestones}

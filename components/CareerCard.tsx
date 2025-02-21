@@ -47,20 +47,9 @@ export function CareerCard({ career, onSelect }: CareerCardProps) {
     };
 
     const handleSelect = (e: React.MouseEvent) => {
-        e.stopPropagation(); // Prevent closing the modal when clicking the button
+        e.stopPropagation();
         onSelect(career.id);
     };
-
-    // Disable scrolling behind modal when expanded (if desired, you can also handle this here)
-    useEffect(() => {
-        if (expanded) {
-            const originalOverflow = document.body.style.overflow;
-            document.body.style.overflow = "hidden";
-            return () => {
-                document.body.style.overflow = originalOverflow;
-            };
-        }
-    }, [expanded]);
 
     // Fetch career-review data when expanded
     useEffect(() => {
@@ -124,7 +113,7 @@ export function CareerCard({ career, onSelect }: CareerCardProps) {
                                 </p>
                                 <Button
                                     onClick={handleSelect}
-                                    className="mt-4 bg-blue-600 text-white hover:bg-blue-700"
+                                    className="mt-4 bg-blue text-white hover:bg-dark1"
                                 >
                                     Select Career
                                 </Button>
