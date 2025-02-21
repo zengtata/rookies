@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import {ModelViewer} from "@/components/3dModel";
 
 const questions = [
   {
@@ -212,20 +213,20 @@ const Page = () => {
           <h1 className="text-xl font-bold">Career Quiz</h1>
         </header>
         {/* Main container: 3D model on desktop, questions in a ScrollArea */}
-        <main className="flex flex-col md:flex-row p-4 mx-auto w-[90vw] md:w-[calc(100vw-16rem)] h-[calc(100vh-4rem)] overflow-hidden">
+        <main className="flex flex-col md:flex-row p-4 mx-auto w-[90vw] lg:w-[calc(100vw-16rem)] h-[calc(100vh-4rem)] overflow-hidden">
           {/* 3D Model Container (desktop only) */}
-          <div className="hidden md:flex w-full md:w-1/3 border border-gray-300 items-center justify-center">
-            <p className="text-lg font-medium">3D model</p>
+          <div className="hidden md:flex w-full md:w-2/5 border border-gray-300 items-center justify-center">
+            <ModelViewer />
           </div>
           {/* Questions Container within a ScrollArea */}
-          <ScrollArea className="w-full md:w-2/3 h-full md:pl-4 hide-scrollbar">
+          <ScrollArea className="w-full md:w-3/5 h-full md:pl-4 hide-scrollbar">
             <div className="space-y-6 pb-8">
               {questions.map((q, index) => (
-                  <div key={index}>
+                  <div key={index} className={"pb-6"}>
                     <h3 className="text-xl font-medium text-gray-700 mb-8">
                       {q.question}
                     </h3>
-                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 2xl:grid-cols-2 gap-6">
                       {q.options.map((option, idx) => {
                         // If an answer is selected, show only that one.
                         if (answers[index] && answers[index] !== option) return null;
@@ -235,8 +236,8 @@ const Page = () => {
                                 onClick={() => handleAnswer(index, option)}
                                 className={`inline-flex items-center px-4 py-3 rounded-lg transition-colors duration-200 ease-in-out ${
                                     answers[index] === option
-                                        ? "bg-blue-600 text-white border border-blue-600"
-                                        : "bg-transparent text-gray-800 border border-gray-300 hover:bg-gray-50"
+                                        ? "bg-dark1 text-white border hover:bg-dark-300"
+                                        : "bg-transparent text-gray-800 border border-gray-300 hover:bg-gray"
                                 }`}
                             >
                               {option}
@@ -252,8 +253,8 @@ const Page = () => {
                     disabled={!allAnswered}
                     className={`px-6 py-3 rounded-lg shadow-md transition-colors duration-200 ease-in-out ${
                         allAnswered
-                            ? "bg-blue-600 text-white hover:bg-blue-700"
-                            : "bg-gray-400 text-gray-800 cursor-not-allowed"
+                            ? "bg-blue text-white hover:bg-dark-700"
+                            : "bg-gray text-dark-100 cursor-not-allowed"
                     }`}
                 >
                   Submit

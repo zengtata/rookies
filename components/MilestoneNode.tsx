@@ -17,10 +17,10 @@ export function MilestoneNode({ step, title, isActive, completed, onClick }: Mil
             className={cn(
                 "button",
                 isActive
-                    ? "bg-black text-white"
+                    ? "bg-blue text-white"
                     : completed
                         ? "bg-green-500"
-                        : "bg-gray-400"
+                        : "bg-dark1"
             )}
             data-tooltip={title}
         >

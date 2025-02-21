@@ -9,10 +9,17 @@ import {
     SidebarInset,
 } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
+import {NextResponse} from "next/server";
 
 const Layout = async ({ children }: { children: ReactNode }) => {
     const session = await auth();
-    if (!session) redirect("/sign-in");
+    if (!session || !session.user) {
+        redirect("/sign-in");
+    }
+    const userForSidebar = {
+        name: session.user.name || "Anonymous",
+        email: session.user.email || "no-email@example.com",
+    };
 
     // Check if user has selected a career
     const userCareerExists = await db
@@ -27,7 +34,7 @@ const Layout = async ({ children }: { children: ReactNode }) => {
     return (
         <SidebarProvider>
             {/* The pinned sidebar on the left */}
-            <AppSidebar />
+            <AppSidebar user={userForSidebar} />
 
             {/* The main content area, offset by the sidebar's state */}
             <SidebarInset className="h-screen relative flex flex-col bg-white">

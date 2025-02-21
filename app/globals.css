@@ -105,8 +105,11 @@
 
 
   .form-btn {
-    @apply bg-customLight text-dark-100 hover:bg-customTeal inline-flex min-h-14 w-full items-center justify-center rounded-md px-6 py-2 font-bold text-base !important;
+    @apply relative overflow-hidden bg-gray text-dark1 hover:bg-red inline-flex min-h-14 w-full items-center justify-center rounded-md px-6 py-2 font-bold text-base !important;
+    transition: background-color 1s ease, transform 1s ease;
   }
+
+
 
   .form-input {
     @apply
@@ -115,7 +118,7 @@
     text-base
     font-bold
     placeholder:font-normal
-    text-customLight
+    text-gray
     placeholder:text-light-100
     focus-visible:ring-0
     focus-visible:shadow-none
@@ -218,7 +221,7 @@
     width: 400px;
     max-width: 90%;
     /* Transparent white overlay background */
-    background-color: rgb(242, 239, 231, 0.25);
+    background-color: rgb(73, 73, 83, 0.5);
   }
 
   .auth-video {

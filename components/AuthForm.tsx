@@ -74,7 +74,7 @@ const AuthForm = <T extends FieldValues>({
 
   return (
     <div className="flex flex-col gap-4">
-      <h1 className="text-2xl font-semibold text-white">
+      <h1 className="text-2xl font-semibold text-grey">
         {isSignIn ? "Welcome Back To Rookies" : "Create your account"}
       </h1>
       <Form {...form}>
@@ -114,11 +114,11 @@ const AuthForm = <T extends FieldValues>({
           </Button>
         </form>
       </Form>
-      <p className="text-center text-base font-medium text-customLight">
+      <p className="text-center text-base text-neutral-300">
         {isSignIn ? "New to Rookies? " : "Already have an account? "}
         <Link
           href={isSignIn ? "/sign-up" : "/sign-in"}
-          className="font-bold text-customTeal"
+          className="font-bold text-grey"
         >
           {isSignIn ? "Sign up" : "Sign in"}
         </Link>

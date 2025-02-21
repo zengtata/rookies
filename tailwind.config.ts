@@ -19,10 +19,7 @@ export default {
     			]
     		},
     		colors: {
-    			customLight: '#F2EFE7',
-    			customBlueGray: '#9ACBD0',
-    			customTeal: '#48A6A7',
-    			customBlue: '#2973B2',
+
     			background: 'hsl(var(--background))',
     			foreground: 'hsl(var(--foreground))',
     			card: {
@@ -63,6 +60,17 @@ export default {
     				DEFAULT: '#E7C9A5',
     				admin: '#25388C'
     			},
+
+				customLight: '#F2EFE7',
+				customBlueGray: '#9ACBD0',
+				customTeal: '#48A6A7',
+				customBlue: '#2973B2',
+
+				red: "#FF5656",
+				blue: "#3674B5",
+				gray: "#EDF2F6",
+				dark1: "#494953",
+
     			green: {
     				'100': '#ECFDF3',
     				'400': '#4C7B62',
@@ -70,15 +78,7 @@ export default {
     				'800': '#027A48',
     				DEFAULT: '#027A48'
     			},
-    			red: {
-    				'400': '#F46F70',
-    				'500': '#E27233',
-    				'800': '#EF3A4B',
-    				DEFAULT: '#EF3A4B'
-    			},
-    			blue: {
-    				'100': '#0089F1'
-    			},
+
     			light: {
     				'100': '#D6E0FF',
     				'200': '#EED1AC',
@@ -99,9 +99,7 @@ export default {
     				'700': '#464F6F',
     				'800': '#1E2230'
     			},
-    			gray: {
-    				'100': '#CBD5E1'
-    			},
+
     			sidebar: {
     				DEFAULT: 'hsl(var(--sidebar-background))',
     				foreground: 'hsl(var(--sidebar-foreground))',

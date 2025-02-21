@@ -122,7 +122,7 @@ export default function Homepage() {
         milestones.length > 0 ? (completedMilestones.length / milestones.length) * 100 : 0;
 
     return (
-        <div className="flex flex-col min-h-screen w-full bg-white overflow-hidden">
+        <div className="flex flex-col min-h-screen w-full bg-grey overflow-hidden">
             {/* Sticky Header */}
             <header className="sticky top-0 z-50 w-full border-b-2 bg-white">
                 <div className="flex items-center gap-3 px-4 py-3">
