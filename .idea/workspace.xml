@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="" />
+    <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/(root)/about/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SettingsDropdown.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/drizzle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/neon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/nextjs.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/react.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/shadcn.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/tailwindcss.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/typescript.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/app-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/app-sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +52,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Thesis/rookies/app/(auth)/sign-in&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Thesis/rookies/public/icons&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -52,15 +68,16 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Thesis\rookies\public\icons" />
       <recent name="D:\Thesis\rookies\app\(auth)\sign-in" />
       <recent name="D:\Thesis\rookies\app\(auth)\sign-up" />
       <recent name="D:\OneDrive\Asztali gép\Thesis\rookies\career_recommendation_project" />
       <recent name="D:\OneDrive\Asztali gép\Thesis\rookies\career_recommendation_project\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Thesis\rookies\public\icons" />
       <recent name="D:\Thesis\rookies\public" />
       <recent name="D:\Thesis\rookies\public\models" />
-      <recent name="D:\Thesis\rookies\public\icons" />
       <recent name="D:\Thesis\rookies\app\(auth)" />
       <recent name="D:\Thesis\rookies\career_recommendation_project" />
     </key>
@@ -112,6 +129,9 @@
       <workItem from="1739985027268" duration="11546000" />
       <workItem from="1740074071541" duration="11194000" />
       <workItem from="1740137467904" duration="29681000" />
+      <workItem from="1740180845503" duration="801000" />
+      <workItem from="1740310745924" duration="10838000" />
+      <workItem from="1740340900767" duration="3246000" />
     </task>
     <servers />
   </component>

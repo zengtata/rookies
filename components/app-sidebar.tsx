@@ -15,6 +15,7 @@ import {
     SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { NavUser } from "@/components/NavUser";
+import {SettingsDropdown} from "@/components/SettingsDropdown";
 
 interface AppSidebarProps {
     user: {
@@ -34,7 +35,6 @@ export function AppSidebar({ user }: AppSidebarProps) {
     // Additional nav items to display just above the footer
     const additionalNavItems = [
         { title: "How Rookies Work", href: "/about", icon: Info },
-        { title: "Settings", href: "/settings", icon: Settings },
     ];
 
     return (
@@ -78,6 +78,9 @@ export function AppSidebar({ user }: AppSidebarProps) {
                                 </SidebarMenuButton>
                             </SidebarMenuItem>
                         ))}
+                        <SidebarMenuItem>
+                            <SettingsDropdown />
+                        </SidebarMenuItem>
                     </SidebarMenu>
                 </SidebarGroup>
             </SidebarContent>
