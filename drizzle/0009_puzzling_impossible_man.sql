@@ -1,0 +1,2 @@
+ALTER TABLE "user_progress" ADD COLUMN "career_id" uuid NOT NULL;--> statement-breakpoint
+ALTER TABLE "user_progress" ADD CONSTRAINT "user_progress_career_id_careers_id_fk" FOREIGN KEY ("career_id") REFERENCES "public"."careers"("id") ON DELETE no action ON UPDATE no action;

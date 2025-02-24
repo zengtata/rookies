@@ -6,21 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/about/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/quiz/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/quiz/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(root)/recommendation/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/recommendation/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/get-progress/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/get-progress/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/update-progress/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/update-progress/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/CareerCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CareerCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MilestoneDetailsPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MilestoneDetailsPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MilestoneSheet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MilestoneSheet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NavUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavUser.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SettingsDropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SettingsDropdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/dropdown-menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/skeleton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/skeleton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icons/heart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/icons/heart.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle/meta/_journal.json" beforeDir="false" afterPath="$PROJECT_DIR$/drizzle/meta/_journal.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +126,7 @@
       <workItem from="1740310745924" duration="10838000" />
       <workItem from="1740340900767" duration="10265000" />
       <workItem from="1740399347300" duration="595000" />
-      <workItem from="1740402167947" duration="12642000" />
+      <workItem from="1740402167947" duration="21242000" />
     </task>
     <servers />
   </component>

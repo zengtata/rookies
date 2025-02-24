@@ -36,9 +36,14 @@ interface CareerReview {
 interface CareerCardProps {
   career: Career;
   onSelect: (careerId: string) => void;
+  isSelected?: boolean;
 }
 
-export function CareerCard({ career, onSelect }: CareerCardProps) {
+export function CareerCard({
+  career,
+  onSelect,
+  isSelected = false,
+}: CareerCardProps) {
   const [expanded, setExpanded] = useState(false);
   const [reviews, setReviews] = useState<CareerReview[]>([]);
 
@@ -81,19 +86,15 @@ export function CareerCard({ career, onSelect }: CareerCardProps) {
     <>
       {/* Collapsed Card */}
       <div
-        className={
-          "relative flex-shrink-0 cursor-pointer transition-all duration-500 bg-component border border-border rounded-lg shadow-md p-4 w-60 h-72 overflow-hidden hover:w-[360px] hover:rounded-lg hover:bg-buttonHover"
-        }
+        className={`relative flex-shrink-0 cursor-pointer transition-all duration-500 
+          ${isSelected ? "bg-button" : "bg-component"} 
+          border border-border rounded-lg shadow-md p-4 w-60 h-72 overflow-hidden hover:w-[360px] hover:rounded-lg hover:bg-buttonHover`}
         onClick={handleClick}
       >
         <p className="text-3xl md:text-5xl font-semibold text-foreground pb-6 transition-opacity duration-300">
           {career.title}
         </p>
-        <p
-          className={
-            "mt-2 text-md text-foreground transition-opacity duration-300 line-clamp-5"
-          }
-        >
+        <p className="mt-2 text-md text-foreground transition-opacity duration-300 line-clamp-5">
           {career.description}
         </p>
       </div>
@@ -113,12 +114,14 @@ export function CareerCard({ career, onSelect }: CareerCardProps) {
               <p className="text-xl xl:text-4xl font-semibold text-foreground">
                 {career.title}
               </p>
-              <Button
-                onClick={handleSelect}
-                className="mt-4 bg-button text-white transition-colors hover:bg-buttonHover"
-              >
-                Select Career
-              </Button>
+              {!isSelected && (
+                <Button
+                  onClick={handleSelect}
+                  className="mt-4 bg-button text-white transition-colors hover:bg-buttonHover"
+                >
+                  Select Career
+                </Button>
+              )}
             </div>
 
             {/* Right Side: Career Description and Charts */}

@@ -43,6 +43,34 @@
       "when": 1739805904468,
       "tag": "0005_purple_la_nuit",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1740418091304,
+      "tag": "0006_chilly_starfox",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1740418547416,
+      "tag": "0007_outstanding_dakota_north",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1740418614574,
+      "tag": "0008_mushy_whiplash",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1740418629104,
+      "tag": "0009_puzzling_impossible_man",
+      "breakpoints": true
     }
   ]
 }

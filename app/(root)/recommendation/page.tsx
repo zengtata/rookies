@@ -7,9 +7,11 @@ import { cn } from "@/lib/utils";
 
 export default function RecommendationPage() {
   const [careers, setCareers] = useState<any[]>([]);
+  const [currentCareerId, setCurrentCareerId] = useState<string | null>(null);
   const router = useRouter();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
+  // Fetch user's recommended careers
   useEffect(() => {
     const fetchCareers = async () => {
       const storedResponses = localStorage.getItem("quizResponses");
@@ -18,22 +20,17 @@ export default function RecommendationPage() {
         router.push("/quiz");
         return;
       }
-
       const responses = JSON.parse(storedResponses);
       if (!responses || responses.length < 11) {
         alert("Incomplete quiz responses found. Please complete the quiz.");
         router.push("/quiz");
         return;
       }
-
       const response = await fetch("/api/recommend", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ responses }),
       });
-
       const data = await response.json();
       if (data.success) {
         setCareers(data.careers || []);
@@ -42,20 +39,35 @@ export default function RecommendationPage() {
         alert("Error in recommendation: " + data.error);
       }
     };
-
     fetchCareers();
   }, [router]);
+
+  // Fetch the user's selected career from the user-career table
+  useEffect(() => {
+    const fetchSelectedCareer = async () => {
+      const res = await fetch("/api/user-career-details", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      });
+      const data = await res.json();
+      if (data.success && data.career) {
+        setCurrentCareerId(data.career.id);
+      } else {
+        setCurrentCareerId(null);
+      }
+    };
+    fetchSelectedCareer();
+  }, []);
 
   const handleCareerSelection = async (careerId: string) => {
     const response = await fetch("/api/select-career", {
       method: "POST",
       body: JSON.stringify({ careerId }),
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
     });
-
     if (response.ok) {
+      // Optionally, you might also update currentCareerId here.
+      setCurrentCareerId(careerId);
       router.push("/");
     } else {
       alert("Failed to select career");
@@ -102,14 +114,18 @@ export default function RecommendationPage() {
                     className={cn("top-match h-14 w-14 bg-component")}
                     data-tooltip={"Top Match"}
                   >
-                    <span className={"h-5/6 w-5/6"}>
+                    <span className="h-5/6 w-5/6">
                       <img src="/icons/heart.svg" alt="heart" />
                     </span>
                   </button>
                 ) : (
                   <div className="mb-2 h-[46px]" />
                 )}
-                <CareerCard career={career} onSelect={handleCareerSelection} />
+                <CareerCard
+                  career={career}
+                  onSelect={handleCareerSelection}
+                  isSelected={career.id === currentCareerId}
+                />
               </div>
             ))}
           </div>
