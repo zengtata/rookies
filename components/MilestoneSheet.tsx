@@ -29,17 +29,19 @@ export function MilestoneSheet({
                                }: MilestoneSheetProps) {
     return (
         <Sheet open={open} onOpenChange={onOpenChange}>
-            <SheetContent className="w-full bg-white p-6">
-                <h2 className="text-2xl font-semibold mb-2">{milestone.name}</h2>
-                <p className="text-gray-600 mb-4">{milestone.description}</p>
-                <p className="text-gray-500 mb-4">Resources: {milestone.resources}</p>
+            <SheetContent className="w-[90%] bg-component p-6">
+                <h2 className="text-2xl font-semibold mb-2 text-foreground">
+                    {milestone.name}
+                </h2>
+                <p className="mb-4 text-foreground">{milestone.description}</p>
+                <p className="mb-4">Resources: {milestone.resources}</p>
                 {!isCompleted ? (
                     <Button
                         onClick={() => {
                             onOpenChange(false);
                             onComplete();
                         }}
-                        className="bg-green-500 text-white transition-colors hover:bg-green-600"
+                        className="bg-green-600 text-white transition-colors hover:bg-green-500"
                     >
                         Complete Milestone
                     </Button>
@@ -49,7 +51,7 @@ export function MilestoneSheet({
                             onOpenChange(false);
                             onUndo();
                         }}
-                        className="bg-yellow-500 text-white transition-colors hover:bg-yellow-600"
+                        className="bg-button text-white transition-colors hover:bg-component"
                     >
                         Undo Completion
                     </Button>

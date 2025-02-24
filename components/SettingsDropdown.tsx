@@ -46,7 +46,7 @@ export function SettingsDropdown() {
             <DropdownMenuTrigger asChild>
                 <SidebarMenuButton
                     size="lg"
-                    className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+                    className="data-[state=open]:text-sidebar-accent-foreground data-[state=open]:bg-sidebar-accent"
                 >
                     <Settings className="h-6 w-6" />
                     <span>Settings</span>
@@ -54,7 +54,7 @@ export function SettingsDropdown() {
                 </SidebarMenuButton>
             </DropdownMenuTrigger>
             <DropdownMenuContent
-                className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
+                className="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg bg-component "
                 side={isMobile ? "bottom" : "right"}
                 align="end"
                 sideOffset={4}
@@ -62,7 +62,7 @@ export function SettingsDropdown() {
                 <DropdownMenuLabel>Settings</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
-                    <div className="flex items-center justify-between w-full">
+                    <div className="flex items-center justify-between w-full ">
                         <span>Dark Mode</span>
                         <Switch checked={darkMode} onCheckedChange={handleDarkModeToggle} />
                     </div>

@@ -2,245 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ========== Base Layer: Global CSS Variables & Base Styles ========== */
 @layer base {
+  /* Global Color Variables (Light Mode) */
   :root {
-    --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+    /* Main Colors */
+    --background: #fafafa;   /* Overall page background */
+    --foreground: #171717;   /* Text color */
+    --component:  #e5e5e5;   /* Component backgrounds (cards, sheets, etc.) */
+    --button:     #2563eb;   /* Button backgrounds */
+    --buttonHover: #60a5fa;
 
-  .hide-scrollbar::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-    border-radius: 0px;
-  }
-
-  .hide-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .hide-scrollbar::-webkit-scrollbar-thumb {
-    background: transparent;
-    border-radius: 0px;
-  }
-
-  .hide-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: transparent;
-  }
-  .dark {
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer components {
-  .button {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: rgb(20, 20, 20);
-    border: none;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    transition-duration: 0.3s;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .button:hover {
-    width: 260px;
-    height: 165px;
-    border-radius: 50px;
-    background-color: rgb(255, 69, 69);
-    transition-duration: 0.3s;
-    align-items: center;
-  }
-
-  /* The step number is visible by default */
-  .stepNumber {
-    color: white;
-    font-size: 1.25rem;
-    transition: opacity 0.3s;
-  }
-
-  /* The tooltip uses the data-tooltip attribute and is hidden by default */
-  .button::before {
-    content: attr(data-tooltip);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 0;
-    opacity: 0;
-    transition: font-size 0.3s, opacity 0.3s;
-  }
-
-  /* On hover, hide the step number and reveal the milestone name */
-  .button:hover .stepNumber {
-    opacity: 0;
-  }
-
-  .button:hover::before {
-    font-size: 1rem; /* match the stepNumber font-size */
-    opacity: 1;
-  }
-
-
-
-  .form-btn {
-    @apply relative overflow-hidden bg-gray text-dark1 hover:bg-red inline-flex min-h-14 w-full items-center justify-center rounded-md px-6 py-2 font-bold text-base !important;
-    transition: background-color 1s ease, transform 1s ease;
-  }
-
-
-
-  .form-input {
-    @apply
-    w-full
-    min-h-14
-    text-base
-    font-bold
-    placeholder:font-normal
-    text-gray
-    placeholder:text-light-100
-    focus-visible:ring-0
-    focus-visible:shadow-none
-    bg-transparent /* Remove bg-dark-300 and use transparent */
-    border
-    border-white /* Give it a white border, or choose another color */
-    rounded-md /* Optional, if you want rounded corners */
-    !important;
-  }
-
-
-  /* File Upload */
-  .upload-btn {
-    @apply flex min-h-14 w-full items-center justify-center gap-1.5 rounded-md;
-  }
-
-  .upload-filename {
-    @apply mt-1 text-center text-xs;
-  }
-
-  .progress {
-    @apply rounded-full bg-green-800 p-0.5 text-center font-bebas-neue text-[8px] font-bold leading-none text-light-100;
-  }
-
-  /* Search */
-  .search {
-    @apply relative mt-10 flex min-h-14 w-full items-center rounded-xl bg-dark-300 px-4;
-  }
-
-  .search-input {
-    @apply w-full border-none font-bold placeholder:font-normal text-white placeholder:text-light-100 focus-visible:ring-0 focus-visible:shadow-none !important;
-  }
-
-
-  /* Not Found */
-  #not-found {
-    @apply flex justify-center items-center flex-col text-center w-full;
-  }
-
-  #not-found h4 {
-    @apply text-white mt-6 font-semibold text-2xl;
-  }
-
-  #not-found p {
-    @apply text-light-100 w-[360px] mt-1;
-  }
-
-  .not-found-btn {
-    @apply bg-primary font-bebas-neue min-w-[360px] mt-6 text-dark-100 text-xl hover:bg-primary/90 min-h-12 !important;
-  }
-
-  /* Pagination */
-  #pagination {
-    @apply flex flex-row justify-end gap-3;
-  }
-
-  .pagination-btn_light {
-    @apply bg-light-300 text-dark-300 hover:bg-light-300/70 !important;
-  }
-
-  .pagination-btn_dark {
-    @apply bg-dark-300 hover:bg-dark-100 !important;
-  }
-
-  #pagination p {
-    @apply text-sm inline-flex items-center font-semibold px-4 py-1.5 rounded-md text-center;
-  }
-
-  /* Sort */
-  .select-trigger {
-    @apply w-40 h-10 px-4 bg-dark-300 text-light-100 border-dark-100 !important;
-  }
-
-  .select-content {
-    @apply bg-dark-300 text-light-100 border-dark-100 !important;
-  }
-
-  .select-item {
-    @apply focus:bg-dark-600 focus:text-light-100 !important;
-  }
-}
-
-@layer utilities {
-
-
-  /* Auth */
-  .auth-container {
-    @apply relative flex flex-col-reverse text-customLight sm:flex-row;
-  }
-
-  .auth-form {
-    @apply relative flex h-full min-h-screen flex-1 items-center px-5 py-10;
-    /* Remove the background white so the video shows through */
-    background: none;
-    overflow: hidden;
-  }
-
-  .auth-box {
-    @apply relative mx-auto flex flex-col gap-6 rounded-lg p-10;
-    width: 400px;
-    max-width: 90%;
-    /* Transparent white overlay background */
-    background-color: rgb(73, 73, 83, 0.5);
-  }
-
-  .auth-video {
-    @apply absolute top-0 left-0 w-full h-full object-cover;
-    z-index: -1;
-    pointer-events: none;
-  }
-
-  /* Root */
-  .root-container {
-    @apply flex min-h-screen flex-1 flex-col bg-white px-5 xs:px-10 md:px-16;
-  }
-
-}
-
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Other global tokens */
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
@@ -264,10 +37,27 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+
+    /* Sidebar Colors (Light Mode) – Matching the Main Scheme */
+    --sidebar-background: 0 0% 89.8%;          /* approx from #D8D2C2 */
+    --sidebar-foreground: 0 0% 9%;            /* approx from #494953 */
+    --sidebar-primary:    221.2 83.2% 53.3%;          /* approx from #B17457 */
+    --sidebar-primary-foreground: 221.2 83.2% 53.3%;       /* approx from #FAF7F0 */
+    --sidebar-accent:     213.1 93.9% 67.8%;            /* same as primary */
+    --sidebar-accent-foreground: 0 0% 9%;
+    --sidebar-border:     0 0% 89.8%;           /* subtle border */
+    --sidebar-ring:       221.2 83.2% 53.3%;             /* focus ring */
   }
+
+  /* Global Color Variables (Dark Mode) */
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: #171717;      /* Overall dark background */
+    --foreground: #fafafa;      /* Text color in dark mode */
+    --component:  #262626;      /* Component backgrounds in dark mode */
+    --button:     #dc2626;      /* Button backgrounds in dark mode */
+    --buttonHover: #f87171;
+
+    /* Other dark tokens */
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
@@ -290,51 +80,247 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+
+    /* Sidebar Colors (Dark Mode) */
+    --sidebar-background: 0 0% 14.9%;            /* approx from #4A4947 */
+    --sidebar-foreground: 0 0% 96.1%;              /* approx from #FAF7F0 */
+    --sidebar-primary:    0 72.2% 50.6%;            /* slightly lighter for dark */
+    --sidebar-primary-foreground: 0 72.2% 50.6%;       /* pure white */
+    --sidebar-accent:     0 72.2% 50.6%;
+    --sidebar-accent-foreground: 0 0% 96.1%;
+    --sidebar-border:     0 0% 14.9%;             /* dark border */
+    --sidebar-ring:       0 72.2% 50.6%;
   }
 
+  /* Apply global base styles */
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ========== Components Layer ========== */
+@layer components {
+  /* Button */
+  .button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+  .button:hover {
+    width: 260px;
+    height: 165px;
+    border-radius: 50px;
+    background-color: rgb(255, 69, 69);
+    transition-duration: 0.3s;
+    align-items: center;
+  }
+  .stepNumber {
+    color: white;
+    font-size: 1.25rem;
+    transition: opacity 0.3s;
+  }
+  .button::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0;
+    opacity: 0;
+    transition: font-size 0.3s, opacity 0.3s;
+  }
+  .button:hover .stepNumber {
+    opacity: 0;
+  }
+  .button:hover::before {
+    font-size: 1rem;
+    opacity: 1;
+  }
+
+  .top-match {
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    border-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+  .top-match:hover {
+    width: 160px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: rgb(255, 69, 69);
+    transition-duration: 0.3s;
+    align-items: center;
+  }
+  .top-match::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0;
+    opacity: 0;
+    transition: font-size 0.3s, opacity 0.3s;
+  }
+  .top-match:hover::before {
+    font-size: 1.5rem; /* Adjust as needed */
+    opacity: 1;
+  }
+
+  /* Form styles */
+  .form-btn {
+    @apply relative overflow-hidden bg-gray text-dark1 hover:bg-red inline-flex min-h-14 w-full items-center justify-center rounded-md px-6 py-2 font-bold text-base !important;
+    transition: background-color 1s ease, transform 1s ease;
+  }
+  .form-input {
+    @apply w-full min-h-14 text-base font-bold placeholder:font-normal text-gray placeholder:text-light-100 focus-visible:ring-0 focus-visible:shadow-none bg-transparent border border-white rounded-md !important;
+  }
+
+  /* File Upload */
+  .upload-btn {
+    @apply flex min-h-14 w-full items-center justify-center gap-1.5 rounded-md;
+  }
+  .upload-filename {
+    @apply mt-1 text-center text-xs;
+  }
+  .progress {
+    @apply rounded-full bg-green-800 p-0.5 text-center font-bebas-neue text-[8px] font-bold leading-none text-light-100;
+  }
+
+  /* Search */
+  .search {
+    @apply relative mt-10 flex min-h-14 w-full items-center rounded-xl bg-dark-300 px-4;
+  }
+  .search-input {
+    @apply w-full border-none font-bold placeholder:font-normal text-white placeholder:text-light-100 focus-visible:ring-0 focus-visible:shadow-none !important;
+  }
+
+  /* Not Found */
+  #not-found {
+    @apply flex justify-center items-center flex-col text-center w-full;
+  }
+  #not-found h4 {
+    @apply text-white mt-6 font-semibold text-2xl;
+  }
+  #not-found p {
+    @apply text-light-100 w-[360px] mt-1;
+  }
+  .not-found-btn {
+    @apply bg-primary font-bebas-neue min-w-[360px] mt-6 text-dark-100 text-xl hover:bg-primary/90 min-h-12 !important;
+  }
+
+  /* Pagination */
+  #pagination {
+    @apply flex flex-row justify-end gap-3;
+  }
+  .pagination-btn_light {
+    @apply bg-light-300 text-dark-300 hover:bg-light-300/70 !important;
+  }
+  .pagination-btn_dark {
+    @apply bg-dark-300 hover:bg-dark-100 !important;
+  }
+  #pagination p {
+    @apply text-sm inline-flex items-center font-semibold px-4 py-1.5 rounded-md text-center;
+  }
+
+  /* Sort */
+  .select-trigger {
+    @apply w-40 h-10 px-4 bg-dark-300 text-light-100 border-dark-100 !important;
+  }
+  .select-content {
+    @apply bg-dark-300 text-light-100 border-dark-100 !important;
+  }
+  .select-item {
+    @apply focus:bg-dark-600 focus:text-light-100 !important;
+  }
+}
+
+/* ========== Utilities Layer ========== */
+@layer utilities {
+  /* Auth */
+  .auth-container {
+    @apply relative flex flex-col-reverse text-customLight sm:flex-row;
+  }
+  .auth-form {
+    @apply relative flex h-full min-h-screen flex-1 items-center px-5 py-10;
+    background: none;
+    overflow: hidden;
+  }
+  .auth-box {
+    @apply relative mx-auto flex flex-col gap-6 rounded-lg p-10;
+    width: 400px;
+    max-width: 90%;
+    background-color: rgba(73, 73, 83, 0.5);
+  }
+  .auth-video {
+    @apply absolute top-0 left-0 w-full h-full object-cover;
+    z-index: -1;
+    pointer-events: none;
+  }
+  /* Root */
+  .root-container {
+    @apply flex min-h-screen flex-1 flex-col bg-white px-5 xs:px-10 md:px-16;
+  }
+}
+
+/* ========== Additional Base Styles ========== */
+@layer base {
   .vertical-roadmap {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    overflow-y: auto; /* Make it scrollable if needed */
-    max-height: 90vh; /* or any desired height */
+    overflow-y: auto;
+    max-height: 90vh;
   }
-
-  /* Each container for a single milestone + connecting line */
   .milestone-item {
     position: relative;
-    margin-bottom: 2rem; /* spacing between nodes */
+    margin-bottom: 2rem;
   }
-
-  /* The line connecting to the next node (below the circle) */
   .line {
     position: absolute;
-    top: 80px; /* just below the node, which is 80px tall */
+    top: 80px;
     left: 50%;
     transform: translateX(-50%);
     width: 2px;
-    height: 2rem; /* adjust to control spacing */
+    height: 2rem;
     background: #999;
   }
-
-  /* Hide scrollbar */
   .hide-scrollbar {
-    -ms-overflow-style: none; /* IE/Edge */
-    scrollbar-width: none;     /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
   .hide-scrollbar::-webkit-scrollbar {
-    display: none; /* Chrome/Safari/Opera */
+    display: none;
   }
-
-  /* (Optional) The existing tooltip code you have: */
   .tooltip-container {
     position: relative;
     cursor: pointer;
     transition: all 0.2s;
   }
-
-  /* Tooltip will be centered over the node */
   .tooltip {
     position: absolute;
     top: 50%;
@@ -352,25 +338,13 @@
     font-size: 0.875rem;
     color: #333;
   }
-
   .tooltip-container:hover .tooltip {
     opacity: 1;
     visibility: visible;
   }
-
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-
-
+/* Ensure global elements use these variables */
 @layer base {
   * {
     @apply border-border outline-ring/50;

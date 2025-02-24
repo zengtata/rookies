@@ -206,24 +206,24 @@ const Page = () => {
   const allAnswered = Object.keys(answers).length === questions.length;
 
   return (
-      <div className="h-screen overflow-hidden">
+      <div className="h-screen bg-background overflow-hidden">
         {/* Header with sidebar trigger */}
-        <header className="h-16 border-b flex items-center gap-4 px-4 shrink-0">
+        <header className="h-16 border-b border-border flex items-center gap-4 px-4 shrink-0 bg-background">
           <SidebarTrigger />
-          <h1 className="text-xl font-bold">Career Quiz</h1>
+          <h1 className="text-xl font-bold text-foreground">Career Quiz</h1>
         </header>
         {/* Main container: 3D model on desktop, questions in a ScrollArea */}
-        <main className="flex flex-col md:flex-row p-4 mx-auto w-[90vw] lg:w-[calc(100vw-16rem)] h-[calc(100vh-4rem)] overflow-hidden">
+        <main className="flex flex-col md:flex-row p-4 mx-auto w-[90vw] lg:w-[calc(100vw-16rem)] h-[calc(100vh-4rem)] overflow-hidden bg-background">
           {/* 3D Model Container (desktop only) */}
-          <div className="hidden md:flex w-full md:w-2/5 border border-gray-300 items-center justify-center">
+          <div className="hidden md:flex w-full md:w-2/5 border border-border items-center justify-center bg-background">
             <ModelViewer />
           </div>
           {/* Questions Container within a ScrollArea */}
-          <ScrollArea className="w-full md:w-3/5 h-full md:pl-4 hide-scrollbar">
+          <ScrollArea className="w-full md:w-3/5 h-full md:pl-4 hide-scrollbar bg-background">
             <div className="space-y-6 pb-8">
               {questions.map((q, index) => (
-                  <div key={index} className={"pb-6"}>
-                    <h3 className="text-xl font-medium text-gray-700 mb-8">
+                  <div key={index} className="pb-6">
+                    <h3 className="text-xl font-medium text-foreground mb-8">
                       {q.question}
                     </h3>
                     <div className="grid grid-cols-1 2xl:grid-cols-2 gap-6">
@@ -236,8 +236,8 @@ const Page = () => {
                                 onClick={() => handleAnswer(index, option)}
                                 className={`inline-flex items-center px-4 py-3 rounded-lg transition-colors duration-200 ease-in-out ${
                                     answers[index] === option
-                                        ? "bg-dark1 text-white border hover:bg-dark-300"
-                                        : "bg-transparent text-gray-800 border border-gray-300 hover:bg-gray"
+                                        ? "bg-button text-white border border-border hover:bg-buttonHover"
+                                        : "bg-component text-foreground border border-border hover:bg-button hover:text-white"
                                 }`}
                             >
                               {option}
@@ -253,8 +253,8 @@ const Page = () => {
                     disabled={!allAnswered}
                     className={`px-6 py-3 rounded-lg shadow-md transition-colors duration-200 ease-in-out ${
                         allAnswered
-                            ? "bg-blue text-white hover:bg-dark-700"
-                            : "bg-gray text-dark-100 cursor-not-allowed"
+                            ? "bg-green-500 text-white hover:bg-green-600"
+                            : "bg-transparent text-foreground cursor-not-allowed border border-border"
                     }`}
                 >
                   Submit

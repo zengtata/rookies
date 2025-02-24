@@ -26,20 +26,28 @@ export function MilestoneDetailsPanel({
                                           onUndo,
                                       }: MilestoneDetailsPanelProps) {
     return (
-        <div className="hidden md:block md:w-50 md:mx-8 mt-8 md:mt-0 p-6 border rounded-lg shadow-lg bg-white">
-            <h2 className="text-2xl font-semibold mb-2">
+        <div className="hidden md:block md:w-50 md:mx-8 mt-8 md:mt-0 p-6 border border-border rounded-lg shadow-lg bg-component">
+            <h2 className="text-2xl font-semibold mb-2 text-foreground">
                 Level {milestone.step_order}: {milestone.milestone.name}
             </h2>
-            <p className="text-gray-600 mb-4">{milestone.milestone.description}</p>
-            <p className="text-gray-500 mb-4">
+            <p className="mb-4 text-foreground">
+                {milestone.milestone.description}
+            </p>
+            <p className="mb-4">
                 Resources: {milestone.milestone.resources}
             </p>
             {!isCompleted ? (
-                <Button onClick={onComplete} className="bg-green-500 text-white transition-colors hover:bg-green-600">
+                <Button
+                    onClick={onComplete}
+                    className="bg-green-600 text-white transition-colors hover:bg-green-500"
+                >
                     Complete Milestone
                 </Button>
             ) : (
-                <Button onClick={onUndo} className="bg-yellow-500 text-white transition-colors hover:bg-yellow-600">
+                <Button
+                    onClick={onUndo}
+                    className="bg-button text-white transition-colors hover:bg-buttonHover"
+                >
                     Undo Completion
                 </Button>
             )}

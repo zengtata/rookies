@@ -1,9 +1,9 @@
 "use client";
-
 import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { CareerCard } from "@/components/CareerCard";
+import { cn } from "@/lib/utils";
 
 export default function RecommendationPage() {
   const [careers, setCareers] = useState<any[]>([]);
@@ -71,36 +71,50 @@ export default function RecommendationPage() {
   };
 
   return (
-      <div className="h-screen bg-white overflow-hidden">
-        {/* Sticky top header */}
-        <header className="h-16 border-b flex items-center gap-4 px-4 shrink-0">
-          <SidebarTrigger />
-          <h1 className="text-xl font-bold">Recommended Careers</h1>
-        </header>
+    <div className="h-screen bg-background overflow-hidden">
+      {/* Sticky top header */}
+      <header className="h-16 border-b border-border flex items-center gap-4 px-4 shrink-0 bg-background">
+        <SidebarTrigger />
+        <h1 className="text-xl font-bold text-foreground">
+          Recommended Careers
+        </h1>
+      </header>
 
-        {/* Main container */}
-        <main
-            ref={scrollContainerRef}
-            onWheel={handleWheel}
-            className= "hide-scrollbar overflow-hidden overflow-x-auto mx-auto w-[90vw] md:w-[calc(100vw-16rem)] h-[calc(100vh-2rem)] md:h-[calc(100vh-10%)]"
-        >
-          {careers.length === 0 ? (
-              <div className="flex items-center justify-center h-full">
-                <p className="text-gray-500">Loading or no careers found...</p>
+      {/* Main container */}
+      <main
+        ref={scrollContainerRef}
+        onWheel={handleWheel}
+        className="hide-scrollbar overflow-hidden overflow-x-auto mx-auto w-[90vw] md:w-[calc(100vw-16rem)] h-[calc(100vh-2rem)] md:h-[calc(100vh-10%)] bg-background"
+      >
+        {careers.length === 0 ? (
+          <div className="flex items-center justify-center h-full">
+            <p className="text-foreground">Loading or no careers found...</p>
+          </div>
+        ) : (
+          <div className="flex flex-row items-center h-full space-x-6 px-2 py-2">
+            {careers.map((career, index) => (
+              <div
+                key={career.id}
+                className="first:ml-0 flex flex-col items-center"
+              >
+                {index < 3 ? (
+                  <button
+                    className={cn("top-match h-14 w-14 bg-component")}
+                    data-tooltip={"Top Match"}
+                  >
+                    <span className={"h-5/6 w-5/6"}>
+                      <img src="/icons/heart.svg" alt="heart" />
+                    </span>
+                  </button>
+                ) : (
+                  <div className="mb-2 h-[46px]" />
+                )}
+                <CareerCard career={career} onSelect={handleCareerSelection} />
               </div>
-          ) : (
-              <div className="flex flex-row items-center h-full space-x-6 px-2 py-2">
-                {careers.map((career) => (
-                    <div key={career.id} className="first:ml-0">
-                      <CareerCard
-                          career={career}
-                          onSelect={handleCareerSelection}
-                      />
-                    </div>
-                ))}
-              </div>
-          )}
-        </main>
-      </div>
+            ))}
+          </div>
+        )}
+      </main>
+    </div>
   );
 }

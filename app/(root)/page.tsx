@@ -6,7 +6,7 @@ import { MilestoneSheet } from "@/components/MilestoneSheet";
 import { MilestoneNavigation } from "@/components/MilestoneNavigation";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import {useToast} from "@/hooks/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 interface Milestone {
     milestone: {
@@ -28,8 +28,7 @@ export default function Homepage() {
     const [isMobile, setIsMobile] = useState<boolean>(false);
 
     const router = useRouter();
-
-    const {toast} = useToast();
+    const { toast } = useToast();
 
     // Detect mobile width
     useEffect(() => {
@@ -55,8 +54,7 @@ export default function Homepage() {
                 if (data.error === "No career selected") {
                     toast({
                         title: "No Career Selected",
-                        description:
-                            "Please answer the quiz and select a career!",
+                        description: "Please answer the quiz and select a career!",
                         variant: "destructive",
                     });
                     router.push("/quiz");
@@ -131,16 +129,14 @@ export default function Homepage() {
         milestones.length > 0 ? (completedMilestones.length / milestones.length) * 100 : 0;
 
     return (
-        <div className="flex flex-col min-h-screen w-full bg-grey overflow-hidden">
+        <div className="flex flex-col min-h-screen w-full bg-background overflow-hidden">
             {/* Sticky Header */}
-            <header className="sticky top-0 z-50 w-full border-b-2 bg-white">
+            <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
                 <div className="flex items-center gap-3 px-4 py-3">
                     <SidebarTrigger />
                     {career && (
                         <div>
-                            <h1 className="text-2xl font-bold">{career.title}</h1>
-                            {/* Uncomment if you want to show the description:
-              <p className="text-sm text-gray-600">{career.description}</p> */}
+                            <h1 className="text-2xl font-bold text-foreground">{career.title}</h1>
                         </div>
                     )}
                 </div>
@@ -149,11 +145,11 @@ export default function Homepage() {
             {/* Main content: 3 columns */}
             <div className="flex flex-1 overflow-hidden">
                 {/* Column 1: Vertical progress bar */}
-                <div className="w-16 border-r bg-white relative flex items-center justify-center">
+                <div className="w-16 border-r border-border bg-background relative flex items-center justify-center">
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="h-[80%] w-2 bg-gray-300 relative">
+                        <div className="h-[80%] w-2 bg-component rounded-sm relative">
                             <div
-                                className="bg-green-600 w-full transition-all duration-300"
+                                className="bg-green-500 w-full transition-all duration-300"
                                 style={{ height: `${progressPercentage}%` }}
                             />
                         </div>

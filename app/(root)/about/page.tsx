@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -11,10 +10,14 @@ import {
     ChartConfig,
 } from "@/components/ui/chart";
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton"
-
-
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
 
 // Dummy sentiment data
 const chartDataSentiment = [
@@ -29,12 +32,12 @@ const chartDataSentiment = [
 
 const AboutPage = () => {
     return (
-        <div className="flex flex-col h-full w-full bg-grey">
+        <div className="flex flex-col h-full w-full bg-background">
             {/* Sticky Header */}
-            <header className="sticky top-0 z-50 w-full border-b-2 bg-white">
+            <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
                 <div className="flex items-center gap-3 px-4 py-3">
                     <SidebarTrigger />
-                    <h1 className="text-2xl font-bold">About Rookies</h1>
+                    <h1 className="text-2xl font-bold text-foreground">About Rookies</h1>
                 </div>
             </header>
 
@@ -46,13 +49,13 @@ const AboutPage = () => {
                         <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                             {/* Content Column */}
                             <div>
-                                <p className="text-3xl font-semibold mb-3">Purpose</p>
-                                <p className="text-gray-700">
+                                <p className="text-3xl font-semibold mb-3 text-foreground">Purpose</p>
+                                <p className="text-foreground">
                                     Choosing a career in tech can be overwhelming, especially for first-year CS students. Our platform helps students discover their ideal career through a guided quiz and personalized recommendations.
                                 </p>
                             </div>
 
-                            {/* Image Column */}
+                            {/* Skeleton Column */}
                             <div className="flex justify-center">
                                 <Skeleton className="h-60 w-80 rounded-lg" />
                             </div>
@@ -60,37 +63,37 @@ const AboutPage = () => {
 
                         {/* Section 2: How It Works */}
                         <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center pt-16">
-
                             <div className="flex justify-center">
                                 <Skeleton className="h-60 w-80 rounded-lg" />
                             </div>
 
                             <div>
-                                <p className="text-3xl font-semibold mb-3">How It Works</p>
-                                <p className="text-gray-700">Our process is simple:</p>
-                                <ul className="list-disc list-inside text-gray-700">
+                                <p className="text-3xl font-semibold mb-3 text-foreground">How It Works</p>
+                                <p className="text-foreground">Our process is simple:</p>
+                                <ul className="list-disc list-inside text-foreground">
                                     <li>Take a quick quiz about your skills and interests.</li>
                                     <li>Receive personalized career recommendations.</li>
                                     <li>Follow a structured roadmap to success.</li>
                                 </ul>
                             </div>
-
                         </section>
 
                         {/* Section 3: Sentiment Analysis */}
                         <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center pt-16">
                             <div>
-                                <p className="text-3xl font-semibold mb-3">Sentiment Analysis</p>
-                                <p className="text-gray-700">
+                                <p className="text-3xl font-semibold mb-3 text-foreground">Sentiment Analysis</p>
+                                <p className="text-foreground">
                                     We use sentiment analysis to determine career suitability based on your quiz responses.
                                     This ensures accurate and relevant recommendations tailored to your skills and goals.
                                 </p>
                             </div>
                             <div className="flex justify-center">
-                                <Card className="w-[80%]">
+                                <Card className="w-[80%] bg-component">
                                     <CardHeader>
-                                        <CardTitle>Sentiment Over Time</CardTitle>
-                                        <CardDescription>Yearly sentiment scores</CardDescription>
+                                        <CardTitle className="text-foreground">Sentiment Over Time</CardTitle>
+                                        <CardDescription className="text-foreground">
+                                            Yearly sentiment scores
+                                        </CardDescription>
                                     </CardHeader>
                                     <CardContent>
                                         <ChartContainer
@@ -114,7 +117,7 @@ const AboutPage = () => {
                                                     tickLine={false}
                                                     axisLine={false}
                                                     tickMargin={8}
-                                                    padding={{ left: 12}}
+                                                    padding={{ left: 12 }}
                                                 />
                                                 <ChartTooltip
                                                     cursor={false}
@@ -137,59 +140,29 @@ const AboutPage = () => {
                         {/* Section 4: Technologies */}
                         <section className="pt-16 text-center">
                             <div>
-                                <p className="text-3xl font-semibold mb-3">Technologies Rookies Use</p>
-                                <p className="text-gray-700 pb-20">
+                                <p className="text-3xl font-semibold mb-3 text-foreground">Technologies Rookies Use</p>
+                                <p className="pb-20 text-foreground">
                                     We leverage state-of-the-art technologies to deliver personalized career insights.
                                     Our stack includes modern web frameworks, robust databases, and intelligent analytics.
                                 </p>
                                 <div className="flex flex-row justify-evenly">
                                     <div>
-                                        <Image
-                                            src="/icons/drizzle.svg"
-                                            alt="Drizzle"
-                                            width={50}
-                                            height={50}
-                                        />
+                                        <Image src="/icons/drizzle.svg" alt="Drizzle" width={50} height={50} />
                                     </div>
                                     <div>
-                                        <Image
-                                            src="/icons/neon.svg"
-                                            alt="Neon"
-                                            width={50}
-                                            height={50}
-                                        />
+                                        <Image src="/icons/neon.svg" alt="Neon" width={50} height={50} />
                                     </div>
                                     <div>
-                                        <Image
-                                            src="/icons/nextjs.svg"
-                                            alt="Next.js"
-                                            width={50}
-                                            height={50}
-                                        />
+                                        <Image src="/icons/nextjs.svg" alt="Next.js" width={50} height={50} />
                                     </div>
                                     <div>
-                                        <Image
-                                            src="/icons/shadcn.svg"
-                                            alt="Shadcn"
-                                            width={50}
-                                            height={50}
-                                        />
+                                        <Image src="/icons/shadcn.svg" alt="Shadcn" width={50} height={50} />
                                     </div>
                                     <div>
-                                        <Image
-                                            src="/icons/tailwindcss.svg"
-                                            alt="Tailwind CSS"
-                                            width={50}
-                                            height={50}
-                                        />
+                                        <Image src="/icons/tailwindcss.svg" alt="Tailwind CSS" width={50} height={50} />
                                     </div>
                                     <div>
-                                        <Image
-                                            src="/icons/typescript.svg"
-                                            alt="TypeScript"
-                                            width={50}
-                                            height={50}
-                                        />
+                                        <Image src="/icons/typescript.svg" alt="TypeScript" width={50} height={50} />
                                     </div>
                                 </div>
                             </div>
@@ -197,11 +170,11 @@ const AboutPage = () => {
 
                         {/* Section 5: Future Plans */}
                         <section className="py-16">
-                            <p className="text-3xl font-semibold mb-3">Future Plans</p>
-                            <p className="text-gray-700">
+                            <p className="text-3xl font-semibold mb-3 text-foreground">Future Plans</p>
+                            <p className="text-foreground">
                                 We plan to enhance the platform by adding features like:
                             </p>
-                            <ul className="list-disc list-inside text-gray-700">
+                            <ul className="list-disc list-inside text-foreground">
                                 <li>Machine learning-based career recommendations.</li>
                                 <li>Personalized learning progress tracking.</li>
                                 <li>Job and internship listings.</li>
