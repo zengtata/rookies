@@ -284,6 +284,30 @@
   .root-container {
     @apply flex min-h-screen flex-1 flex-col bg-white px-5 xs:px-10 md:px-16;
   }
+
+  .pixelBackground {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
+  }
+  .pixelBackground .column {
+    width: 5vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .pixelBackground .column .block {
+    width: 100%;
+    height: 5vw;
+    background-color: var(--button); /* Or use a CSS variable if desired */
+  }
+
 }
 
 /* ========== Additional Base Styles ========== */
