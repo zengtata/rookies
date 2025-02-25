@@ -71,6 +71,13 @@
       "when": 1740418629104,
       "tag": "0009_puzzling_impossible_man",
       "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1740472765896,
+      "tag": "0010_flashy_exodus",
+      "breakpoints": true
     }
   ]
 }

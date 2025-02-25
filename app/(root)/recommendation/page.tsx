@@ -11,25 +11,12 @@ export default function RecommendationPage() {
   const router = useRouter();
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  // Fetch user's recommended careers
+  // Fetch user's recommended careers using quiz answers from the database.
   useEffect(() => {
     const fetchCareers = async () => {
-      const storedResponses = localStorage.getItem("quizResponses");
-      if (!storedResponses) {
-        alert("No quiz responses found. Please complete the quiz.");
-        router.push("/quiz");
-        return;
-      }
-      const responses = JSON.parse(storedResponses);
-      if (!responses || responses.length < 11) {
-        alert("Incomplete quiz responses found. Please complete the quiz.");
-        router.push("/quiz");
-        return;
-      }
       const response = await fetch("/api/recommend", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ responses }),
       });
       const data = await response.json();
       if (data.success) {
@@ -37,12 +24,14 @@ export default function RecommendationPage() {
       } else {
         console.error("Failed to load careers:", data.error);
         alert("Error in recommendation: " + data.error);
+        // Optionally redirect back to quiz if no answers were found.
+        router.push("/quiz");
       }
     };
     fetchCareers();
   }, [router]);
 
-  // Fetch the user's selected career from the user-career table
+  // Fetch the user's selected career from the user-career table.
   useEffect(() => {
     const fetchSelectedCareer = async () => {
       const res = await fetch("/api/user-career-details", {
@@ -66,7 +55,6 @@ export default function RecommendationPage() {
       headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
-      // Optionally, you might also update currentCareerId here.
       setCurrentCareerId(careerId);
       router.push("/");
     } else {
@@ -74,7 +62,7 @@ export default function RecommendationPage() {
     }
   };
 
-  // Convert vertical scroll to horizontal
+  // Convert vertical scroll to horizontal.
   const handleWheel = (event: React.WheelEvent<HTMLDivElement>) => {
     event.preventDefault();
     if (scrollContainerRef.current) {

@@ -160,7 +160,6 @@ export function CareerCard({
                       config={
                         {
                           sentiment: {
-                            label: "Sentiment",
                             color: "hsl(var(--chart-1))",
                           },
                         } as ChartConfig
@@ -209,7 +208,6 @@ export function CareerCard({
                       config={
                         {
                           reviews: {
-                            label: "Reviews",
                             color: "hsl(var(--chart-2))",
                           },
                         } as ChartConfig

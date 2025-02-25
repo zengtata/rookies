@@ -65,3 +65,11 @@ export const careerReviews = pgTable("career_reviews", {
   sentiment_score: real("sentiment_score").notNull(),
   num_reviews: integer("num_reviews").notNull(),
 });
+
+export const quizAnswers = pgTable("quiz_answers", {
+  id: uuid("id").notNull().primaryKey().defaultRandom(),
+  user_id: uuid("user_id")
+    .notNull()
+    .references(() => users.id),
+  answers: text("answers").notNull(),
+});
