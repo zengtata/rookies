@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/api/quiz-answer/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/change-password/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ChangePasswordDialog.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/quiz/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/quiz/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/recommendation/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/recommendation/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/recommend/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/recommend/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drizzle/meta/_journal.json" beforeDir="false" afterPath="$PROJECT_DIR$/drizzle/meta/_journal.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(auth)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(auth)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AuthForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AuthForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SettingsDropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SettingsDropdown.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/validation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/validation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,11 +68,11 @@
       <recent name="D:\OneDrive\Asztali gép\Thesis\rookies\career_recommendation_project\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Thesis\rookies\app\api\change-password" />
       <recent name="D:\Thesis\rookies\public\icons" />
       <recent name="D:\Thesis\rookies\public" />
       <recent name="D:\Thesis\rookies\public\models" />
       <recent name="D:\Thesis\rookies\app\(auth)" />
-      <recent name="D:\Thesis\rookies\career_recommendation_project" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -127,7 +128,8 @@
       <workItem from="1740399347300" duration="595000" />
       <workItem from="1740402167947" duration="21518000" />
       <workItem from="1740459864940" duration="966000" />
-      <workItem from="1740467014164" duration="8517000" />
+      <workItem from="1740467014164" duration="8847000" />
+      <workItem from="1740568521942" duration="2390000" />
     </task>
     <servers />
   </component>

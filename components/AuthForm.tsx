@@ -28,7 +28,6 @@ import { FIELD_NAMES, FIELD_TYPES } from "@/constants";
 import { toast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 
-
 interface Props<T extends FieldValues> {
   schema: ZodType<T>;
   defaultValues: T;
@@ -60,12 +59,20 @@ const AuthForm = <T extends FieldValues>({
           ? "Signed in successfully"
           : "Signed up successfully",
       });
-
       router.push("/");
     } else {
-      toast({
-        title: `Error ${isSignIn ? "signing in" : "signing up"}`,
-      });
+      // Check if error indicates that the user already exists.
+      if (result.error && result.error.includes("User already exists")) {
+        toast({
+          title: "User already exists",
+          description:
+            "This email is already registered. Would you like to sign in instead?",
+        });
+      } else {
+        toast({
+          title: `Error ${isSignIn ? "signing in" : "signing up"}`,
+        });
+      }
     }
   };
 
@@ -90,14 +97,12 @@ const AuthForm = <T extends FieldValues>({
                     {FIELD_NAMES[field.name as keyof typeof FIELD_NAMES]}
                   </FormLabel>
                   <FormControl>
-                      <Input
-                        required
-                        type={
-                          FIELD_TYPES[field.name as keyof typeof FIELD_TYPES]
-                        }
-                        {...field}
-                        className="form-input"
-                      />
+                    <Input
+                      required
+                      type={FIELD_TYPES[field.name as keyof typeof FIELD_TYPES]}
+                      {...field}
+                      className="form-input"
+                    />
                   </FormControl>
 
                   <FormMessage />
