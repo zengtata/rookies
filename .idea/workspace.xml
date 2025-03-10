@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/quiz/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/quiz/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/quiz-answer/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/quiz-answer/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/career_milestone.json" beforeDir="false" afterPath="$PROJECT_DIR$/career_milestone.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MilestoneDetailsPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MilestoneDetailsPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MilestoneSheet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MilestoneSheet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/recommendation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recommendation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/milestones.json" beforeDir="false" afterPath="$PROJECT_DIR$/milestones.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +130,7 @@
       <workItem from="1740929268626" duration="23000" />
       <workItem from="1740932581044" duration="1402000" />
       <workItem from="1741266456335" duration="8153000" />
-      <workItem from="1741614748990" duration="10800000" />
+      <workItem from="1741614748990" duration="12512000" />
     </task>
     <servers />
   </component>
