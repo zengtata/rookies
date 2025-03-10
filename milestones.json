@@ -1,602 +1,505 @@
 [
   {
-    "name": "Learn Programming Languages (Python, R, Java)",
-    "description": "Description for Learn Programming Languages (Python, R, Java).",
-    "resources": "Resources for Learn Programming Languages (Python, R, Java)."
-  },
-  {
-    "name": "Understand Data Structures and Algorithms",
-    "description": "Description for Understand Data Structures and Algorithms.",
-    "resources": "Resources for Understand Data Structures and Algorithms."
-  },
-  {
-    "name": "Study Mathematics and Statistics (Linear Algebra, Calculus, Probability)",
-    "description": "Description for Study Mathematics and Statistics (Linear Algebra, Calculus, Probability).",
-    "resources": "Resources for Study Mathematics and Statistics (Linear Algebra, Calculus, Probability)."
-  },
-  {
-    "name": "Learn Machine Learning Fundamentals",
-    "description": "Description for Learn Machine Learning Fundamentals.",
-    "resources": "Resources for Learn Machine Learning Fundamentals."
-  },
-  {
-    "name": "Master Deep Learning (Neural Networks, CNN, RNN)",
-    "description": "Description for Master Deep Learning (Neural Networks, CNN, RNN).",
-    "resources": "Resources for Master Deep Learning (Neural Networks, CNN, RNN)."
-  },
-  {
-    "name": "Work with Data (Data Preprocessing, Feature Engineering)",
-    "description": "Description for Work with Data (Data Preprocessing, Feature Engineering).",
-    "resources": "Resources for Work with Data (Data Preprocessing, Feature Engineering)."
-  },
-  {
-    "name": "Understand Natural Language Processing (NLP)",
-    "description": "Description for Understand Natural Language Processing (NLP).",
-    "resources": "Resources for Understand Natural Language Processing (NLP)."
-  },
-  {
-    "name": "Learn AI Frameworks and Libraries (TensorFlow, Keras, PyTorch)",
-    "description": "Description for Learn AI Frameworks and Libraries (TensorFlow, Keras, PyTorch).",
-    "resources": "Resources for Learn AI Frameworks and Libraries (TensorFlow, Keras, PyTorch)."
-  },
-  {
-    "name": "Build AI Models and Systems (Machine Learning Pipelines, Predictive Models)",
-    "description": "Description for Build AI Models and Systems (Machine Learning Pipelines, Predictive Models).",
-    "resources": "Resources for Build AI Models and Systems (Machine Learning Pipelines, Predictive Models)."
-  },
-  {
-    "name": "Deploy and Monitor AI Systems",
-    "description": "Description for Deploy and Monitor AI Systems.",
-    "resources": "Resources for Deploy and Monitor AI Systems."
-  },
-  {
-    "name": "Stay Updated on Emerging AI Research",
-    "description": "Description for Stay Updated on Emerging AI Research.",
-    "resources": "Resources for Stay Updated on Emerging AI Research."
-  },
-  {
-    "name": "Learn Programming Languages (JavaScript, Python, C++)",
-    "description": "Description for Learn Programming Languages (JavaScript, Python, C++).",
-    "resources": "Resources for Learn Programming Languages (JavaScript, Python, C++)."
-  },
-  {
-    "name": "Understand Blockchain Basics (Distributed Ledger, Cryptography, Consensus Mechanisms)",
-    "description": "Description for Understand Blockchain Basics (Distributed Ledger, Cryptography, Consensus Mechanisms).",
-    "resources": "Resources for Understand Blockchain Basics (Distributed Ledger, Cryptography, Consensus Mechanisms)."
-  },
-  {
-    "name": "Learn About Blockchain Platforms (Ethereum, Bitcoin, Hyperledger)",
-    "description": "Description for Learn About Blockchain Platforms (Ethereum, Bitcoin, Hyperledger).",
-    "resources": "Resources for Learn About Blockchain Platforms (Ethereum, Bitcoin, Hyperledger)."
-  },
-  {
-    "name": "Get Familiar with Smart Contracts (Solidity, Ethereum smart contract development)",
-    "description": "Description for Get Familiar with Smart Contracts (Solidity, Ethereum smart contract development).",
-    "resources": "Resources for Get Familiar with Smart Contracts (Solidity, Ethereum smart contract development)."
-  },
-  {
-    "name": "Understand Blockchain Security (Cryptographic Hashing, Public/Private Keys)",
-    "description": "Description for Understand Blockchain Security (Cryptographic Hashing, Public/Private Keys).",
-    "resources": "Resources for Understand Blockchain Security (Cryptographic Hashing, Public/Private Keys)."
-  },
-  {
-    "name": "Explore Decentralized Applications (dApps)",
-    "description": "Description for Explore Decentralized Applications (dApps).",
-    "resources": "Resources for Explore Decentralized Applications (dApps)."
-  },
-  {
-    "name": "Develop and Deploy Smart Contracts",
-    "description": "Description for Develop and Deploy Smart Contracts.",
-    "resources": "Resources for Develop and Deploy Smart Contracts."
-  },
-  {
-    "name": "Work with Distributed Ledger Technologies",
-    "description": "Description for Work with Distributed Ledger Technologies.",
-    "resources": "Resources for Work with Distributed Ledger Technologies."
-  },
-  {
-    "name": "Contribute to Open Source Blockchain Projects",
-    "description": "Description for Contribute to Open Source Blockchain Projects.",
-    "resources": "Resources for Contribute to Open Source Blockchain Projects."
-  },
-  {
-    "name": "Stay Updated on Blockchain Innovations (DeFi, NFTs, Layer 2 Solutions)",
-    "description": "Description for Stay Updated on Blockchain Innovations (DeFi, NFTs, Layer 2 Solutions).",
-    "resources": "Resources for Stay Updated on Blockchain Innovations (DeFi, NFTs, Layer 2 Solutions)."
-  },
-  {
-    "name": "Learn Programming Languages (Python, Java, Go)",
-    "description": "Description for Learn Programming Languages (Python, Java, Go).",
-    "resources": "Resources for Learn Programming Languages (Python, Java, Go)."
-  },
-  {
-    "name": "Understand Networking Fundamentals (TCP/IP, DNS, HTTP)",
-    "description": "Description for Understand Networking Fundamentals (TCP/IP, DNS, HTTP).",
-    "resources": "Resources for Understand Networking Fundamentals (TCP/IP, DNS, HTTP)."
-  },
-  {
-    "name": "Learn Operating Systems and Virtualization (Linux, Docker, Kubernetes)",
-    "description": "Description for Learn Operating Systems and Virtualization (Linux, Docker, Kubernetes).",
-    "resources": "Resources for Learn Operating Systems and Virtualization (Linux, Docker, Kubernetes)."
-  },
-  {
-    "name": "Get Familiar with Cloud Platforms (AWS, Azure, Google Cloud)",
-    "description": "Description for Get Familiar with Cloud Platforms (AWS, Azure, Google Cloud).",
-    "resources": "Resources for Get Familiar with Cloud Platforms (AWS, Azure, Google Cloud)."
-  },
-  {
-    "name": "Learn Cloud Infrastructure Management (Compute, Storage, Networking)",
-    "description": "Description for Learn Cloud Infrastructure Management (Compute, Storage, Networking).",
-    "resources": "Resources for Learn Cloud Infrastructure Management (Compute, Storage, Networking)."
-  },
-  {
-    "name": "Master Cloud Security Practices (IAM, VPC, Encryption)",
-    "description": "Description for Master Cloud Security Practices (IAM, VPC, Encryption).",
-    "resources": "Resources for Master Cloud Security Practices (IAM, VPC, Encryption)."
-  },
-  {
-    "name": "Work with Cloud APIs and SDKs (AWS SDK, Google Cloud API)",
-    "description": "Description for Work with Cloud APIs and SDKs (AWS SDK, Google Cloud API).",
-    "resources": "Resources for Work with Cloud APIs and SDKs (AWS SDK, Google Cloud API)."
-  },
-  {
-    "name": "Learn Automation and Infrastructure as Code (Terraform, CloudFormation)",
-    "description": "Description for Learn Automation and Infrastructure as Code (Terraform, CloudFormation).",
-    "resources": "Resources for Learn Automation and Infrastructure as Code (Terraform, CloudFormation)."
-  },
-  {
-    "name": "Work with Containers and Orchestration (Docker, Kubernetes)",
-    "description": "Description for Work with Containers and Orchestration (Docker, Kubernetes).",
-    "resources": "Resources for Work with Containers and Orchestration (Docker, Kubernetes)."
-  },
-  {
-    "name": "Optimize Cloud Architecture for Cost and Performance",
-    "description": "Description for Optimize Cloud Architecture for Cost and Performance.",
-    "resources": "Resources for Optimize Cloud Architecture for Cost and Performance."
-  },
-  {
-    "name": "Stay Updated with Cloud Technologies (Serverless, Hybrid Cloud, Edge Computing)",
-    "description": "Description for Stay Updated with Cloud Technologies (Serverless, Hybrid Cloud, Edge Computing).",
-    "resources": "Resources for Stay Updated with Cloud Technologies (Serverless, Hybrid Cloud, Edge Computing)."
-  },
-  {
-    "name": "Learn Networking Basics (TCP/IP, Subnetting, VPNs)",
-    "description": "Description for Learn Networking Basics (TCP/IP, Subnetting, VPNs).",
-    "resources": "Resources for Learn Networking Basics (TCP/IP, Subnetting, VPNs)."
-  },
-  {
-    "name": "Understand Operating Systems (Linux, Windows, macOS)",
-    "description": "Description for Understand Operating Systems (Linux, Windows, macOS).",
-    "resources": "Resources for Understand Operating Systems (Linux, Windows, macOS)."
-  },
-  {
-    "name": "Study Security Fundamentals (Firewalls, Encryption, Authentication)",
-    "description": "Description for Study Security Fundamentals (Firewalls, Encryption, Authentication).",
-    "resources": "Resources for Study Security Fundamentals (Firewalls, Encryption, Authentication)."
-  },
-  {
-    "name": "Learn Cryptography (Public/Private Keys, SSL/TLS)",
-    "description": "Description for Learn Cryptography (Public/Private Keys, SSL/TLS).",
-    "resources": "Resources for Learn Cryptography (Public/Private Keys, SSL/TLS)."
-  },
-  {
-    "name": "Understand Threats and Vulnerabilities (Malware, Phishing, Denial of Service)",
-    "description": "Description for Understand Threats and Vulnerabilities (Malware, Phishing, Denial of Service).",
-    "resources": "Resources for Understand Threats and Vulnerabilities (Malware, Phishing, Denial of Service)."
-  },
-  {
-    "name": "Master Security Tools and Software (Wireshark, Nmap, Metasploit)",
-    "description": "Description for Master Security Tools and Software (Wireshark, Nmap, Metasploit).",
-    "resources": "Resources for Master Security Tools and Software (Wireshark, Nmap, Metasploit)."
-  },
-  {
-    "name": "Learn Penetration Testing Techniques",
-    "description": "Description for Learn Penetration Testing Techniques.",
-    "resources": "Resources for Learn Penetration Testing Techniques."
-  },
-  {
-    "name": "Study Incident Response and Forensics",
-    "description": "Description for Study Incident Response and Forensics.",
-    "resources": "Resources for Study Incident Response and Forensics."
-  },
-  {
-    "name": "Get Familiar with Security Compliance and Regulations (GDPR, HIPAA)",
-    "description": "Description for Get Familiar with Security Compliance and Regulations (GDPR, HIPAA).",
-    "resources": "Resources for Get Familiar with Security Compliance and Regulations (GDPR, HIPAA)."
-  },
-  {
-    "name": "Work on Security Audits and Risk Management",
-    "description": "Description for Work on Security Audits and Risk Management.",
-    "resources": "Resources for Work on Security Audits and Risk Management."
-  },
-  {
-    "name": "Stay Updated on Emerging Security Trends (Zero Trust, Ransomware Defense)",
-    "description": "Description for Stay Updated on Emerging Security Trends (Zero Trust, Ransomware Defense).",
-    "resources": "Resources for Stay Updated on Emerging Security Trends (Zero Trust, Ransomware Defense)."
-  },
-  {
-    "name": "Learn Programming Languages (Python, R, SQL)",
-    "description": "Description for Learn Programming Languages (Python, R, SQL).",
-    "resources": "Resources for Learn Programming Languages (Python, R, SQL)."
-  },
-  {
-    "name": "Study Mathematics and Statistics (Probability, Hypothesis Testing, Linear Algebra)",
-    "description": "Description for Study Mathematics and Statistics (Probability, Hypothesis Testing, Linear Algebra).",
-    "resources": "Resources for Study Mathematics and Statistics (Probability, Hypothesis Testing, Linear Algebra)."
-  },
-  {
-    "name": "Master Data Wrangling (Cleaning, Merging, Aggregating Data)",
-    "description": "Description for Master Data Wrangling (Cleaning, Merging, Aggregating Data).",
-    "resources": "Resources for Master Data Wrangling (Cleaning, Merging, Aggregating Data)."
-  },
-  {
-    "name": "Understand Machine Learning Algorithms (Classification, Regression, Clustering)",
-    "description": "Description for Understand Machine Learning Algorithms (Classification, Regression, Clustering).",
-    "resources": "Resources for Understand Machine Learning Algorithms (Classification, Regression, Clustering)."
-  },
-  {
-    "name": "Work with Data Visualization Tools (Matplotlib, Seaborn, Power BI)",
-    "description": "Description for Work with Data Visualization Tools (Matplotlib, Seaborn, Power BI).",
-    "resources": "Resources for Work with Data Visualization Tools (Matplotlib, Seaborn, Power BI)."
-  },
-  {
-    "name": "Learn Data Modeling and Feature Engineering",
-    "description": "Description for Learn Data Modeling and Feature Engineering.",
-    "resources": "Resources for Learn Data Modeling and Feature Engineering."
-  },
-  {
-    "name": "Master SQL and Database Management",
-    "description": "Description for Master SQL and Database Management.",
-    "resources": "Resources for Master SQL and Database Management."
-  },
-  {
-    "name": "Build Predictive Models and Analysis",
-    "description": "Description for Build Predictive Models and Analysis.",
-    "resources": "Resources for Build Predictive Models and Analysis."
-  },
-  {
-    "name": "Learn Big Data Technologies (Hadoop, Spark)",
-    "description": "Description for Learn Big Data Technologies (Hadoop, Spark).",
-    "resources": "Resources for Learn Big Data Technologies (Hadoop, Spark)."
-  },
-  {
-    "name": "Deploy Models into Production",
-    "description": "Description for Deploy Models into Production.",
-    "resources": "Resources for Deploy Models into Production."
-  },
-  {
-    "name": "Stay Updated with New Machine Learning and AI Trends",
-    "description": "Description for Stay Updated with New Machine Learning and AI Trends.",
-    "resources": "Resources for Stay Updated with New Machine Learning and AI Trends."
-  },
-  {
-    "name": "Earn a Degree in Information Technology or Management",
-    "description": "Description for Earn a Degree in Information Technology or Management.",
-    "resources": "Resources for Earn a Degree in Information Technology or Management."
-  },
-  {
-    "name": "Gain Technical Skills (Networking, Database Management, Programming)",
-    "description": "Description for Gain Technical Skills (Networking, Database Management, Programming).",
-    "resources": "Resources for Gain Technical Skills (Networking, Database Management, Programming)."
-  },
-  {
-    "name": "Develop Leadership Skills (Team Management, Communication)",
-    "description": "Description for Develop Leadership Skills (Team Management, Communication).",
-    "resources": "Resources for Develop Leadership Skills (Team Management, Communication)."
-  },
-  {
-    "name": "Learn IT Infrastructure Management (Servers, Storage, Networks)",
-    "description": "Description for Learn IT Infrastructure Management (Servers, Storage, Networks).",
-    "resources": "Resources for Learn IT Infrastructure Management (Servers, Storage, Networks)."
-  },
-  {
-    "name": "Gain Experience in Project Management",
-    "description": "Description for Gain Experience in Project Management.",
-    "resources": "Resources for Gain Experience in Project Management."
-  },
-  {
-    "name": "Understand Business Processes and IT Alignment",
-    "description": "Description for Understand Business Processes and IT Alignment.",
-    "resources": "Resources for Understand Business Processes and IT Alignment."
-  },
-  {
-    "name": "Manage IT Teams and Resources",
-    "description": "Description for Manage IT Teams and Resources.",
-    "resources": "Resources for Manage IT Teams and Resources."
-  },
-  {
-    "name": "Implement IT Security Policies",
-    "description": "Description for Implement IT Security Policies.",
-    "resources": "Resources for Implement IT Security Policies."
-  },
-  {
-    "name": "Learn IT Governance and Compliance (ITIL, GDPR, HIPAA)",
-    "description": "Description for Learn IT Governance and Compliance (ITIL, GDPR, HIPAA).",
-    "resources": "Resources for Learn IT Governance and Compliance (ITIL, GDPR, HIPAA)."
-  },
-  {
-    "name": "Manage Budgets and IT Strategy",
-    "description": "Description for Manage Budgets and IT Strategy.",
-    "resources": "Resources for Manage Budgets and IT Strategy."
-  },
-  {
-    "name": "Stay Updated with IT Innovations (Cloud Computing, AI, DevOps)",
-    "description": "Description for Stay Updated with IT Innovations (Cloud Computing, AI, DevOps).",
-    "resources": "Resources for Stay Updated with IT Innovations (Cloud Computing, AI, DevOps)."
-  },
-  {
-    "name": "Learn Basic IT Skills (Hardware, Software, Networking)",
-    "description": "Description for Learn Basic IT Skills (Hardware, Software, Networking).",
-    "resources": "Resources for Learn Basic IT Skills (Hardware, Software, Networking)."
-  },
-  {
-    "name": "Understand Operating Systems (Windows, macOS, Linux)",
-    "description": "Description for Understand Operating Systems (Windows, macOS, Linux).",
-    "resources": "Resources for Understand Operating Systems (Windows, macOS, Linux)."
-  },
-  {
-    "name": "Study Networking Basics (IP Addressing, DNS, DHCP)",
-    "description": "Description for Study Networking Basics (IP Addressing, DNS, DHCP).",
-    "resources": "Resources for Study Networking Basics (IP Addressing, DNS, DHCP)."
-  },
-  {
-    "name": "Learn Troubleshooting Techniques",
-    "description": "Description for Learn Troubleshooting Techniques.",
-    "resources": "Resources for Learn Troubleshooting Techniques."
-  },
-  {
-    "name": "Master IT Service Management (Ticketing, SLA)",
-    "description": "Description for Master IT Service Management (Ticketing, SLA).",
-    "resources": "Resources for Master IT Service Management (Ticketing, SLA)."
-  },
-  {
-    "name": "Learn Remote Support Tools (TeamViewer, AnyDesk)",
-    "description": "Description for Learn Remote Support Tools (TeamViewer, AnyDesk).",
-    "resources": "Resources for Learn Remote Support Tools (TeamViewer, AnyDesk)."
-  },
-  {
-    "name": "Learn Cloud Computing Basics (Google Drive, Microsoft OneDrive)",
-    "description": "Description for Learn Cloud Computing Basics (Google Drive, Microsoft OneDrive).",
-    "resources": "Resources for Learn Cloud Computing Basics (Google Drive, Microsoft OneDrive)."
-  },
-  {
-    "name": "Understand Security Practices (Antivirus, Backup Solutions)",
-    "description": "Description for Understand Security Practices (Antivirus, Backup Solutions).",
-    "resources": "Resources for Understand Security Practices (Antivirus, Backup Solutions)."
-  },
-  {
-    "name": "Specialize in Hardware or Software Support",
-    "description": "Description for Specialize in Hardware or Software Support.",
-    "resources": "Resources for Specialize in Hardware or Software Support."
-  },
-  {
-    "name": "Gain Certifications (CompTIA A+, Network+)",
-    "description": "Description for Gain Certifications (CompTIA A+, Network+).",
-    "resources": "Resources for Gain Certifications (CompTIA A+, Network+)."
-  },
-  {
-    "name": "Keep Up with New Technologies (Cloud, IoT, Automation)",
-    "description": "Description for Keep Up with New Technologies (Cloud, IoT, Automation).",
-    "resources": "Resources for Keep Up with New Technologies (Cloud, IoT, Automation)."
-  },
-  {
-    "name": "Learn Networking Basics (TCP/IP, OSI Model, Routing, Switching)",
-    "description": "Description for Learn Networking Basics (TCP/IP, OSI Model, Routing, Switching).",
-    "resources": "Resources for Learn Networking Basics (TCP/IP, OSI Model, Routing, Switching)."
-  },
-  {
-    "name": "Understand Operating Systems (Linux, Windows Server)",
-    "description": "Description for Understand Operating Systems (Linux, Windows Server).",
-    "resources": "Resources for Understand Operating Systems (Linux, Windows Server)."
-  },
-  {
-    "name": "Master Networking Tools (Wireshark, Nmap, Cisco Packet Tracer)",
-    "description": "Description for Master Networking Tools (Wireshark, Nmap, Cisco Packet Tracer).",
-    "resources": "Resources for Master Networking Tools (Wireshark, Nmap, Cisco Packet Tracer)."
-  },
-  {
-    "name": "Get Certified (Cisco CCNA, CompTIA Network+)",
-    "description": "Description for Get Certified (Cisco CCNA, CompTIA Network+).",
-    "resources": "Resources for Get Certified (Cisco CCNA, CompTIA Network+)."
-  },
-  {
-    "name": "Learn Network Configuration (VLAN, VPN, DNS, DHCP)",
-    "description": "Description for Learn Network Configuration (VLAN, VPN, DNS, DHCP).",
-    "resources": "Resources for Learn Network Configuration (VLAN, VPN, DNS, DHCP)."
-  },
-  {
-    "name": "Understand Routing and Switching Protocols (BGP, OSPF, RIP)",
-    "description": "Description for Understand Routing and Switching Protocols (BGP, OSPF, RIP).",
-    "resources": "Resources for Understand Routing and Switching Protocols (BGP, OSPF, RIP)."
-  },
-  {
-    "name": "Learn Network Security (Firewalls, Intrusion Detection Systems)",
-    "description": "Description for Learn Network Security (Firewalls, Intrusion Detection Systems).",
-    "resources": "Resources for Learn Network Security (Firewalls, Intrusion Detection Systems)."
-  },
-  {
-    "name": "Work with Wireless Networking",
-    "description": "Description for Work with Wireless Networking.",
-    "resources": "Resources for Work with Wireless Networking."
-  },
-  {
-    "name": "Gain Expertise in Network Design (Topology, Redundancy)",
-    "description": "Description for Gain Expertise in Network Design (Topology, Redundancy).",
-    "resources": "Resources for Gain Expertise in Network Design (Topology, Redundancy)."
-  },
-  {
-    "name": "Manage Network Monitoring and Troubleshooting",
-    "description": "Description for Manage Network Monitoring and Troubleshooting.",
-    "resources": "Resources for Manage Network Monitoring and Troubleshooting."
-  },
-  {
-    "name": "Stay Updated on Network Innovations (SD-WAN, 5G, Network Automation)",
-    "description": "Description for Stay Updated on Network Innovations (SD-WAN, 5G, Network Automation).",
-    "resources": "Resources for Stay Updated on Network Innovations (SD-WAN, 5G, Network Automation)."
-  },
-  {
-    "name": "Learn Programming Languages (Java, Python, JavaScript)",
-    "description": "Description for Learn Programming Languages (Java, Python, JavaScript).",
-    "resources": "Resources for Learn Programming Languages (Java, Python, JavaScript)."
-  },
-  {
-    "name": "Understand Software Development Life Cycle (SDLC)",
-    "description": "Description for Understand Software Development Life Cycle (SDLC).",
-    "resources": "Resources for Understand Software Development Life Cycle (SDLC)."
-  },
-  {
-    "name": "Learn Manual Testing Techniques (Test Cases, Bug Reporting)",
-    "description": "Description for Learn Manual Testing Techniques (Test Cases, Bug Reporting).",
-    "resources": "Resources for Learn Manual Testing Techniques (Test Cases, Bug Reporting)."
-  },
-  {
-    "name": "Master Automation Tools (Selenium, Cypress, JUnit)",
-    "description": "Description for Master Automation Tools (Selenium, Cypress, JUnit).",
-    "resources": "Resources for Master Automation Tools (Selenium, Cypress, JUnit)."
-  },
-  {
-    "name": "Learn About CI/CD and DevOps Practices",
-    "description": "Description for Learn About CI/CD and DevOps Practices.",
-    "resources": "Resources for Learn About CI/CD and DevOps Practices."
-  },
-  {
-    "name": "Understand Performance and Load Testing",
-    "description": "Description for Understand Performance and Load Testing.",
-    "resources": "Resources for Understand Performance and Load Testing."
-  },
-  {
-    "name": "Work with Test Management Tools (JIRA, TestRail)",
-    "description": "Description for Work with Test Management Tools (JIRA, TestRail).",
-    "resources": "Resources for Work with Test Management Tools (JIRA, TestRail)."
-  },
-  {
-    "name": "Understand Security and Penetration Testing (OWASP, Burp Suite)",
-    "description": "Description for Understand Security and Penetration Testing (OWASP, Burp Suite).",
-    "resources": "Resources for Understand Security and Penetration Testing (OWASP, Burp Suite)."
-  },
-  {
-    "name": "Become Familiar with Agile/Scrum Methodologies",
-    "description": "Description for Become Familiar with Agile/Scrum Methodologies.",
-    "resources": "Resources for Become Familiar with Agile/Scrum Methodologies."
-  },
-  {
-    "name": "Learn Test-Driven Development (TDD)",
-    "description": "Description for Learn Test-Driven Development (TDD).",
-    "resources": "Resources for Learn Test-Driven Development (TDD)."
-  },
-  {
-    "name": "Stay Updated on Testing Tools and Practices (AI in Testing, Cloud Testing)",
-    "description": "Description for Stay Updated on Testing Tools and Practices (AI in Testing, Cloud Testing).",
-    "resources": "Resources for Stay Updated on Testing Tools and Practices (AI in Testing, Cloud Testing)."
-  },
-  {
-    "name": "Learn Programming Languages (Java, Python, C++, JavaScript)",
-    "description": "Description for Learn Programming Languages (Java, Python, C++, JavaScript).",
-    "resources": "Resources for Learn Programming Languages (Java, Python, C++, JavaScript)."
-  },
-  {
-    "name": "Understand Data Structures and Algorithms",
-    "description": "Description for Understand Data Structures and Algorithms.",
-    "resources": "Resources for Understand Data Structures and Algorithms."
-  },
-  {
-    "name": "Learn Software Development Methodologies (Agile, Waterfall)",
-    "description": "Description for Learn Software Development Methodologies (Agile, Waterfall).",
-    "resources": "Resources for Learn Software Development Methodologies (Agile, Waterfall)."
-  },
-  {
-    "name": "Master Web Development (HTML, CSS, JavaScript, React, Node.js)",
-    "description": "Description for Master Web Development (HTML, CSS, JavaScript, React, Node.js).",
-    "resources": "Resources for Master Web Development (HTML, CSS, JavaScript, React, Node.js)."
-  },
-  {
-    "name": "Work with Databases (SQL, NoSQL)",
-    "description": "Description for Work with Databases (SQL, NoSQL).",
-    "resources": "Resources for Work with Databases (SQL, NoSQL)."
-  },
-  {
-    "name": "Learn about APIs and Web Services",
-    "description": "Description for Learn about APIs and Web Services.",
-    "resources": "Resources for Learn about APIs and Web Services."
-  },
-  {
-    "name": "Understand Software Architecture and Design Patterns",
-    "description": "Description for Understand Software Architecture and Design Patterns.",
-    "resources": "Resources for Understand Software Architecture and Design Patterns."
-  },
-  {
-    "name": "Work on Version Control (Git)",
-    "description": "Description for Work on Version Control (Git).",
-    "resources": "Resources for Work on Version Control (Git)."
-  },
-  {
-    "name": "Test and Debug Code",
-    "description": "Description for Test and Debug Code.",
-    "resources": "Resources for Test and Debug Code."
-  },
-  {
-    "name": "Build and Deploy Applications",
-    "description": "Description for Build and Deploy Applications.",
-    "resources": "Resources for Build and Deploy Applications."
-  },
-  {
-    "name": "Stay Updated on New Technologies and Frameworks",
-    "description": "Description for Stay Updated on New Technologies and Frameworks.",
-    "resources": "Resources for Stay Updated on New Technologies and Frameworks."
-  },
-  {
-    "name": "Learn Design Principles (Color Theory, Typography, Layout)",
-    "description": "Description for Learn Design Principles (Color Theory, Typography, Layout).",
-    "resources": "Resources for Learn Design Principles (Color Theory, Typography, Layout)."
-  },
-  {
-    "name": "Understand User-Centered Design (UCD)",
-    "description": "Description for Understand User-Centered Design (UCD).",
-    "resources": "Resources for Understand User-Centered Design (UCD)."
-  },
-  {
-    "name": "Learn Wireframing and Prototyping Tools (Figma, Adobe XD, Sketch)",
-    "description": "Description for Learn Wireframing and Prototyping Tools (Figma, Adobe XD, Sketch).",
-    "resources": "Resources for Learn Wireframing and Prototyping Tools (Figma, Adobe XD, Sketch)."
-  },
-  {
-    "name": "Conduct User Research (Surveys, Interviews, Usability Testing)",
-    "description": "Description for Conduct User Research (Surveys, Interviews, Usability Testing).",
-    "resources": "Resources for Conduct User Research (Surveys, Interviews, Usability Testing)."
-  },
-  {
-    "name": "Design User Interfaces (UI)",
-    "description": "Description for Design User Interfaces (UI).",
-    "resources": "Resources for Design User Interfaces (UI)."
-  },
-  {
-    "name": "Learn about Accessibility (A11y) and Responsive Design",
-    "description": "Description for Learn about Accessibility (A11y) and Responsive Design.",
-    "resources": "Resources for Learn about Accessibility (A11y) and Responsive Design."
-  },
-  {
-    "name": "Collaborate with Developers on Implementation",
-    "description": "Description for Collaborate with Developers on Implementation.",
-    "resources": "Resources for Collaborate with Developers on Implementation."
-  },
-  {
-    "name": "Learn About Interaction Design (Gestures, Animations)",
-    "description": "Description for Learn About Interaction Design (Gestures, Animations).",
-    "resources": "Resources for Learn About Interaction Design (Gestures, Animations)."
-  },
-  {
-    "name": "Master Information Architecture (Sitemaps, User Flows)",
-    "description": "Description for Master Information Architecture (Sitemaps, User Flows).",
-    "resources": "Resources for Master Information Architecture (Sitemaps, User Flows)."
-  },
-  {
-    "name": "Test Designs with Real Users and Iterate",
-    "description": "Description for Test Designs with Real Users and Iterate.",
-    "resources": "Resources for Test Designs with Real Users and Iterate."
-  },
-  {
-    "name": "Stay Updated on UX/UI Trends and Tools (Voice UI, Augmented Reality)",
-    "description": "Description for Stay Updated on UX/UI Trends and Tools (Voice UI, Augmented Reality).",
-    "resources": "Resources for Stay Updated on UX/UI Trends and Tools (Voice UI, Augmented Reality)."
+    "career_id": "213d3325-502c-480b-929f-a160c89c3c0a",
+    "career_name": "Software Architect",
+    "career_description": "Design the high-level structure and roadmap of software systems. A Software Architect makes strategic technical decisions, selects appropriate frameworks and tools, guides development teams, and ensures systems are scalable, maintainable, and secure.",
+    "roadmap": [
+      {
+        "id": "ms-sa-001",
+        "name": "Introduction to Software Architecture and the Architect Role",
+        "description": "Understand what software architecture is, the various architectural styles (e.g., monolithic, microservices, serverless) and the role of a Software Architect. Learn the basics of how applications are built and the impact of design choices on scalability and performance.",
+        "resources": "YouTube: 'Software Architecture Basics' (https://www.youtube.com/watch?v=8hpopzexample), Course: 'Software Architecture Fundamentals' on Coursera (https://www.coursera.org/learn/software-architecture)"
+      },
+      {
+        "id": "ms-sa-002",
+        "name": "Fundamentals of Programming and Object-Oriented Design",
+        "description": "Build a strong foundation in programming with an emphasis on object-oriented design, SOLID principles, and best coding practices that underpin scalable system design.",
+        "resources": "YouTube: 'Object Oriented Programming Tutorial' (https://www.youtube.com/watch?v=GoXwIVyNvX0), Course: 'Java Programming Masterclass' on Udemy (https://www.udemy.com/course/java-the-complete-java-developer-course/)"
+      },
+      {
+        "id": "ms-sa-003",
+        "name": "Design Patterns, SOLID Principles, and Best Practices",
+        "description": "Explore common design patterns (MVC, MVP, MVVM), SOLID principles, Domain Driven Design, and Test Driven Development. Learn to apply these techniques to create modular, robust, and maintainable architectures.",
+        "resources": "YouTube: 'Design Patterns Explained Simply' (https://www.youtube.com/watch?v=vNHpsC5ng_E), Course: 'Design Patterns in Java' on Udemy (https://www.udemy.com/course/design-patterns-java/)"
+      },
+      {
+        "id": "ms-sa-004",
+        "name": "System Design, Architectural Styles, and Roadmapping",
+        "description": "Delve deep into system design: learn about microservices, distributed systems, and enterprise architecture. Understand how to create technical roadmaps and design systems that balance trade-offs between performance, scalability, and cost.",
+        "resources": "YouTube: 'System Design Interview Preparation' (https://www.youtube.com/watch?v=UzLMhqg3_Wc), Course: 'Grokking the System Design Interview' on Educative (https://www.educative.io/courses/grokking-the-system-design-interview)"
+      },
+      {
+        "id": "ms-sa-005",
+        "name": "Advanced Technical Skills and Modern Tools",
+        "description": "Gain expertise in cloud integration, container orchestration (Docker, Kubernetes), and modern DevOps practices. Understand how to integrate APIs (GraphQL, REST) and use tools like Git, CI/CD pipelines, and infrastructure as code.",
+        "resources": "YouTube: 'Advanced Cloud Architecture' (https://www.youtube.com/watch?v=3pssHc8m0e0), Course: 'Architecting on AWS' on LinkedIn Learning (https://www.linkedin.com/learning/architecting-on-aws)"
+      },
+      {
+        "id": "ms-sa-006",
+        "name": "Leadership, Communication, and Strategic Decision-Making",
+        "description": "Develop essential soft skills including leadership, effective communication, documentation, mentoring, and strategic decision-making. Learn to work with stakeholders and enforce standards within development teams.",
+        "resources": "YouTube: 'Tech Leadership 101' (https://www.youtube.com/watch?v=5Wl0XyzcZxE), Course: 'Leadership in Tech' on LinkedIn Learning (https://www.linkedin.com/learning/topics/leadership)"
+      }
+    ]
+  },
+  {
+    "career_id": "36e4930e-3089-4b25-8c91-03431d5728ee",
+    "career_name": "Cloud Engineer",
+    "career_description": "Manage and optimize cloud-based infrastructures. A Cloud Engineer designs cloud architectures, deploys and maintains resources, ensures security and scalability, and automates cloud operations.",
+    "roadmap": [
+      {
+        "id": "ms-ce-001",
+        "name": "Introduction to Cloud Computing and Virtualization",
+        "description": "Understand the core concepts of cloud computing including virtualization, IaaS, PaaS, and SaaS models. Learn about different deployment strategies and the benefits of cloud infrastructure.",
+        "resources": "YouTube: 'Cloud Computing Basics' (https://www.youtube.com/watch?v=1e6QZWzAL7I), Course: 'Introduction to Cloud Computing' on Coursera (https://www.coursera.org/learn/cloud-computing)"
+      },
+      {
+        "id": "ms-ce-002",
+        "name": "Cloud Service Models and Deployment Strategies",
+        "description": "Delve into the differences between public, private, and hybrid clouds. Learn best practices for deploying cloud resources and managing cloud environments.",
+        "resources": "YouTube: 'Understanding Cloud Service Models' (https://www.youtube.com/watch?v=BKb6ZYdjMJ0), Course: 'Cloud Computing Concepts' on Udacity (https://www.udacity.com/course/cloud-computing--ud080)"
+      },
+      {
+        "id": "ms-ce-003",
+        "name": "Building and Managing Cloud Infrastructure",
+        "description": "Gain hands-on experience with major cloud platforms (AWS, Azure, Google Cloud). Learn how to provision, configure, monitor, and maintain cloud resources using industry best practices.",
+        "resources": "YouTube: 'AWS Tutorial for Beginners' (https://www.youtube.com/watch?v=ubCNZRNjhyo), Course: 'AWS Certified Solutions Architect' on Udemy (https://www.udemy.com/course/aws-certified-solutions-architect-associate/)"
+      },
+      {
+        "id": "ms-ce-004",
+        "name": "Containerization and Orchestration with Docker and Kubernetes",
+        "description": "Learn how to containerize applications using Docker and manage container clusters with Kubernetes. Understand container orchestration and its role in building scalable cloud applications.",
+        "resources": "YouTube: 'Docker and Kubernetes Tutorial' (https://www.youtube.com/watch?v=X48VuDVv0do), Course: 'Kubernetes for Beginners' on Pluralsight (https://www.pluralsight.com/courses/kubernetes-getting-started)"
+      },
+      {
+        "id": "ms-ce-005",
+        "name": "Cloud Security and Compliance",
+        "description": "Explore the security challenges in cloud environments. Learn to implement security best practices including identity and access management, data encryption, and compliance with industry standards.",
+        "resources": "YouTube: 'Cloud Security Fundamentals' (https://www.youtube.com/watch?v=0awjG6fGpgM), Course: 'AWS Security Essentials' on Coursera (https://www.coursera.org/learn/aws-security)"
+      },
+      {
+        "id": "ms-ce-006",
+        "name": "Advanced Cloud Optimization and Automation",
+        "description": "Master advanced cloud engineering techniques such as cost optimization, auto-scaling, and automation using Infrastructure as Code tools like Terraform, enabling efficient and resilient cloud operations.",
+        "resources": "YouTube: 'Cloud Architecture Best Practices' (https://www.youtube.com/watch?v=3pssHc8m0e0), Course: 'Architecting on AWS' on LinkedIn Learning (https://www.linkedin.com/learning/architecting-on-aws)"
+      }
+    ]
+  },
+  {
+    "career_id": "48605609-829e-4499-ad36-f796a7e1f71f",
+    "career_name": "IT Manager",
+    "career_description": "Oversee an organization’s technology infrastructure and IT teams. IT Managers handle strategic planning, budgeting, team leadership, and ensure that IT initiatives align with business goals.",
+    "roadmap": [
+      {
+        "id": "ms-itm-001",
+        "name": "Foundations of IT Management",
+        "description": "Learn the basics of IT management, including the structure of IT departments, various service delivery models, and the key roles within an organization’s IT function.",
+        "resources": "YouTube: 'Introduction to IT Management' (https://www.youtube.com/watch?v=U6UuLY2Sp2k), Course: 'ITIL Foundation' on Udemy (https://www.udemy.com/course/itil-foundation/)"
+      },
+      {
+        "id": "ms-itm-002",
+        "name": "Strategic IT Planning, Budgeting, and Resource Allocation",
+        "description": "Understand how to develop and implement strategic IT plans, manage budgets, and allocate resources to support both current operations and future innovation.",
+        "resources": "YouTube: 'IT Strategy Explained' (https://www.youtube.com/watch?v=ghuFfHZufvA), Course: 'IT Management: Strategy and Planning' on Coursera (https://www.coursera.org/learn/it-strategy)"
+      },
+      {
+        "id": "ms-itm-003",
+        "name": "Leadership and Team Management in IT",
+        "description": "Develop the leadership and communication skills necessary to manage IT teams, mentor staff, and drive projects forward in a dynamic technology environment.",
+        "resources": "YouTube: 'Leadership in IT' (https://www.youtube.com/watch?v=Q5K8jxCPk5s), Course: 'Management Skills for IT Professionals' on LinkedIn Learning (https://www.linkedin.com/learning/topics/management)"
+      },
+      {
+        "id": "ms-itm-004",
+        "name": "Cybersecurity Fundamentals and Risk Management",
+        "description": "Learn the fundamentals of cybersecurity, including risk assessment, vulnerability management, and implementing security protocols to protect IT assets.",
+        "resources": "YouTube: 'Cybersecurity for Managers' (https://www.youtube.com/watch?v=GQJZXZ2kKZE), Course: 'Cybersecurity Essentials' on edX (https://www.edx.org/course/cybersecurity-essentials)"
+      },
+      {
+        "id": "ms-itm-005",
+        "name": "Driving Digital Transformation and Innovation",
+        "description": "Explore emerging technologies and strategies for digital transformation. Learn how to drive innovation and manage change to ensure IT delivers strategic business value.",
+        "resources": "YouTube: 'Digital Transformation in IT' (https://www.youtube.com/watch?v=E-FsK8o7FOI), Course: 'Digital Transformation' on Coursera (https://www.coursera.org/learn/digital-transformation)"
+      }
+    ]
+  },
+  {
+    "career_id": "56535cfe-17d8-48ce-bea3-25275b86c358",
+    "career_name": "Data Scientist",
+    "career_description": "Analyze and interpret complex data to support decision-making. Data Scientists build predictive models, perform data wrangling and visualization, and communicate insights to stakeholders.",
+    "roadmap": [
+      {
+        "id": "ms-ds-001",
+        "name": "Introduction to Data Science and Programming",
+        "description": "Learn the fundamentals of data science along with programming skills in Python or R. Get introduced to libraries and tools used for data manipulation and analysis.",
+        "resources": "YouTube: 'Python for Data Science' (https://www.youtube.com/watch?v=LHBE6Q9XlzI), Course: 'Python for Data Science Bootcamp' on Udemy (https://www.udemy.com/course/python-for-data-science/)"
+      },
+      {
+        "id": "ms-ds-002",
+        "name": "Mathematics and Statistics for Data Science",
+        "description": "Build a strong foundation in linear algebra, calculus, probability, and statistics. These mathematical concepts are essential for modeling and analyzing data.",
+        "resources": "YouTube: 'Math for Data Science' (https://www.youtube.com/watch?v=KEXfXP9nAcY), Course: 'Mathematics for Machine Learning' on Coursera (https://www.coursera.org/learn/mathematics-machine-learning)"
+      },
+      {
+        "id": "ms-ds-003",
+        "name": "Data Wrangling, Preprocessing, and Exploration",
+        "description": "Master the techniques for cleaning, transforming, and exploring raw data. Learn how to handle missing values, normalize data, and perform feature engineering.",
+        "resources": "YouTube: 'Data Preprocessing Tutorial' (https://www.youtube.com/watch?v=4uG1NMKNWCU), Course: 'Data Science and Machine Learning Bootcamp' on Udemy (https://www.udemy.com/course/data-science/)"
+      },
+      {
+        "id": "ms-ds-004",
+        "name": "Data Visualization and Exploratory Data Analysis",
+        "description": "Learn to create compelling visualizations that reveal insights from data. Understand how to use visualization libraries to perform exploratory data analysis.",
+        "resources": "YouTube: 'Data Visualization in Python' (https://www.youtube.com/watch?v=XF1_MlZ5l6M), Course: 'Data Visualization with Python' on Coursera (https://www.coursera.org/learn/python-for-data-visualization)"
+      },
+      {
+        "id": "ms-ds-005",
+        "name": "Machine Learning Fundamentals and Model Evaluation",
+        "description": "Study key machine learning algorithms, learn how to train and evaluate models, and understand concepts such as overfitting, cross-validation, and hyperparameter tuning.",
+        "resources": "YouTube: 'Machine Learning Basics' (https://www.youtube.com/watch?v=GwIo3gDZCVQ), Course: 'Machine Learning by Andrew Ng' on Coursera (https://www.coursera.org/learn/machine-learning)"
+      },
+      {
+        "id": "ms-ds-006",
+        "name": "Advanced Machine Learning Techniques and Model Deployment",
+        "description": "Delve into advanced topics such as ensemble methods, reinforcement learning, and learn strategies for deploying models into production.",
+        "resources": "YouTube: 'Ensemble Learning Explained' (https://www.youtube.com/watch?v=5qap5aO4i9A), Course: 'Production Machine Learning Systems' on Coursera (https://www.coursera.org/learn/ml-production)"
+      },
+      {
+        "id": "ms-ds-007",
+        "name": "Deep Learning and Neural Networks",
+        "description": "Gain an in-depth understanding of deep learning, including convolutional and recurrent neural networks. Learn to build and train complex neural models using frameworks like TensorFlow and PyTorch.",
+        "resources": "YouTube: 'Deep Learning Crash Course' (https://www.youtube.com/watch?v=aircAruvnKk), Course: 'Deep Learning Specialization' on Coursera (https://www.coursera.org/specializations/deep-learning)"
+      },
+      {
+        "id": "ms-ds-008",
+        "name": "Introduction to Natural Language Processing",
+        "description": "Learn the basics of NLP including text processing, sentiment analysis, and common libraries used for processing and analyzing language data.",
+        "resources": "YouTube: 'NLP Tutorial for Beginners' (https://www.youtube.com/watch?v=8rXD5-xhemo), Course: 'Natural Language Processing' on Coursera (https://www.coursera.org/learn/nlp)"
+      }
+    ]
+  },
+  {
+    "career_id": "615b3190-e6a5-4cef-95d5-b44cb587bcb8",
+    "career_name": "QA Engineer",
+    "career_description": "Ensure software quality by designing test plans, executing tests, automating testing processes, and collaborating with development teams to resolve issues.",
+    "roadmap": [
+      {
+        "id": "ms-qa-001",
+        "name": "Foundations of Software Testing and Quality Assurance",
+        "description": "Understand the importance of testing throughout the software development lifecycle and learn the basic methodologies and terminologies used in quality assurance.",
+        "resources": "YouTube: 'Software Testing Basics' (https://www.youtube.com/watch?v=Gz1kQDNsK6E), Course: 'Foundations of Software Testing' on Udemy (https://www.udemy.com/course/software-testing/)"
+      },
+      {
+        "id": "ms-qa-002",
+        "name": "Manual Testing Techniques and Test Case Design",
+        "description": "Develop practical skills in manual testing, including how to design effective test cases, perform exploratory testing, and document defects clearly.",
+        "resources": "YouTube: 'Manual Testing Tutorial' (https://www.youtube.com/watch?v=3s8rs9C2Kdw), Course: 'Manual Testing Course' on LinkedIn Learning (https://www.linkedin.com/learning/manual-testing)"
+      },
+      {
+        "id": "ms-qa-003",
+        "name": "Introduction to Test Automation",
+        "description": "Learn the basics of test automation using tools such as Selenium and JUnit. Understand how automation improves testing efficiency and repeatability.",
+        "resources": "YouTube: 'Selenium Tutorial' (https://www.youtube.com/watch?v=FExGJ7K0I8A), Course: 'Test Automation with Selenium' on Coursera (https://www.coursera.org/learn/selenium)"
+      },
+      {
+        "id": "ms-qa-004",
+        "name": "Advanced Test Automation and CI/CD Integration",
+        "description": "Explore advanced automation frameworks and learn how to integrate automated testing into continuous integration/continuous deployment pipelines.",
+        "resources": "YouTube: 'Advanced Test Automation' (https://www.youtube.com/watch?v=Kx_Z45pI3JY), Course: 'Advanced Selenium Frameworks' on Udemy (https://www.udemy.com/course/advanced-selenium/)"
+      },
+      {
+        "id": "ms-qa-005",
+        "name": "Specialized Testing: Performance, Security, and Usability",
+        "description": "Study specialized testing methods including performance testing, security testing, and usability testing to ensure comprehensive evaluation of software systems.",
+        "resources": "YouTube: 'Performance Testing Tutorial' (https://www.youtube.com/watch?v=Vy3zF5Y9d-4), Course: 'Software Testing: Performance Testing' on Pluralsight (https://www.pluralsight.com/courses/software-testing-performance)"
+      },
+      {
+        "id": "ms-qa-006",
+        "name": "Quality Assurance Best Practices and Continuous Improvement",
+        "description": "Learn industry best practices for quality assurance, including process improvements, test metrics, and strategies to drive continuous quality enhancement.",
+        "resources": "YouTube: 'QA Best Practices' (https://www.youtube.com/watch?v=Vy3zF5Y9d-4), Course: 'Quality Assurance for Software' on edX (https://www.edx.org/course/quality-assurance)"
+      }
+    ]
+  },
+  {
+    "career_id": "935bd750-9830-43dd-8195-e4ea71e70a95",
+    "career_name": "IT Support",
+    "career_description": "Provide technical assistance to end-users by troubleshooting hardware, software, and network issues. Deliver excellent customer support and ensure smooth operation of IT systems.",
+    "roadmap": [
+      {
+        "id": "ms-its-001",
+        "name": "Foundations of IT Support and Troubleshooting",
+        "description": "Learn the basics of IT support roles, common troubleshooting methodologies, and essential skills required to diagnose and resolve technical issues.",
+        "resources": "YouTube: 'IT Support Fundamentals' (https://www.youtube.com/watch?v=feL5CP1z5wQ), Course: 'Google IT Support Professional Certificate' on Coursera (https://www.coursera.org/professional-certificates/google-it-support)"
+      },
+      {
+        "id": "ms-its-002",
+        "name": "Hardware, Operating Systems, and Networking Basics",
+        "description": "Gain an understanding of computer hardware components, various operating systems, and foundational networking concepts critical for effective IT support.",
+        "resources": "YouTube: 'Computer Hardware Basics' (https://www.youtube.com/watch?v=OivQk5rHcYw), Course: 'Networking Fundamentals' on LinkedIn Learning (https://www.linkedin.com/learning/networking-foundations)"
+      },
+      {
+        "id": "ms-its-003",
+        "name": "Effective Troubleshooting and Problem Resolution",
+        "description": "Develop systematic troubleshooting techniques to diagnose and resolve common technical problems, and learn how to use diagnostic tools effectively.",
+        "resources": "YouTube: 'Troubleshooting Guide' (https://www.youtube.com/watch?v=H8z9MDPp5IM), Course: 'Computer Repair and Maintenance' on Udemy (https://www.udemy.com/course/computer-repair/)"
+      },
+      {
+        "id": "ms-its-004",
+        "name": "Customer Service and Communication for IT Support",
+        "description": "Enhance your communication and customer service skills to effectively interact with end-users and manage support tickets with professionalism.",
+        "resources": "YouTube: 'Customer Service in IT' (https://www.youtube.com/watch?v=FhEaqdHDU-A), Course: 'Effective Communication Skills' on Udemy (https://www.udemy.com/course/effective-communication/)"
+      },
+      {
+        "id": "ms-its-005",
+        "name": "Advanced IT Support and Remote Management Techniques",
+        "description": "Learn advanced strategies for remote IT support, including automation, remote monitoring, and proactive system maintenance to improve service delivery.",
+        "resources": "YouTube: 'Advanced IT Support' (https://www.youtube.com/watch?v=1LLRh3hLzyY), Course: 'Advanced IT Support Techniques' on Pluralsight (https://www.pluralsight.com/courses/advanced-it-support)"
+      }
+    ]
+  },
+  {
+    "career_id": "a68df7ad-120f-41ef-8a46-643de480b001",
+    "career_name": "Cyber Security",
+    "career_description": "Protect organizations’ systems, networks, and data from cyber threats by implementing security measures, monitoring systems, and conducting risk assessments.",
+    "roadmap": [
+      {
+        "id": "ms-cs-001",
+        "name": "Cyber Security Fundamentals and Awareness",
+        "description": "Establish a solid foundation in cybersecurity concepts, common threats, and the importance of protecting digital assets.",
+        "resources": "YouTube: 'Cyber Security for Beginners' (https://www.youtube.com/watch?v=U9Tn1YnoL-c), Course: 'Introduction to Cyber Security' on Coursera (https://www.coursera.org/learn/intro-cyber-security)"
+      },
+      {
+        "id": "ms-cs-002",
+        "name": "Risk Assessment and Vulnerability Management",
+        "description": "Learn how to perform risk assessments and vulnerability scans. Understand threat modeling and how to mitigate risks within an IT environment.",
+        "resources": "YouTube: 'Risk Assessment in Cyber Security' (https://www.youtube.com/watch?v=2xkZGVXG9Xg), Course: 'Vulnerability Management' on LinkedIn Learning (https://www.linkedin.com/learning/vulnerability-management)"
+      },
+      {
+        "id": "ms-cs-003",
+        "name": "Network Security and Defensive Technologies",
+        "description": "Study network security fundamentals including firewalls, intrusion detection systems, encryption methods, and secure network architecture.",
+        "resources": "YouTube: 'Network Security Basics' (https://www.youtube.com/watch?v=Md4x9MxjMQw), Course: 'Network Security Fundamentals' on Udemy (https://www.udemy.com/course/network-security/)"
+      },
+      {
+        "id": "ms-cs-004",
+        "name": "Incident Response, Digital Forensics, and Recovery",
+        "description": "Learn the steps for effective incident response, techniques in digital forensics, and strategies for system recovery following a security breach.",
+        "resources": "YouTube: 'Incident Response Tutorial' (https://www.youtube.com/watch?v=zMpaGCzLhG4), Course: 'Digital Forensics and Incident Response' on Udemy (https://www.udemy.com/course/digital-forensics/)"
+      },
+      {
+        "id": "ms-cs-005",
+        "name": "Advanced Cyber Security Tools and Strategies",
+        "description": "Explore advanced security tools including SIEM systems, multi-factor authentication, and proactive defense strategies to safeguard IT infrastructure.",
+        "resources": "YouTube: 'Cyber Security Tools Overview' (https://www.youtube.com/watch?v=4F8p2G7j6LU), Course: 'Security Tools for Cyber Security' on Pluralsight (https://www.pluralsight.com/courses/cybersecurity-tools)"
+      },
+      {
+        "id": "ms-cs-006",
+        "name": "Certification Preparation and Career Development",
+        "description": "Prepare for industry certifications such as CISSP, CEH, or CompTIA Security+ while learning career development strategies in cybersecurity.",
+        "resources": "YouTube: 'Cyber Security Career Tips' (https://www.youtube.com/watch?v=5jFVyJ3A7L8), Course: 'Cyber Security Certification Bootcamp' on Udemy (https://www.udemy.com/course/cyber-security-certification/)"
+      }
+    ]
+  },
+  {
+    "career_id": "abd89677-39b1-46cb-b70d-1feeecf87fe7",
+    "career_name": "Database Engineer",
+    "career_description": "Design, implement, and maintain robust database systems that ensure data integrity, security, and high performance. Work with both SQL and NoSQL databases and manage data modeling, optimization, and administration.",
+    "roadmap": [
+      {
+        "id": "ms-de-001",
+        "name": "Foundations of Database Systems and Data Storage",
+        "description": "Learn the fundamental concepts of database systems, including relational and NoSQL databases, and understand how data is stored, retrieved, and managed.",
+        "resources": "YouTube: 'Database Systems Explained' (https://www.youtube.com/watch?v=8stVXObL4KY), Course: 'Introduction to Databases' on Coursera (https://www.coursera.org/learn/database-management)"
+      },
+      {
+        "id": "ms-de-002",
+        "name": "Mastering SQL and Database Querying",
+        "description": "Develop advanced SQL skills to query, manipulate, and analyze data. Learn how to work with various SQL dialects and optimize your queries.",
+        "resources": "YouTube: 'SQL Tutorial for Beginners' (https://www.youtube.com/watch?v=HXV3zeQKqGY), Course: 'SQL for Data Science' on Udemy (https://www.udemy.com/course/sql-for-data-science/)"
+      },
+      {
+        "id": "ms-de-003",
+        "name": "Database Design, Normalization, and Data Modeling",
+        "description": "Learn to design efficient and scalable database schemas using normalization techniques and data modeling best practices.",
+        "resources": "YouTube: 'Database Design Tutorial' (https://www.youtube.com/watch?v=ztHopE5Wnpc), Course: 'Data Modeling for Database Design' on LinkedIn Learning (https://www.linkedin.com/learning/data-modeling)"
+      },
+      {
+        "id": "ms-de-004",
+        "name": "Database Administration, Security, and Maintenance",
+        "description": "Understand best practices in database administration, including backup strategies, performance monitoring, and security measures to protect data.",
+        "resources": "YouTube: 'Database Administration Basics' (https://www.youtube.com/watch?v=BrBWRvXcQXo), Course: 'Database Administration' on Pluralsight (https://www.pluralsight.com/courses/database-administration)"
+      },
+      {
+        "id": "ms-de-005",
+        "name": "Performance Tuning and Query Optimization",
+        "description": "Learn techniques for optimizing database performance through query optimization, indexing strategies, caching, and performance tuning.",
+        "resources": "YouTube: 'SQL Performance Tuning' (https://www.youtube.com/watch?v=VHTBq8Fq0i8), Course: 'SQL Performance Tuning' on Udemy (https://www.udemy.com/course/sql-performance-tuning/)"
+      },
+      {
+        "id": "ms-de-006",
+        "name": "Introduction to NoSQL, Distributed, and Cloud Databases",
+        "description": "Gain an understanding of non-relational databases and distributed systems, and learn how cloud platforms are reshaping database management.",
+        "resources": "YouTube: 'NoSQL Database Tutorial' (https://www.youtube.com/watch?v=1xW7QpYB5BM), Course: 'Introduction to NoSQL Databases' on Coursera (https://www.coursera.org/learn/nosql-databases)"
+      },
+      {
+        "id": "ms-de-007",
+        "name": "Advanced Database Technologies and Cloud Integration",
+        "description": "Explore advanced topics such as high availability, sharding, replication, and learn how to integrate databases with cloud environments.",
+        "resources": "YouTube: 'Advanced Database Systems' (https://www.youtube.com/watch?v=Q1m0Qiv6J9I), Course: 'Advanced Database Systems' on Coursera (https://www.coursera.org/learn/advanced-database)"
+      }
+    ]
+  },
+  {
+    "career_id": "c9978f4d-d37e-4149-b46a-2ad4e128ddd1",
+    "career_name": "Network Engineer",
+    "career_description": "Design, implement, and maintain networking infrastructures by configuring devices, ensuring security, and optimizing network performance.",
+    "roadmap": [
+      {
+        "id": "ms-ne-001",
+        "name": "Networking Fundamentals and Protocols",
+        "description": "Learn core networking concepts including the OSI model, TCP/IP protocols, and the basics of data transmission across networks.",
+        "resources": "YouTube: 'Networking Basics' (https://www.youtube.com/watch?v=qiQR5rTSshw), Course: 'Introduction to Networking' on Cisco Networking Academy (https://www.netacad.com/courses/networking)"
+      },
+      {
+        "id": "ms-ne-002",
+        "name": "Understanding Network Hardware and Topologies",
+        "description": "Study various network devices, cables, and topologies to understand how physical networks are constructed and maintained.",
+        "resources": "YouTube: 'Network Topologies Explained' (https://www.youtube.com/watch?v=Y2G2iMIPYuI), Course: 'Networking Essentials' on Udemy (https://www.udemy.com/course/networking-essentials/)"
+      },
+      {
+        "id": "ms-ne-003",
+        "name": "Configuring Routers, Switches, and Firewalls",
+        "description": "Gain hands-on experience configuring routers, switches, and firewalls. Learn how to secure networks by properly setting up these devices.",
+        "resources": "YouTube: 'Router and Switch Configuration' (https://www.youtube.com/watch?v=0VH4T1I-pL4), Course: 'Cisco CCNA' on Udemy (https://www.udemy.com/course/ccna/)"
+      },
+      {
+        "id": "ms-ne-004",
+        "name": "Network Security, Monitoring, and Management",
+        "description": "Learn best practices for network security, including monitoring techniques, firewall configurations, and the use of network management tools.",
+        "resources": "YouTube: 'Network Security Fundamentals' (https://www.youtube.com/watch?v=LsVfiYyqeR8), Course: 'Network Security' on LinkedIn Learning (https://www.linkedin.com/learning/network-security)"
+      },
+      {
+        "id": "ms-ne-005",
+        "name": "Advanced Network Design and Troubleshooting",
+        "description": "Explore advanced design principles for building robust networks and develop troubleshooting strategies to diagnose and resolve complex network issues.",
+        "resources": "YouTube: 'Advanced Network Design' (https://www.youtube.com/watch?v=U0XdY6y8SVQ), Course: 'Network Troubleshooting' on Pluralsight (https://www.pluralsight.com/courses/network-troubleshooting)"
+      },
+      {
+        "id": "ms-ne-006",
+        "name": "Emerging Networking Technologies: SDN, IoT, and 5G",
+        "description": "Stay updated on emerging networking trends such as software-defined networking (SDN), the Internet of Things (IoT), and 5G technologies, and understand their impact on network architecture.",
+        "resources": "YouTube: 'Emerging Networking Technologies' (https://www.youtube.com/watch?v=Zolp5AdYkuE), Course: 'SDN and Network Automation' on Coursera (https://www.coursera.org/learn/sdn-network-automation)"
+      }
+    ]
+  },
+  {
+    "career_id": "ef5a4227-f6a6-4263-b4cc-532e369a3364",
+    "career_name": "Software Engineer",
+    "career_description": "Design, develop, and maintain software applications by writing clean code, employing testing strategies, and continuously learning new languages and frameworks.",
+    "roadmap": [
+      {
+        "id": "ms-se-001",
+        "name": "Foundations of Programming and Computer Science",
+        "description": "Establish a solid foundation in programming, computer science fundamentals, and problem-solving techniques essential for software development.",
+        "resources": "YouTube: 'Programming Fundamentals' (https://www.youtube.com/watch?v=8PopR3x-VMY), Course: 'CS50: Introduction to Computer Science' on edX (https://www.edx.org/course/cs50s-introduction-to-computer-science)"
+      },
+      {
+        "id": "ms-se-002",
+        "name": "Data Structures and Algorithms",
+        "description": "Learn core data structures and algorithms to write efficient code and tackle complex programming challenges with proven strategies.",
+        "resources": "YouTube: 'Data Structures and Algorithms' (https://www.youtube.com/watch?v=RBSGKlAvoiM), Course: 'Algorithms Specialization' on Coursera (https://www.coursera.org/specializations/algorithms)"
+      },
+      {
+        "id": "ms-se-003",
+        "name": "Software Development Methodologies and Tools",
+        "description": "Understand agile methodologies, version control systems, and collaborative tools that streamline software development and improve team productivity.",
+        "resources": "YouTube: 'Agile Methodologies Explained' (https://www.youtube.com/watch?v=Z9QbYZh1YXY), Course: 'Agile Software Development' on Udemy (https://www.udemy.com/course/agile-software-development/)"
+      },
+      {
+        "id": "ms-se-004",
+        "name": "Object-Oriented Programming and Design Patterns",
+        "description": "Deepen your understanding of OOP and design patterns to build scalable and maintainable software. Apply these principles in real-world projects.",
+        "resources": "YouTube: 'OOP and Design Patterns' (https://www.youtube.com/watch?v=GoXwIVyNvX0), Course: 'Design Patterns in Java' on Udemy (https://www.udemy.com/course/design-patterns-java/)"
+      },
+      {
+        "id": "ms-se-005",
+        "name": "Full-Stack Development Fundamentals",
+        "description": "Gain exposure to both front-end and back-end development, learn about key frameworks, and understand how to build complete, production-ready applications.",
+        "resources": "YouTube: 'Full-Stack Development Tutorial' (https://www.youtube.com/watch?v=Q33KBiDriJY), Course: 'The Complete Web Developer Bootcamp' on Udemy (https://www.udemy.com/course/the-complete-web-developer-bootcamp/)"
+      },
+      {
+        "id": "ms-se-006",
+        "name": "Advanced Programming Techniques and Code Optimization",
+        "description": "Explore advanced programming concepts, learn code optimization strategies, and master debugging techniques to write high-quality, efficient software.",
+        "resources": "YouTube: 'Advanced Programming Concepts' (https://www.youtube.com/watch?v=O6P86uwfdR0), Course: 'Clean Code' on Udemy (https://www.udemy.com/course/clean-code/)"
+      },
+      {
+        "id": "ms-se-007",
+        "name": "Software Testing, Debugging, and Deployment",
+        "description": "Learn various testing methodologies, effective debugging practices, and deployment strategies to ensure software quality and reliable production releases.",
+        "resources": "YouTube: 'Software Testing Explained' (https://www.youtube.com/watch?v=Gz1kQDNsK6E), Course: 'Software Testing' on Udemy (https://www.udemy.com/course/software-testing/)"
+      },
+      {
+        "id": "ms-se-008",
+        "name": "Agile Practices and Continuous Integration/Delivery",
+        "description": "Understand how to implement CI/CD pipelines and agile workflows to automate testing and deployment, ensuring rapid and reliable software delivery.",
+        "resources": "YouTube: 'CI/CD Pipeline Explained' (https://www.youtube.com/watch?v=1xT8Rw9qC4E), Course: 'Continuous Integration with Jenkins' on Coursera (https://www.coursera.org/learn/jenkins-continuous-integration)"
+      },
+      {
+        "id": "ms-se-009",
+        "name": "Career Development and Specialization",
+        "description": "Create a personalized career roadmap, explore areas of specialization, and learn strategies for continuous professional growth in software engineering.",
+        "resources": "YouTube: 'How to Advance as a Software Engineer' (https://www.youtube.com/watch?v=AMhOpP5b0ik), Course: 'Career Success Specialization' on Coursera (https://www.coursera.org/specializations/career-success)"
+      }
+    ]
+  },
+  {
+    "career_id": "fb03738b-b40b-4681-a127-1c705e86042d",
+    "career_name": "UX Designer",
+    "career_description": "Create intuitive and engaging user experiences by combining user research, wireframing, prototyping, and visual design. UX Designers focus on making digital products usable, accessible, and aesthetically pleasing.",
+    "roadmap": [
+      {
+        "id": "ms-ux-001",
+        "name": "Foundations of User Experience (UX) Design",
+        "description": "Learn the core principles of UX design including human-centered design, usability, and the overall design thinking process.",
+        "resources": "YouTube: 'UX Design for Beginners' (https://www.youtube.com/watch?v=Ovj4hFxko7c), Course: 'User Experience Design Fundamentals' on Coursera (https://www.coursera.org/learn/ux-design)"
+      },
+      {
+        "id": "ms-ux-002",
+        "name": "User Research, Personas, and Empathy Mapping",
+        "description": "Develop skills in conducting user research, creating user personas, and mapping empathy to deeply understand user needs and inform design decisions.",
+        "resources": "YouTube: 'User Research Methods' (https://www.youtube.com/watch?v=vmj8t4rcgLE), Course: 'UX Research' on LinkedIn Learning (https://www.linkedin.com/learning/ux-research)"
+      },
+      {
+        "id": "ms-ux-003",
+        "name": "Wireframing, Prototyping, and Interaction Design",
+        "description": "Master the art of creating low- and high-fidelity wireframes and interactive prototypes. Learn how to iterate designs based on user feedback and usability testing.",
+        "resources": "YouTube: 'Wireframing Tutorial' (https://www.youtube.com/watch?v=9z7dQ3Ck-T0), Course: 'UX & Web Design Master Course' on Udemy (https://www.udemy.com/course/ux-web-design/)"
+      },
+      {
+        "id": "ms-ux-004",
+        "name": "Visual Design Principles and Branding",
+        "description": "Learn typography, color theory, layout design, and branding essentials to create visually appealing and cohesive digital products.",
+        "resources": "YouTube: 'Visual Design Basics' (https://www.youtube.com/watch?v=Q1e0z4cM0V4), Course: 'Graphic Design Bootcamp' on Udemy (https://www.udemy.com/course/graphic-design/)"
+      },
+      {
+        "id": "ms-ux-005",
+        "name": "Usability Testing and Iterative Design",
+        "description": "Learn how to conduct usability testing, analyze feedback, and iteratively improve your designs to enhance user experience.",
+        "resources": "YouTube: 'Usability Testing Tutorial' (https://www.youtube.com/watch?v=z5GgNeq6amA), Course: 'User Experience Research and Design' on edX (https://www.edx.org/course/user-experience-research)"
+      },
+      {
+        "id": "ms-ux-006",
+        "name": "Advanced Interaction Design and Accessibility",
+        "description": "Explore advanced interaction design techniques and learn how to implement accessibility standards to ensure your designs are inclusive and user-friendly.",
+        "resources": "YouTube: 'Advanced Interaction Design' (https://www.youtube.com/watch?v=cY_JNkYx5SA), Course: 'Accessibility and Inclusive Design' on Udacity (https://www.udacity.com/course/accessibility-for-developers--ud891)"
+      },
+      {
+        "id": "ms-ux-007",
+        "name": "Building a UX Portfolio and Career Development",
+        "description": "Learn how to showcase your UX projects effectively by building a strong portfolio and develop strategies to advance your career in UX design.",
+        "resources": "YouTube: 'How to Build a UX Portfolio' (https://www.youtube.com/watch?v=H9pMvfVFG98), Course: 'UX Portfolio: Create a Stand-Out Portfolio' on Skillshare (https://www.skillshare.com/classes/UX-Portfolio-Create-a-Stand-Out-Portfolio/)"
+      }
+    ]
   }
 ]

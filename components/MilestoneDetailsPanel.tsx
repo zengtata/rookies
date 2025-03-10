@@ -25,6 +25,40 @@ export function MilestoneDetailsPanel({
                                           onComplete,
                                           onUndo,
                                       }: MilestoneDetailsPanelProps) {
+    // Helper function to render resources on separate lines with link on new line.
+    const renderResources = (resources: string) => {
+        // Split the string by commas and trim each part.
+        const resourceList = resources.split(",").map((item) => item.trim());
+        return resourceList.map((resource, index) => {
+            // Extract a URL wrapped in parentheses.
+            const linkMatch = resource.match(/\((https?:\/\/[^)]+)\)/);
+            if (linkMatch) {
+                const url = linkMatch[1];
+                // Remove the URL (with parentheses) from the resource text.
+                const textWithoutLink = resource.replace(linkMatch[0], "").trim();
+                return (
+                    <div key={index} className="mb-1">
+                        {textWithoutLink}
+                        <br />
+                        <a
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-500 underline"
+                        >
+                            {url}
+                        </a>
+                    </div>
+                );
+            }
+            return (
+                <div key={index} className="mb-1">
+                    {resource}
+                </div>
+            );
+        });
+    };
+
     return (
         <div className="hidden md:block md:w-50 md:mx-8 mt-8 md:mt-0 p-6 border border-border rounded-lg shadow-lg bg-component">
             <h2 className="text-2xl font-semibold mb-2 text-foreground">
@@ -33,9 +67,10 @@ export function MilestoneDetailsPanel({
             <p className="mb-4 text-foreground">
                 {milestone.milestone.description}
             </p>
-            <p className="mb-4">
-                Resources: {milestone.milestone.resources}
-            </p>
+            <div className="mb-4">
+                <p className="font-bold">Resources:</p>
+                {renderResources(milestone.milestone.resources)}
+            </div>
             {!isCompleted ? (
                 <Button
                     onClick={onComplete}

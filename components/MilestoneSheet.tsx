@@ -27,6 +27,39 @@ export function MilestoneSheet({
                                    onComplete,
                                    onUndo,
                                }: MilestoneSheetProps) {
+    // Helper function to split and render resources on separate lines with clickable links
+    const renderResources = (resources: string) => {
+        const resourceList = resources.split(",").map((item) => item.trim());
+        return resourceList.map((resource, index) => {
+            // Extract URL wrapped in parentheses
+            const linkMatch = resource.match(/\((https?:\/\/[^)]+)\)/);
+            if (linkMatch) {
+                const url = linkMatch[1];
+                // Remove the URL (with parentheses) from the resource text
+                const textWithoutLink = resource.replace(linkMatch[0], "").trim();
+                return (
+                    <div key={index} className="mb-1">
+                        {textWithoutLink}
+                        <br />
+                        <a
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-500 underline"
+                        >
+                            {url}
+                        </a>
+                    </div>
+                );
+            }
+            return (
+                <div key={index} className="mb-1">
+                    {resource}
+                </div>
+            );
+        });
+    };
+
     return (
         <Sheet open={open} onOpenChange={onOpenChange}>
             <SheetContent className="w-[90%] bg-component p-6">
@@ -34,7 +67,10 @@ export function MilestoneSheet({
                     {milestone.name}
                 </h2>
                 <p className="mb-4 text-foreground">{milestone.description}</p>
-                <p className="mb-4">Resources: {milestone.resources}</p>
+                <div className="mb-4">
+                    <p className="font-bold">Resources:</p>
+                    {renderResources(milestone.resources)}
+                </div>
                 {!isCompleted ? (
                     <Button
                         onClick={() => {

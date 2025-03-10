@@ -9,8 +9,8 @@ export async function POST(request: Request) {
   const session = await auth();
   if (!session || !session.user) {
     return NextResponse.json(
-      { success: false, error: "Unauthorized" },
-      { status: 401 },
+        { success: false, error: "Unauthorized" },
+        { status: 401 },
     );
   }
 
@@ -26,11 +26,19 @@ export async function POST(request: Request) {
   try {
     const { answers } = await request.json();
 
-    // Save the quiz answers as a JSON string in the database.
-    await db.insert(quizAnswers).values({
-      user_id: userId,
-      answers: JSON.stringify(answers),
-    });
+    // Upsert the quiz answers.
+    await db
+        .insert(quizAnswers)
+        .values({
+          user_id: userId,
+          answers: JSON.stringify(answers),
+        })
+        .onConflictDoUpdate({
+          target: [quizAnswers.user_id],
+          set: {
+            answers: JSON.stringify(answers),
+          },
+        });
 
     return NextResponse.json({ success: true });
   } catch (error) {
