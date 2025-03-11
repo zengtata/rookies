@@ -177,14 +177,15 @@ const AboutPage = () => {
                                             </div>
                                         </CarouselItem>
                                     </CarouselContent>
+                                    <p className="text-center text-sm text-foreground mb-8">Swipe {"<->"}</p>
                                     <CarouselPrevious />
                                     <CarouselNext />
-                                    <p className="text-center text-sm text-foreground">Swipe {"<->"}</p>
+
                                 </Carousel>
                             </div>
 
                             <div>
-                                <p className="text-3xl md:text-5xl font-semibold mb-3 text-foreground">
+                                <p className="text-3xl md:text-5xl font-semibold my-3 pt-10 text-foreground">
                                     How It Works
                                 </p>
                                 <p className="text-foreground text-md md:text-lg pb-4">Our process is simple:</p>
