@@ -179,8 +179,10 @@ const AboutPage = () => {
                                     </CarouselContent>
                                     <CarouselPrevious />
                                     <CarouselNext />
+                                    <p className="text-center text-sm text-foreground">Swipe {"<->"}</p>
                                 </Carousel>
                             </div>
+
                             <div>
                                 <p className="text-3xl md:text-5xl font-semibold mb-3 text-foreground">
                                     How It Works
