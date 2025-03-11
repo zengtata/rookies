@@ -63,7 +63,7 @@ const dummyMilestones = [
     {
         milestone: {
             id: "dummy3",
-            name: "Step: Follow Roadmap",
+            name: "Step 3: Follow Roadmap",
             description: "Description for dummy milestone 3.",
             resources: "",
         },
