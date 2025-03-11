@@ -27,9 +27,9 @@ interface ChangePasswordDialogProps {
 }
 
 export function ChangePasswordDialog({
-  open,
-  onOpenChange,
-}: ChangePasswordDialogProps) {
+                                       open,
+                                       onOpenChange,
+                                     }: ChangePasswordDialogProps) {
   const { register, handleSubmit, reset } = useForm<FormData>();
   const [loading, setLoading] = useState(false);
 
@@ -73,57 +73,72 @@ export function ChangePasswordDialog({
     setLoading(false);
   };
 
+  // onError will catch validation errors.
+  const onError = (errors: any) => {
+    if (errors.newPassword && errors.newPassword.message === "Password must contain at least one uppercase and one lowercase letter.") {
+      toast({ title: "Error", description: "Password must contain at least one uppercase and one lowercase letter." });
+    }
+  };
+
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[425px]">
-        <DialogTitle>Change Password</DialogTitle>
-        <DialogDescription>
-          Enter your old password and choose a new password.
-        </DialogDescription>
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 mt-4">
-          <div>
-            <Label htmlFor="oldPassword">Old Password</Label>
-            <Input
-              id="oldPassword"
-              type="password"
-              {...register("oldPassword", { required: true })}
-            />
-          </div>
-          <div>
-            <Label htmlFor="newPassword">New Password</Label>
-            <Input
-              id="newPassword"
-              type="password"
-              {...register("newPassword", { required: true, minLength: 8 })}
-            />
-          </div>
-          <div>
-            <Label htmlFor="confirmNewPassword">Confirm New Password</Label>
-            <Input
-              id="confirmNewPassword"
-              type="password"
-              {...register("confirmNewPassword", {
-                required: true,
-                minLength: 8,
-              })}
-            />
-          </div>
-          <div className="flex justify-end space-x-2 pt-4">
-            <DialogClose asChild>
-              <Button
-                variant="outline"
-                type="button"
-                onClick={() => onOpenChange(false)}
-              >
-                Cancel
+      <Dialog open={open} onOpenChange={onOpenChange}>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogTitle>Change Password</DialogTitle>
+          <DialogDescription>
+            Enter your old password and choose a new password.
+          </DialogDescription>
+          <form onSubmit={handleSubmit(onSubmit, onError)} className="space-y-4 mt-4">
+            <div>
+              <Label htmlFor="oldPassword">Old Password</Label>
+              <Input
+                  id="oldPassword"
+                  type="password"
+                  {...register("oldPassword", { required: "Old password is required" })}
+              />
+            </div>
+            <div>
+              <Label htmlFor="newPassword">New Password</Label>
+              <Input
+                  id="newPassword"
+                  type="password"
+                  {...register("newPassword", {
+                    required: "New password is required",
+                    minLength: {
+                      value: 8,
+                      message: "Password must be at least 8 characters long",
+                    },
+                    validate: (value) =>
+                        /[a-z]/.test(value) && /[A-Z]/.test(value) ||
+                        "Password must contain at least one uppercase and one lowercase letter.",
+                  })}
+              />
+            </div>
+            <div>
+              <Label htmlFor="confirmNewPassword">Confirm New Password</Label>
+              <Input
+                  id="confirmNewPassword"
+                  type="password"
+                  {...register("confirmNewPassword", {
+                    required: "Please confirm your new password",
+                    minLength: {
+                      value: 8,
+                      message: "Password must be at least 8 characters long",
+                    },
+                  })}
+              />
+            </div>
+            <div className="flex justify-end space-x-2 pt-4">
+              <DialogClose asChild>
+                <Button variant="outline" type="button" onClick={() => onOpenChange(false)}>
+                  Cancel
+                </Button>
+              </DialogClose>
+              <Button type="submit" disabled={loading} className="text-white">
+                {loading ? "Changing..." : "Change Password"}
               </Button>
-            </DialogClose>
-            <Button type="submit" disabled={loading} className="text-white">
-              {loading ? "Changing..." : "Change Password"}
-            </Button>
-          </div>
-        </form>
-      </DialogContent>
-    </Dialog>
+            </div>
+          </form>
+        </DialogContent>
+      </Dialog>
   );
 }

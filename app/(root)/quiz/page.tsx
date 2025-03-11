@@ -157,12 +157,12 @@ const Page = () => {
   };
 
   // Check if all questions are answered.
-  // For question 6, ensure the array exists and is non-empty.
-  const allAnswered =
-      Object.keys(answers).length === questions.length &&
-      Array.isArray(answers[6])
-          ? (answers[6] as string[]).length > 0
-          : true;
+  const allAnswered = questions.every((_, index) => {
+    if (index === 6) {
+      return Array.isArray(answers[index]) && (answers[index] as string[]).length > 0;
+    }
+    return answers[index] !== undefined && answers[index] !== "";
+  });
 
   const handleSubmit = async () => {
     if (!allAnswered) {
