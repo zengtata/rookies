@@ -127,7 +127,7 @@ const AboutPage = () => {
                         {/* Section 2: How It Works */}
                         <section className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center py-16 text-center lg:text-start">
                             <div className="flex justify-center">
-                                <Carousel className="w-[330px] h-60 sm:w-96" setApi={setCarouselApi}>
+                                <Carousel className="w-[330px] h-60 sm:w-96 border-2 rounded-lg border-component" setApi={setCarouselApi}>
                                     <CarouselContent>
                                         <CarouselItem>
                                             <div className="p-4">
