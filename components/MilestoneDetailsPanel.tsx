@@ -37,14 +37,14 @@ export function MilestoneDetailsPanel({
                 // Remove the URL (with parentheses) from the resource text.
                 const textWithoutLink = resource.replace(linkMatch[0], "").trim();
                 return (
-                    <div key={index} className="mb-1">
+                    <div key={index} className="mb-4">
                         {textWithoutLink}
                         <br />
                         <a
                             href={url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-500 underline"
+                            className="text-buttonHover underline"
                         >
                             {url}
                         </a>
@@ -61,14 +61,14 @@ export function MilestoneDetailsPanel({
 
     return (
         <div className="hidden md:block md:w-50 md:mx-8 mt-8 md:mt-0 p-6 border border-border rounded-lg shadow-lg bg-component">
-            <h2 className="text-2xl font-semibold mb-2 text-foreground">
+            <p className="text-2xl lg:text-3xl font-semibold mb-4 text-foreground">
                 Level {milestone.step_order}: {milestone.milestone.name}
-            </h2>
-            <p className="mb-4 text-foreground">
+            </p>
+            <p className="text-md lg:text-xl mb-4 text-foreground">
                 {milestone.milestone.description}
             </p>
-            <div className="mb-4">
-                <p className="font-bold">Resources:</p>
+            <div className="text-md lg:text-xl mb-6">
+                <p className="font-bold mb-2">Resources:</p>
                 {renderResources(milestone.milestone.resources)}
             </div>
             {!isCompleted ? (

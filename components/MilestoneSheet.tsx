@@ -45,7 +45,7 @@ export function MilestoneSheet({
                             href={url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-500 underline"
+                            className="text-buttonHover underline"
                         >
                             {url}
                         </a>

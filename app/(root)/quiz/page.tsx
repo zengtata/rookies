@@ -215,15 +215,15 @@ const Page = () => {
             <div className="space-y-6 pb-8">
               {questions.map((q, index) => (
                   <div key={index} className="pb-6">
-                    <h3 className="text-xl font-medium text-foreground mb-8">
+                    <p className="text-xl md:text-2xl font-medium text-foreground mb-8">
                       {q.question}
-                    </h3>
+                    </p>
                     <div className="grid grid-cols-1 2xl:grid-cols-2 gap-6">
                       {q.options.map((option, idx) => {
-                        // For single-select questions, hide unselected options.
+                        // For single-select, hide unselected options.
                         if (index !== 6 && answers[index] && answers[index] !== option)
                           return null;
-                        // For multi-select (index 6), always show all options.
+                        // For multi-select, always show all options.
                         const isSelected =
                             index === 6 && Array.isArray(answers[6])
                                 ? (answers[6] as string[]).includes(option)

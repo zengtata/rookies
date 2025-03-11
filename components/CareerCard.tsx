@@ -106,26 +106,22 @@ export function CareerCard({
           onClick={handleClick}
         >
           <div
-            className="relative bg-background w-5/6 h-[75vh] rounded-lg shadow-lg flex flex-col md:flex-row overflow-y-auto border border-border"
+            className="relative bg-background w-5/6 h-[75vh] rounded-lg shadow-lg flex flex-col overflow-y-auto border border-border"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Left Side: Enlarged Card Section */}
-            <div className="w-full md:w-4/12 h-full p-6 flex flex-col items-center justify-center">
-              <p className="text-xl xl:text-4xl font-semibold text-foreground">
+            <div className="w-full p-6 flex flex-col items-center justify-center">
+              <p className="text-2xl md:text-4xl font-semibold text-foreground">
                 {career.title}
               </p>
               {!isSelected && (
-                <Button
-                  onClick={handleSelect}
-                  className="mt-4 bg-button text-white transition-colors hover:bg-buttonHover"
-                >
-                  Select Career
-                </Button>
+                  <Button
+                      onClick={handleSelect}
+                      className="mt-6 bg-button text-white transition-colors hover:bg-buttonHover"
+                  >
+                    Select Career
+                  </Button>
               )}
-            </div>
 
-            {/* Right Side: Career Description and Charts */}
-            <div className="w-full md:w-8/12 p-6 flex flex-col">
               <button
                 onClick={(e) => {
                   e.stopPropagation();
@@ -136,16 +132,13 @@ export function CareerCard({
                 <X className="h-5 w-5" />
               </button>
 
-              <div className="mb-4">
-                <h4 className="text-lg font-bold text-foreground">
-                  Career Description
-                </h4>
-                <p className="text-sm text-foreground mt-2">
+              <div className="m-4">
+                <p className="text-foreground mt-2">
                   {career.description}
                 </p>
               </div>
 
-              <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-4 w-[80%]">
                 <Card className="bg-background">
                   <CardHeader>
                     <CardTitle className="text-foreground">
