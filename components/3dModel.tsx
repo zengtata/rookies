@@ -1,15 +1,14 @@
 "use client";
 
-import React from "react";
-import { Canvas } from "@react-three/fiber";
+import React, { useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Html } from "@react-three/drei";
-import {VideoMesh} from "@/components/VideoMesh";
-// import { useControls } from "leva";
+import { VideoMesh } from "@/components/VideoMesh";
 
 function Model(props: { modelPath: string }) {
     const { scene } = useGLTF(props.modelPath);
 
-    // Default transformation values (use your preferred defaults)
+    // Default transformation values (adjust as needed)
     const rotation = [0, -3, 0];
     const scale = 0.008;
     const position = [0, 0, 0];
@@ -21,6 +20,24 @@ function Model(props: { modelPath: string }) {
             scale={[scale, scale, scale]}
             position={position}
         />
+    );
+}
+
+function RotatingGroup() {
+    const groupRef = useRef<any>(null);
+
+    // Rotate the whole group (model and VideoMesh) together
+    useFrame((state, delta) => {
+        if (groupRef.current) {
+            groupRef.current.rotation.y += delta * 0.5; // adjust rotation speed as desired
+        }
+    });
+
+    return (
+        <group ref={groupRef}>
+            <Model modelPath="/models/sony_tv.glb" />
+            <VideoMesh />
+        </group>
     );
 }
 
@@ -38,12 +55,11 @@ export function ModelViewer() {
                     </Html>
                 }
             >
-                <Model modelPath="/models/sony_trinitron_prl.glb" />
-                <VideoMesh />
+                <RotatingGroup />
             </React.Suspense>
             <OrbitControls
-                minAzimuthAngle={-0.60} // about -27° (horizontal limit)
-                maxAzimuthAngle={0.60}  // about 27° (horizontal limit)
+                minAzimuthAngle={-0.6} // about -27° (horizontal limit)
+                maxAzimuthAngle={0.6}  // about 27° (horizontal limit)
                 minPolarAngle={(50 * Math.PI) / 180}  // about 75° in radians
                 maxPolarAngle={(120 * Math.PI) / 180} // about 105° in radians
                 enableZoom={false}
