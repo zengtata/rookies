@@ -60,7 +60,7 @@ export default function Homepage() {
             description: "Please answer the quiz and select a career!",
             variant: "destructive",
           });
-          router.push("/quiz");
+          router.push("/recommendation");
         }
       }
     };
