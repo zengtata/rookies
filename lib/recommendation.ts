@@ -5,7 +5,7 @@ export function getRecommendations(responses: string[]): string[] {
     "Data Scientist": 0,
     "Database Engineer": 0,
     "IT Manager": 0,
-    "IT Support Specialist": 0,
+    "IT Support": 0,
     "Network Engineer": 0,
     "QA Engineer": 0,
     "Software Architect": 0,
@@ -32,7 +32,7 @@ export function getRecommendations(responses: string[]): string[] {
       break;
     case "Collaborate with others to find the best approach.":
       careerWeights["IT Manager"] += 3;
-      careerWeights["IT Support Specialist"] += 2;
+      careerWeights["IT Support"] += 2;
       careerWeights["Software Engineer"] += 1;
       break;
   }
@@ -41,7 +41,7 @@ export function getRecommendations(responses: string[]): string[] {
   switch (responses[1]) {
     case "Stay calm and focus on solutions.":
       careerWeights["Cyber Security Specialist"] += 3;
-      careerWeights["IT Support Specialist"] += 2;
+      careerWeights["IT Support"] += 2;
       break;
     case "Feel energized by high-pressure situations.":
       careerWeights["Network Engineer"] += 3;
@@ -92,7 +92,7 @@ export function getRecommendations(responses: string[]): string[] {
       careerWeights["Software Architect"] += 2;
       break;
     case "Enjoy the predictability.":
-      careerWeights["IT Support Specialist"] += 3;
+      careerWeights["IT Support"] += 3;
       careerWeights["Network Engineer"] += 2;
       break;
   }
@@ -133,7 +133,7 @@ export function getRecommendations(responses: string[]): string[] {
       careerWeights["UX Designer"] += 2;
       break;
     case "Mentorship or team collaboration.":
-      careerWeights["IT Support Specialist"] += 3;
+      careerWeights["IT Support"] += 3;
       careerWeights["Network Engineer"] += 2;
       break;
   }
@@ -159,7 +159,7 @@ export function getRecommendations(responses: string[]): string[] {
         break;
       case "Networking/system administration":
         careerWeights["Network Engineer"] += 3;
-        careerWeights["IT Support Specialist"] += 2;
+        careerWeights["IT Support"] += 2;
         careerWeights["Cloud Engineer"] += 1;
         break;
       case "Cybersecurity tools (e.g., Wireshark, Kali Linux)":
@@ -171,7 +171,7 @@ export function getRecommendations(responses: string[]): string[] {
         careerWeights["Data Scientist"] += 1;
         break;
       case "None – I’m just starting out":
-        careerWeights["IT Support Specialist"] += 3;
+        careerWeights["IT Support"] += 3;
         careerWeights["QA Engineer"] += 2;
         careerWeights["Software Engineer"] += 1;
         break;
@@ -213,7 +213,7 @@ export function getRecommendations(responses: string[]): string[] {
       careerWeights["UX Designer"] += 2;
       break;
     case "Mentoring others in tech.":
-      careerWeights["IT Support Specialist"] += 3;
+      careerWeights["IT Support"] += 3;
       careerWeights["Cyber Security Specialist"] += 1;
       break;
   }
@@ -242,7 +242,7 @@ export function getRecommendations(responses: string[]): string[] {
   switch (responses[10]) {
     case "Critical—I need clear boundaries.":
       careerWeights["Database Engineer"] += 3;
-      careerWeights["IT Support Specialist"] += 2;
+      careerWeights["IT Support"] += 2;
       break;
     case "Flexible—I don’t mind occasional crunch times.":
       careerWeights["Cloud Engineer"] += 3;
