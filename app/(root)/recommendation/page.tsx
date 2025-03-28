@@ -23,8 +23,6 @@ export default function RecommendationPage() {
         setCareers(data.careers || []);
       } else {
         console.error("Failed to load careers:", data.error);
-        alert("Error in recommendation: " + data.error);
-        // Optionally redirect back to quiz if no answers were found.
         router.push("/quiz");
       }
     };
