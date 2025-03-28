@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/recommendation/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/recommendation/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/use-toast.ts" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/use-toast.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +147,8 @@
       <workItem from="1742758779075" duration="593000" />
       <workItem from="1742809844712" duration="3061000" />
       <workItem from="1743162427863" duration="406000" />
+      <workItem from="1743163116223" duration="297000" />
+      <workItem from="1743163498879" duration="482000" />
     </task>
     <servers />
   </component>

@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { CareerCard } from "@/components/CareerCard";
 import { cn } from "@/lib/utils";
+import {toast} from "@/hooks/use-toast";
 
 export default function RecommendationPage() {
   const [careers, setCareers] = useState<any[]>([]);
@@ -22,12 +23,17 @@ export default function RecommendationPage() {
       if (data.success) {
         setCareers(data.careers || []);
       } else {
-        console.error("Failed to load careers:", data.error);
+        console.error(data.error);
+        toast({
+          title: "No Quiz Answer Found!",
+          description: "Please answer the quiz to get recommendations!",
+          variant: "destructive",
+        });
         router.push("/quiz");
       }
     };
     fetchCareers();
-  }, [router]);
+  }, [router, toast]);
 
   // Fetch the user's selected career from the user-career table.
   useEffect(() => {
