@@ -1,0 +1,312 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Light Mode */
+  :root {
+    --background: #fafafa;
+    --foreground: #171717;
+    --component:  #e5e5e5;
+    --button:     #2563eb;
+    --buttonHover: #60a5fa;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 89.8%;          /* #D8D2C2 */
+    --sidebar-foreground: 0 0% 9%;            /*#494953 */
+    --sidebar-primary:    221.2 83.2% 53.3%;          /* #B17457 */
+    --sidebar-primary-foreground: 221.2 83.2% 53.3%;       /* #FAF7F0 */
+    --sidebar-accent:     213.1 93.9% 67.8%;            /* primary */
+    --sidebar-accent-foreground: 0 0% 9%;
+    --sidebar-border:     0 0% 89.8%;
+    --sidebar-ring:       221.2 83.2% 53.3%;
+  }
+
+  /* Dark Mode */
+  .dark {
+    --background: #171717;
+    --foreground: #fafafa;
+    --component:  #262626;
+    --button:     #dc2626;
+    --buttonHover: #f87171;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    --sidebar-background: 0 0% 14.9%;            /* #4A4947 */
+    --sidebar-foreground: 0 0% 96.1%;              /* #FAF7F0 */
+    --sidebar-primary:    0 72.2% 50.6%;            /* primary */
+    --sidebar-primary-foreground: 0 72.2% 50.6%;
+    --sidebar-accent:     0 72.2% 50.6%;
+    --sidebar-accent-foreground: 0 0% 96.1%;
+    --sidebar-border:     0 0% 14.9%;
+    --sidebar-ring:       0 72.2% 50.6%;
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+@layer components {
+  .button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+  .button:hover {
+    width: 260px;
+    height: 165px;
+    border-radius: 50px;
+    background-color: rgb(255, 69, 69);
+    transition-duration: 0.3s;
+    align-items: center;
+  }
+  .stepNumber {
+    color: white;
+    font-size: 1.25rem;
+    transition: opacity 0.3s;
+  }
+  .button::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0;
+    opacity: 0;
+    transition: font-size 0.3s, opacity 0.3s;
+  }
+  .button:hover .stepNumber {
+    opacity: 0;
+  }
+  .button:hover::before {
+    font-size: 1rem;
+    opacity: 1;
+  }
+
+  .top-match {
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    border-radius: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+  }
+  .top-match:hover {
+    width: 160px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: rgb(255, 69, 69);
+    transition-duration: 0.3s;
+    align-items: center;
+  }
+  .top-match::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0;
+    opacity: 0;
+    transition: font-size 0.3s, opacity 0.3s;
+  }
+  .top-match:hover::before {
+    font-size: 1.5rem;
+    opacity: 1;
+  }
+
+
+  .form-btn {
+    @apply relative overflow-hidden bg-gray text-dark1 hover:bg-red inline-flex min-h-14 w-full items-center justify-center rounded-md px-6 py-2 font-bold text-base !important;
+    transition: background-color 1s ease, transform 1s ease;
+  }
+  .form-input {
+    @apply w-full min-h-14 text-base font-bold placeholder:font-normal text-gray placeholder:text-light-100 focus-visible:ring-0 focus-visible:shadow-none bg-transparent border border-white rounded-md !important;
+  }
+
+}
+
+
+@layer utilities {
+  .auth-container {
+    @apply relative flex flex-col-reverse text-customLight sm:flex-row;
+  }
+  .auth-form {
+    @apply relative flex h-full min-h-screen flex-1 items-center px-5 py-10;
+    background: none;
+    overflow: hidden;
+  }
+  .auth-box {
+    @apply relative mx-auto flex flex-col gap-6 rounded-lg p-10;
+    width: 400px;
+    max-width: 90%;
+    background-color: rgba(73, 73, 83, 0.5);
+  }
+  .auth-video {
+    @apply absolute top-0 left-0 w-full h-full object-cover;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .root-container {
+    @apply flex min-h-screen flex-1 flex-col bg-background px-5 xs:px-10 md:px-16;
+  }
+
+  .pixelBackground {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
+  }
+  .pixelBackground .column {
+    width: 5vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .pixelBackground .column .block {
+    width: 100%;
+    height: 5vw;
+    background-color: var(--button);
+  }
+
+}
+
+
+@layer base {
+  .vertical-roadmap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-y: auto;
+    max-height: 90vh;
+  }
+  .milestone-item {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  .line {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 2rem;
+    background: #999;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .tooltip-container {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .tooltip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    font-size: 0.875rem;
+    color: #333;
+  }
+  .tooltip-container:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
