@@ -53,7 +53,7 @@ const questions = [
     options: [
       "Coding/scripting (Python, Java, etc.).",
       "Data analysis or machine learning.",
-      "Visual design or user psychology.",
+      "Visual design or user experience.",
       "Networking or system administration.",
     ],
   },

@@ -1,3 +1,5 @@
+// Weights changed for section 2, 4, 5; Some career changed as well; Personality and Skills are more relevant. /lib/recommendation.ts
+
 export function getRecommendations(responses: string[]): string[] {
   const careerWeights: Record<string, number> = {
     "Cloud Engineer": 0,
@@ -40,40 +42,39 @@ export function getRecommendations(responses: string[]): string[] {
   // Q2: How do you handle stress?
   switch (responses[1]) {
     case "Stay calm and focus on solutions.":
-      careerWeights["Cyber Security Specialist"] += 3;
+      careerWeights["Cyber Security Specialist"] += 2;
       careerWeights["IT Support"] += 2;
       break;
     case "Feel energized by high-pressure situations.":
-      careerWeights["Network Engineer"] += 3;
+      careerWeights["Network Engineer"] += 2;
       careerWeights["Cloud Engineer"] += 2;
       break;
     case "Prefer to avoid stress with careful planning.":
-      careerWeights["QA Engineer"] += 3;
+      careerWeights["QA Engineer"] += 2;
       careerWeights["Database Engineer"] += 2;
       break;
     case "Get overwhelmed but push through.":
-      careerWeights["Software Engineer"] += 1;
-      careerWeights["Data Scientist"] += 1;
+      // No points will be added for this answer
       break;
   }
 
   // Q3: Your ideal work environment is…
   switch (responses[2]) {
     case "Remote with flexible hours.":
-      careerWeights["Cloud Engineer"] += 3;
-      careerWeights["Software Engineer"] += 2;
+      careerWeights["Cloud Engineer"] += 1;
+      careerWeights["Software Engineer"] += 1;
       break;
     case "A structured office with clear routines.":
-      careerWeights["Database Engineer"] += 3;
-      careerWeights["QA Engineer"] += 2;
+      careerWeights["Database Engineer"] += 1;
+      careerWeights["QA Engineer"] += 1;
       break;
     case "A collaborative open-plan space.":
-      careerWeights["UX Designer"] += 3;
-      careerWeights["IT Manager"] += 2;
+      careerWeights["UX Designer"] += 1;
+      careerWeights["IT Manager"] += 1;
       break;
     case "A dynamic, fast-paced startup.":
-      careerWeights["Software Architect"] += 3;
-      careerWeights["Cyber Security Specialist"] += 2;
+      careerWeights["Software Engineer"] += 1;// changed from Cybersecurity Specialist TO Software Engineer
+      careerWeights["Software Architect"] += 1;
       break;
   }
 
@@ -108,9 +109,9 @@ export function getRecommendations(responses: string[]): string[] {
       careerWeights["Data Scientist"] += 3;
       careerWeights["Cyber Security Specialist"] += 2;
       break;
-    case "Visual design or user psychology.":
+    case "Visual design or user experience.":  // changed to make it more sense
       careerWeights["UX Designer"] += 3;
-      careerWeights["IT Manager"] += 1;
+      careerWeights["Software Engineer"] += 1;
       break;
     case "Networking or system administration.":
       careerWeights["Network Engineer"] += 3;
@@ -154,12 +155,11 @@ export function getRecommendations(responses: string[]): string[] {
         break;
       case "Visual design (e.g., Figma, Adobe XD)":
         careerWeights["UX Designer"] += 3;
-        careerWeights["IT Manager"] += 1;
         break;
       case "Networking/system administration":
         careerWeights["Network Engineer"] += 3;
-        careerWeights["IT Support"] += 2;
-        careerWeights["Cloud Engineer"] += 1;
+        careerWeights["Cloud Engineer"] += 2; // Changed order between IT Support and Cloud Engineer.
+        careerWeights["IT Support"] += 1;
         break;
       case "Cybersecurity tools (e.g., Wireshark, Kali Linux)":
         careerWeights["Cyber Security Specialist"] += 3;
@@ -186,6 +186,8 @@ export function getRecommendations(responses: string[]): string[] {
     case "Protecting people’s privacy/safety.":
       careerWeights["Cyber Security Specialist"] += 3;
       careerWeights["Database Engineer"] += 2;
+      careerWeights["UX Designer"] += 1;   //UX Designer Added
+
       break;
     case "Leading teams and making strategic decisions.":
       careerWeights["IT Manager"] += 3;
@@ -200,56 +202,61 @@ export function getRecommendations(responses: string[]): string[] {
   // Q9: What’s your long-term goal?
   switch (responses[8]) {
     case "Becoming a technical expert in a niche field.":
-      careerWeights["Network Engineer"] += 3;
-      careerWeights["Database Engineer"] += 2;
+      careerWeights["Network Engineer"] += 1;
+      careerWeights["Database Engineer"] += 1;
       break;
     case "Leading a company’s IT strategy.":
-      careerWeights["IT Manager"] += 3;
-      careerWeights["Software Architect"] += 2;
+      careerWeights["IT Manager"] += 1;
+      careerWeights["Software Architect"] += 1;
       break;
     case "Starting your own tech venture.":
-      careerWeights["Software Engineer"] += 3;
-      careerWeights["UX Designer"] += 2;
+      careerWeights["Software Engineer"] += 1;
+      careerWeights["UX Designer"] += 1;
       break;
     case "Mentoring others in tech.":
       careerWeights["IT Support"] += 3;
-      careerWeights["Cyber Security Specialist"] += 1;
+      careerWeights["Database Engineer"] += 1;  // Changed to Database Engineer
       break;
   }
 
   // Q10: How do you view ethical dilemmas in tech?
   switch (responses[9]) {
     case "Advocate fiercely for user privacy.":
-      careerWeights["Cyber Security Specialist"] += 3;
-      careerWeights["UX Designer"] += 2;
+      careerWeights["Cyber Security Specialist"] += 1;
+      careerWeights["UX Designer"] += 1;
       break;
     case "Balance ethics with business needs.":
-      careerWeights["IT Manager"] += 3;
+      careerWeights["IT Manager"] += 1;
       careerWeights["Software Architect"] += 1;
       break;
     case "Follow company policies strictly.":
-      careerWeights["QA Engineer"] += 3;
-      careerWeights["Database Engineer"] += 2;
+      careerWeights["QA Engineer"] += 1;
+      careerWeights["Database Engineer"] += 1;
       break;
     case "Prioritize innovation over regulations.":
-      careerWeights["Software Engineer"] += 3;
-      careerWeights["Cloud Engineer"] += 2;
+      careerWeights["Software Engineer"] += 1;
+      careerWeights["Cloud Engineer"] += 1;
       break;
   }
 
   // Q11: How important is work-life balance?
-  switch (responses[10]) {
+  switch (responses[10]) {  // Added more careers because it is a more general question
     case "Critical—I need clear boundaries.":
-      careerWeights["Database Engineer"] += 3;
-      careerWeights["IT Support"] += 2;
+      careerWeights["Database Engineer"] += 1;
+      careerWeights["UX Designer"] += 1;
+      careerWeights["QA Engineer"] += 1;
+      careerWeights["IT Support"] += 1;
       break;
     case "Flexible—I don’t mind occasional crunch times.":
-      careerWeights["Cloud Engineer"] += 3;
-      careerWeights["Software Engineer"] += 2;
+      careerWeights["Cloud Engineer"] += 1;
+      careerWeights["IT Manager"] += 1;
+      careerWeights["Software Engineer"] += 1;
       break;
     case "Not a priority—I’m driven by passion for the work.":
-      careerWeights["Cyber Security Specialist"] += 3;
-      careerWeights["Software Architect"] += 2;
+      careerWeights["Cyber Security Specialist"] += 1;
+      careerWeights["Software Architect"] += 1;
+      careerWeights["Data Scientist"] += 1;
+      careerWeights["Network Engineer"] += 1;
       break;
   }
 
