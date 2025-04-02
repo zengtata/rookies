@@ -57,22 +57,20 @@ interface TransitionWrapperProps {
 }
 
 const TransitionWrapper = ({ children }: TransitionWrapperProps) => {
-  const pathname = usePathname();
-  const [transitioning, setTransitioning] = useState(false);
+  const [showTransition, setShowTransition] = useState(true);
 
   useEffect(() => {
-    setTransitioning(true);
     const timeout = setTimeout(() => {
-      setTransitioning(false);
+      setShowTransition(false);
     }, 800);
     return () => clearTimeout(timeout);
-  }, [pathname]);
+  }, []);
 
   return (
     <div style={{ position: "relative" }}>
       {children}
       <AnimatePresence>
-        {transitioning && (
+        {showTransition && (
           <motion.div
             key="pixelTransition"
             style={{
