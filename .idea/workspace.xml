@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/api/delete-account/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/recommendation/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/recommendation/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SettingsDropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SettingsDropdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/TransitionWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/TransitionWrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,7 +191,7 @@
       <workItem from="1743670845594" duration="3000" />
       <workItem from="1743670854110" duration="13000" />
       <workItem from="1743670873086" duration="2099000" />
-      <workItem from="1743762401800" duration="6180000" />
+      <workItem from="1743762401800" duration="6436000" />
     </task>
     <servers />
   </component>
