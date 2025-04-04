@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="" />
+    <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +65,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/zengtata/Desktop/Thesis/rookies/public/models&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zengtata/Desktop/Thesis/rookies&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -192,6 +194,8 @@
       <workItem from="1743670854110" duration="13000" />
       <workItem from="1743670873086" duration="2099000" />
       <workItem from="1743762401800" duration="6436000" />
+      <workItem from="1743772906263" duration="596000" />
+      <workItem from="1743775631903" duration="629000" />
     </task>
     <servers />
   </component>

@@ -1,3 +1,5 @@
+// Root page for the application
+
 "use client";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -7,6 +9,17 @@ import { MilestoneNavigation } from "@/components/MilestoneNavigation";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useToast } from "@/hooks/use-toast";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
 
 interface Milestone {
   milestone: {
@@ -26,6 +39,7 @@ export default function Homepage() {
   const [selectedMilestone, setSelectedMilestone] = useState<any>(null);
   const [sheetOpen, setSheetOpen] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [showCongratsDialog, setShowCongratsDialog] = useState(false); // Congratulations dialog added
 
   const router = useRouter();
   const { toast } = useToast();
@@ -58,6 +72,7 @@ export default function Homepage() {
           toast({
             title: "No Career Selected",
             description: "Please answer the quiz and select a career!",
+            // Toast type changed to avoid confusion
           });
           router.push("/recommendation");
         }
@@ -85,8 +100,8 @@ export default function Homepage() {
 
 
   const saveProgressToServer = async (
-    currentMilestone: number,
-    completed: string[],
+      currentMilestone: number,
+      completed: string[],
   ) => {
     await fetch("/api/update-progress", {
       method: "POST",
@@ -130,7 +145,7 @@ export default function Homepage() {
   const handleUndoCompletion = async () => {
     const currentMilestoneId = milestones[currentIndex].milestone.id;
     const newCompleted = completedMilestones.filter(
-      (id) => id !== currentMilestoneId,
+        (id) => id !== currentMilestoneId,
     );
     setCompletedMilestones(newCompleted);
     await saveProgressToServer(currentIndex, newCompleted);
@@ -138,78 +153,101 @@ export default function Homepage() {
 
   // Calculate progress as the percentage of completed milestones
   const progressPercentage =
-    milestones.length > 0
-      ? (completedMilestones.length / milestones.length) * 100
-      : 0;
+      milestones.length > 0
+          ? (completedMilestones.length / milestones.length) * 100
+          : 0;
+
+  useEffect(() => {
+    if (progressPercentage === 100) {
+      setShowCongratsDialog(true);
+    }
+  }, [progressPercentage]);
 
   return (
-    <div className="flex flex-col min-h-screen w-full bg-background overflow-hidden">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
-        <div className="flex items-center gap-3 px-4 py-3">
-          <SidebarTrigger />
-          {career && (
-            <div>
-              <h1 className="text-2xl font-bold text-foreground">
-                {career.title}
-              </h1>
-            </div>
-          )}
-        </div>
-      </header>
+      <div className="flex flex-col min-h-screen w-full bg-background overflow-hidden">
+        {/* Header */}
+        <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
+          <div className="flex items-center gap-3 px-4 py-3">
+            <SidebarTrigger />
+            {career && (
+                <div>
+                  <h1 className="text-2xl font-bold text-foreground">
+                    {career.title}
+                  </h1>
+                </div>
+            )}
+          </div>
+        </header>
 
-      {/* Main */}
-      <div className="flex flex-1 overflow-hidden">
-        {/* Column 1 */}
-        <div className="w-16 border-r border-border bg-background relative flex items-center justify-center">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="h-[80%] w-2 bg-component rounded-sm relative">
-              <div
-                className="bg-green-500 w-full transition-all duration-300"
-                style={{ height: `${progressPercentage}%` }}
-              />
+        {/* Main */}
+        <div className="flex flex-1 overflow-hidden">
+          {/* Column 1 */}
+          <div className="w-16 border-r border-border bg-background relative flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="h-[80%] w-2 bg-component rounded-sm relative">
+                <div
+                    className="bg-green-500 w-full transition-all duration-300"
+                    style={{ height: `${progressPercentage}%` }}
+                />
+              </div>
             </div>
+          </div>
+
+          {/* Column 2 */}
+          <div className="w-full md:w-2/5 overflow-y-auto hide-scrollbar p-4">
+            <ScrollArea className="h-full">
+              <MilestoneNavigation
+                  milestones={milestones}
+                  currentIndex={currentIndex}
+                  completedMilestones={completedMilestones}
+                  onMilestoneClick={handleMilestoneClick}
+              />
+            </ScrollArea>
+          </div>
+
+          {/* Column 3 */}
+          <div className="hidden md:block flex-1 p-4 overflow-y-auto">
+            {milestones[currentIndex] && (
+                <MilestoneDetailsPanel
+                    milestone={milestones[currentIndex]}
+                    isCompleted={completedMilestones.includes(
+                        milestones[currentIndex].milestone.id,
+                    )}
+                    onComplete={handleCompleteMilestone}
+                    onUndo={handleUndoCompletion}
+                />
+            )}
           </div>
         </div>
 
-        {/* Column 2 */}
-        <div className="w-full md:w-2/5 overflow-y-auto hide-scrollbar p-4">
-          <ScrollArea className="h-full">
-            <MilestoneNavigation
-              milestones={milestones}
-              currentIndex={currentIndex}
-              completedMilestones={completedMilestones}
-              onMilestoneClick={handleMilestoneClick}
+        {/* Mobile View*/}
+        {isMobile && selectedMilestone && (
+            <MilestoneSheet
+                milestone={selectedMilestone}
+                isCompleted={completedMilestones.includes(selectedMilestone.id)}
+                open={sheetOpen}
+                onOpenChange={setSheetOpen}
+                onComplete={handleCompleteMilestone}
+                onUndo={handleUndoCompletion}
             />
-          </ScrollArea>
-        </div>
+        )}
 
-        {/* Column 3 */}
-        <div className="hidden md:block flex-1 p-4 overflow-y-auto">
-          {milestones[currentIndex] && (
-            <MilestoneDetailsPanel
-              milestone={milestones[currentIndex]}
-              isCompleted={completedMilestones.includes(
-                milestones[currentIndex].milestone.id,
-              )}
-              onComplete={handleCompleteMilestone}
-              onUndo={handleUndoCompletion}
-            />
-          )}
-        </div>
+        <AlertDialog open={showCongratsDialog} onOpenChange={setShowCongratsDialog}>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Congratulations! 🎉</AlertDialogTitle>
+              <AlertDialogDescription>
+                You have completed all milestones for {career?.title}. If you want, you can explore other careers or revisit some of the materials.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Return Homepage</AlertDialogCancel>
+              <AlertDialogAction onClick={() => router.push("/recommendation")} className="text-white">
+                Explore Other Careers
+              </AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
       </div>
-
-      {/* Mobile View*/}
-      {isMobile && selectedMilestone && (
-        <MilestoneSheet
-          milestone={selectedMilestone}
-          isCompleted={completedMilestones.includes(selectedMilestone.id)}
-          open={sheetOpen}
-          onOpenChange={setSheetOpen}
-          onComplete={handleCompleteMilestone}
-          onUndo={handleUndoCompletion}
-        />
-      )}
-    </div>
   );
 }
