@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b4de0fa-566e-4f5c-9044-360ec7d99944" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/api/delete-account/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/recommendation/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/recommendation/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SettingsDropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SettingsDropdown.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/TransitionWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/TransitionWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +195,12 @@
       <workItem from="1743506352249" duration="12000" />
       <workItem from="1743506369623" duration="4370000" />
       <workItem from="1743607638864" duration="615000" />
-      <workItem from="1743612030831" duration="986000" />
+      <workItem from="1743612030831" duration="1253000" />
+      <workItem from="1743670631108" duration="14000" />
+      <workItem from="1743670845594" duration="3000" />
+      <workItem from="1743670854110" duration="13000" />
+      <workItem from="1743670873086" duration="2099000" />
+      <workItem from="1743762401800" duration="6180000" />
     </task>
     <servers />
   </component>

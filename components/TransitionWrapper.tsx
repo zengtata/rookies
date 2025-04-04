@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, useEffect, useState } from "react";
+import React, {JSX, ReactNode, useEffect, useState} from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
@@ -18,37 +18,46 @@ const anim = {
   }),
 };
 
+
+// had to modify this casue it was causing an error
 const PixelTransition = () => {
-  const getBlocks = () => {
-    const { innerWidth, innerHeight } = window;
-    const blockSize = innerWidth * 0.05;
-    const nbOfBlocks = Math.ceil(innerHeight / blockSize);
-    const indexes = Array.from({ length: nbOfBlocks }, (_, i) => i);
-    for (let i = indexes.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [indexes[i], indexes[j]] = [indexes[j], indexes[i]];
-    }
-    return indexes.map((randomIndex, index) => (
-      <motion.div
-        key={index}
-        className="block"
-        variants={anim}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        custom={randomIndex}
-      />
-    ));
-  };
+  const [blocks, setBlocks] = useState<JSX.Element[]>([]);
+
+  useEffect(() => {
+    const generateBlocks = () => {
+      const { innerWidth, innerHeight } = window;
+      const blockSize = innerWidth * 0.05;
+      const nbOfBlocks = Math.ceil(innerHeight / blockSize);
+      const indexes = Array.from({ length: nbOfBlocks }, (_, i) => i);
+
+      for (let i = indexes.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [indexes[i], indexes[j]] = [indexes[j], indexes[i]];
+      }
+
+      return indexes.map((randomIndex, index) => (
+          <motion.div
+              key={index}
+              className="block"
+              variants={anim}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              custom={randomIndex}
+          />
+      ));
+    };
+    setBlocks(generateBlocks());
+  }, []);
 
   return (
-    <div className="pixelBackground">
-      {Array.from({ length: 20 }).map((_, index) => (
-        <div key={index} className="column">
-          {getBlocks()}
-        </div>
-      ))}
-    </div>
+      <div className="pixelBackground">
+        {Array.from({ length: 20 }).map((_, index) => (
+            <div key={index} className="column">
+              {blocks}
+            </div>
+        ))}
+      </div>
   );
 };
 

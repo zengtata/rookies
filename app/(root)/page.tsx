@@ -58,7 +58,6 @@ export default function Homepage() {
           toast({
             title: "No Career Selected",
             description: "Please answer the quiz and select a career!",
-            variant: "destructive",
           });
           router.push("/recommendation");
         }

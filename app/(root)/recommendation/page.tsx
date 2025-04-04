@@ -26,7 +26,6 @@ export default function RecommendationPage() {
         toast({
           title: "No Quiz Answer Found!",
           description: "Please answer the quiz to get recommendations!",
-          variant: "destructive",
         });
         router.push("/quiz");
       }
