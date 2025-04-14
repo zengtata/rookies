@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
+import { Eye, EyeOff } from "lucide-react";
 
 interface FormData {
   oldPassword: string;
@@ -30,6 +31,11 @@ export function ChangePasswordDialog({
                                        open,
                                        onOpenChange,
                                      }: ChangePasswordDialogProps) {
+
+  const [showOldPassword, setShowOldPassword] = useState(false);
+  const [showNewPassword, setShowNewPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
   const { register, handleSubmit, reset } = useForm<FormData>();
   const [loading, setLoading] = useState(false);
 
@@ -89,42 +95,81 @@ export function ChangePasswordDialog({
           <form onSubmit={handleSubmit(onSubmit, onError)} className="space-y-4 mt-4">
             <div>
               <Label htmlFor="oldPassword">Old Password</Label>
-              <Input
-                  id="oldPassword"
-                  type="password"
-                  {...register("oldPassword", { required: "Old password is required" })}
-              />
+              <div className="relative">
+                <Input
+                    id="oldPassword"
+                    type={showOldPassword ? "text" : "password"}
+                    {...register("oldPassword", {
+                      required: "Old password is required",
+                    })}
+                    className="pr-10"
+                />
+                <button
+                    type="button"
+                    onClick={() => setShowOldPassword((prev) => !prev)}
+                    className="absolute inset-y-0 right-2 flex items-center text-muted-foreground"
+                >
+                  {showOldPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                </button>
+              </div>
+
             </div>
             <div>
               <Label htmlFor="newPassword">New Password</Label>
-              <Input
-                  id="newPassword"
-                  type="password"
-                  {...register("newPassword", {
-                    required: "New password is required",
-                    minLength: {
-                      value: 8,
-                      message: "Password must be at least 8 characters long",
-                    },
-                    validate: (value) =>
-                        /[a-z]/.test(value) && /[A-Z]/.test(value) ||
-                        "Password must contain at least one uppercase and one lowercase letter.",
-                  })}
-              />
+              <div className="relative">
+                <Input
+                    id="newPassword"
+                    type={showNewPassword ? "text" : "password"}
+                    {...register("newPassword", {
+                      required: "New password is required",
+                      minLength: {
+                        value: 8,
+                        message: "Password must be at least 8 characters long",
+                      },
+                      validate: (value) =>
+                          (/[a-z]/.test(value) && /[A-Z]/.test(value)) ||
+                          "Password must contain at least one uppercase and one lowercase letter.",
+                    })}
+                    className="pr-10"
+                />
+                <button
+                    type="button"
+                    onClick={() => setShowNewPassword((prev) => !prev)}
+                    className="absolute inset-y-0 right-2 flex items-center text-muted-foreground"
+                >
+                  {showNewPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                </button>
+              </div>
+
             </div>
             <div>
               <Label htmlFor="confirmNewPassword">Confirm New Password</Label>
-              <Input
-                  id="confirmNewPassword"
-                  type="password"
-                  {...register("confirmNewPassword", {
-                    required: "Please confirm your new password",
-                    minLength: {
-                      value: 8,
-                      message: "Password must be at least 8 characters long",
-                    },
-                  })}
-              />
+              <div className="relative">
+                <Input
+                    id="confirmNewPassword"
+                    type={showConfirmPassword ? "text" : "password"}
+                    {...register("confirmNewPassword", {
+                      required: "Please confirm your new password",
+                      minLength: {
+                        value: 8,
+                        message: "Password must be at least 8 characters long",
+                      },
+                    })}
+                    className="pr-10"
+                />
+                <button
+                    type="button"
+                    onClick={() => setShowConfirmPassword((prev) => !prev)}
+                    className="absolute inset-y-0 right-2 flex items-center text-muted-foreground"
+                >
+                  {showConfirmPassword ? (
+                      <EyeOff size={18} />
+                  ) : (
+                      <Eye size={18} />
+                  )}
+                </button>
+              </div>
+
             </div>
             <div className="flex justify-end space-x-2 pt-4">
               <DialogClose asChild>

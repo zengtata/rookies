@@ -10,7 +10,6 @@ import {
   UseFormReturn,
 } from "react-hook-form";
 import { z, ZodType } from "zod";
-
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -27,6 +26,7 @@ import React from "react";
 import { FIELD_NAMES, FIELD_TYPES } from "@/constants";
 import { toast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
+import { Eye, EyeOff } from "lucide-react";
 
 interface Props<T extends FieldValues> {
   schema: ZodType<T>;
@@ -41,6 +41,8 @@ const AuthForm = <T extends FieldValues>({
   defaultValues,
   onSubmit,
 }: Props<T>) => {
+  const [showPassword, setShowPassword] = React.useState(false);
+
   const router = useRouter();
   const isSignIn = type === "SIGN_IN";
 
@@ -97,12 +99,29 @@ const AuthForm = <T extends FieldValues>({
                     {FIELD_NAMES[field.name as keyof typeof FIELD_NAMES]}
                   </FormLabel>
                   <FormControl>
-                    <Input
-                      required
-                      type={FIELD_TYPES[field.name as keyof typeof FIELD_TYPES]}
-                      {...field}
-                      className="form-input"
-                    />
+                    <div className="relative">
+                      <Input
+                          required
+                          type={
+                            FIELD_TYPES[field.name as keyof typeof FIELD_TYPES] === "password"
+                                ? showPassword
+                                    ? "text"
+                                    : "password"
+                                : FIELD_TYPES[field.name as keyof typeof FIELD_TYPES]
+                          }
+                          {...field}
+                          className="form-input pr-10"
+                      />
+                      {FIELD_TYPES[field.name as keyof typeof FIELD_TYPES] === "password" && (
+                          <button
+                              type="button"
+                              onClick={() => setShowPassword((prev) => !prev)}
+                              className="absolute inset-y-0 right-3 flex items-center text-sm text-white"
+                          >
+                            {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+                          </button>
+                      )}
+                    </div>
                   </FormControl>
 
                   <FormMessage />
