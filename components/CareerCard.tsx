@@ -90,11 +90,21 @@ export function CareerCard({
           border border-border rounded-lg shadow-md p-4 w-60 h-72 overflow-hidden hover:w-[360px] hover:rounded-lg hover:bg-buttonHover`}
         onClick={handleClick}
       >
-        <p className="text-3xl md:text-5xl font-semibold text-foreground pb-6 transition-opacity duration-300">
-          {career.title}
+        <p // Font Color Changed for Visibility
+            className={`text-3xl md:text-5xl font-semibold pb-6 transition-opacity duration-300 ${
+                isSelected ? "text-white" : "text-foreground"
+            }`}
+        >
+        {career.title}
         </p>
-        <p className="mt-2 text-md text-foreground transition-opacity duration-300 line-clamp-5">
-          {career.description}
+
+        <p
+            className={`mt-2 text-md transition-opacity duration-300 line-clamp-5 ${
+                isSelected ? "text-white" : "text-foreground"
+            }`}
+        >
+
+        {career.description}
         </p>
       </div>
 
